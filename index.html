@@ -22,7 +22,10 @@
                 top: -10px;
             }
             hr.end::after {
-                content: "February.20.2026 - last edit by Bronson Chow";
+                content: "End";
+            }
+            hr.end {
+                height: 1vmax;
             }
             h1 {
                 text-align: center;
@@ -38,6 +41,18 @@
             }
             ul {
                 font-size: 1.5vmax;
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1.5vmax;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         </style>
         <title>Bronson Chow's Website</title><!-- TODO tbd title -->
@@ -74,5 +89,9 @@
             <li><a href="https://fast.com/">Internet Speed Test</a><span style="color: #B2BEB5"> Netflix</span></li>
         </ul>
         <hr class="end" />
+        &nbsp;
+        <div class="footer">
+            <p>February 20, 2026 - Last edit by Bronson Chow</p>
+        </div>
     </body>
 </html>
