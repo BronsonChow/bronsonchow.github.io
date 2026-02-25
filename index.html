@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="fn">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Internal CSS -->
         <style>
             * {
@@ -9,11 +9,11 @@
             }
             hr {
                 border: none;
-                border-top: 3px double #333333;
+                border-top: 0.2rem double #333333;
                 color: #333333;
                 overflow: visible;
                 text-align: center;
-                height: 5px;
+                height: 1rem;
             }
             hr::after {
                 background: white;
@@ -25,34 +25,46 @@
                 content: "End";
             }
             hr.end {
-                height: 1vmax;
+                height: 1rem;
             }
             h1 {
+                height: 0.7em;
                 text-align: center;
-                font-size: 4vmax;
+                font-size: 3rem;
             }
             h2 {
                 text-align: center;
-                font-size: 2.5vmax;
+                font-size: 1.5rem;
             }
             h3 {
-                font-size: 2vmax;
-                text-indent: 2em;
+                font-size: 1.5rem;
+                text-indent: 1.5rem;
             }
             ul {
-                font-size: 1.5vmax;
+                font-size: 1rem;
+            }
+            p {
+                font-size: 1rem;
+                margin-left: 2rem;
+            }
+            img {
+                display: block;
+                margin-left: 2rem;
             }
             .footer {
                 position: fixed;
                 left: 0;
                 bottom: 0;
                 width: 100%;
-                height: 1.5vmax;
+                height: 1.5rem;
                 background-color: black;
                 color: white;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+            .subtext {
+                color: #6082B6;
             }
         </style>
         <title>Bronson Chow's Website</title><!-- TODO tbd title -->
@@ -60,8 +72,10 @@
 
     <body>
         <h1>Bronson Chow</h1>
-        <h2>Computer Science Student / <span style="color: #B2BEB5">College of Staten Island</span></h2>
-        <hr />
+        <h2>Computer Science Student / <span class="subtext">College of Staten Island</span></h2>        
+        &nbsp;
+        <hr/>
+
         <h3>Coding Languages</h3>
         <ul>
             <li>C++</li>
@@ -72,23 +86,31 @@
         <ul>
             <li>CSC 326 - Data Structures</li>
             <li>CSC 330 - Object-Oriented Software Design</li>
-            <li>CSC 346 - Switching & Automata Theory <span style="color: #B2BEB5">Current</span></li>
+            <li>CSC 346 - Switching & Automata Theory <span class="subtext">Current</span></li>
             <li>CSC 382 - Analysis of Algorithms</li>
-            <li>CSC 430 - Software Engineering <span style="color: #B2BEB5">Current</span></li>
+            <li>CSC 430 - Software Engineering <span class="subtext">Current</span></li>
+            &nbsp;
         </ul>
+        <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">More Information: CSI Course List</a></p>
+        &nbsp;
+        <hr/>
 
-        <hr />
-        <h3>Important Links</h3>
+        <h3>Cool Links</h3><!--TODO convert into table-->
         <ul>
-            <li><a href="https://www.wolframalpha.com/">Calculator</a><span style="color: #B2BEB5"> WolframAlpha</span></li>
-            <li><a href="https://www.desmos.com/scientific">Calculator</a><span style="color: #B2BEB5"> Desmos</span></li>
+            <li><a href="https://www.wolframalpha.com/">Calculator</a><span class="subtext"> WolframAlpha</span></li>
+            <li><a href="https://www.desmos.com/scientific">Calculator</a><span class="subtext"> Desmos</span></li>
             <li><a href="https://www.cloudflarestatus.com/">Cloudflare Status</a></li>
             <li><a href="https://downdetector.com/">Service Down Detector</a></li>
             <li><a href="https://www.worldtimebuddy.com/">World Clock / Converter</a></li>
-            <li><a href="https://www.speedtest.net/">Internet Speed Test</a><span style="color: #B2BEB5"> Ookla</span></li>
-            <li><a href="https://fast.com/">Internet Speed Test</a><span style="color: #B2BEB5"> Netflix</span></li>
+            <li><a href="https://www.speedtest.net/">Internet Speed Test</a><span class="subtext"> Ookla</span></li>
+            <li><a href="https://fast.com/">Internet Speed Test</a><span class="subtext"> Netflix</span></li>
         </ul>
-        <hr class="end" />
+        &nbsp;
+        <a href="https://wooting.io/">
+            <img src="./assets/wooting logo.png" width="100rem" title="Check out hall effect Keyboards here!"/>
+        </a>
+        &nbsp;
+        <hr class="end"/>
         &nbsp;
         <div class="footer">
             <p>February 20, 2026 - Last edit by Bronson Chow</p>
