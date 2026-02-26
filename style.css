@@ -1,5 +1,9 @@
+@font-face {
+    font-family: Ubuntu Sans;
+    src: url("https://fonts.googleapis.com/css?family=Ubuntu Sans");
+}
 * {
-    font-family: "Courier New", monospace;
+    font-family: Ubuntu Sans, monospace;
 }
 
 body {
@@ -34,9 +38,11 @@ hr.end {
 }
 
 h1 {
+    color: #FFFFFF;
     font-size: 3rem;
     height: 0.7em;
     text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.3rem #000000;
 }
 
 h2 {
