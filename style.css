@@ -6,42 +6,10 @@
     font-family: Ubuntu Sans, monospace;
 }
 
-body {
-    /*CSS reset*/
-    background-color: #FFFFFF;
-    padding: 0;
-    margin: 0;
-}
-
-hr {
-    height: 1rem;
-    border: none;
-    border-top: 0.2rem double #000000;
-    color: #000000;
-    overflow: visible;
-    text-align: center;
-}
-
-hr::after {
-    background: #FFFFFF;
-    padding: 0 0.5rem;
-    position: relative;
-    top: -0.7rem;
-}
-
-hr.end::after {
-    content: "End";
-}
-
-hr.end {
-    height: 1rem;
-}
-
 h1 {
     color: #FFFFFF;
     font-size: 3rem;
-    text-align: center;
-    text-shadow: 0.1rem 0.1rem 0.3rem #000000;
+    text-shadow: 0.1rem 0.1rem 0.3rem #04254e;
 }
 
 h2 {
@@ -64,7 +32,16 @@ ul {
 
 p {
     font-size: 1rem;
-    margin-left: 2rem;
+}
+
+.jumbotron {
+    background-color: #CFCFCF;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.lead {
+    color: #04254e;
 }
 
 .footer {
@@ -81,5 +58,5 @@ p {
 }
 
 .subtext {
-    color: #6082B6;
+    color: #CFCFCF;
 }
