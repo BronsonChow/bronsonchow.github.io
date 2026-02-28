@@ -20,6 +20,11 @@ h3 {
     font-size: 1.5rem;
 }
 
+li img {
+    height: auto;
+    width: 1rem;
+}
+
 ul {
     font-size: 1rem;
 }
@@ -38,9 +43,4 @@ p {
 
 .subtext {
     color: #9C9C9C;
-}
-
-.ul_icon {
-    height: auto;
-    width: 1rem;
 }
