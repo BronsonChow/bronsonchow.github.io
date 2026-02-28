@@ -9,21 +9,15 @@
 h1 {
     color: #FFFFFF;
     font-size: 3rem;
-    text-shadow: 0.1rem 0.1rem 0.3rem #04254e;
+    text-shadow: 0.1rem 0.1rem 0.3rem #04254E;
 }
 
 h2 {
     font-size: 1.5rem;
-    text-align: center;
 }
 
 h3 {
     font-size: 1.5rem;
-    text-indent: 1.5rem;
-}
-
-img {
-    display: block;
 }
 
 ul {
@@ -36,27 +30,17 @@ p {
 
 .jumbotron {
     background-color: #CFCFCF;
-    text-align: center;
-    padding: 0.5rem;
 }
 
 .lead {
-    color: #04254e;
-}
-
-.footer {
-    align-items: bottom;
-    background-color: #000000;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1.5rem;
-    position: fixed;
+    color: #04254E;
 }
 
 .subtext {
-    color: #CFCFCF;
+    color: #9C9C9C;
+}
+
+.ul_icon {
+    height: auto;
+    width: 1rem;
 }
