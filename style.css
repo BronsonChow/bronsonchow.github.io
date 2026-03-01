@@ -1,36 +1,28 @@
-@font-face {
-    font-family: Ubuntu Sans;
-    src: url("https://fonts.googleapis.com/css?family=Ubuntu Sans");
-}
-* {
-    font-family: Ubuntu Sans, monospace;
-}
-
 h1 {
     color: #FFFFFF;
+    font-family: Oswald, sans-serif;
     font-size: 3rem;
     text-shadow: 0.1rem 0.1rem 0.3rem #04254E;
 }
 
 h2 {
-    font-size: 1.5rem;
-}
-
-h3 {
+    font-family: Oswald, sans-serif;
     font-size: 1.5rem;
 }
 
 li img {
     height: auto;
-    width: 1rem;
+    width: 1.1rem;
 }
 
 ul {
-    font-size: 1rem;
+    font-family: Dosis;
+    font-size: 1.1rem;
 }
 
 p {
-    font-size: 1rem;
+    font-family: Dosis;
+    font-size: 1.1rem;
 }
 
 .jumbotron {
