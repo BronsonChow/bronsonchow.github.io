@@ -53,4 +53,5 @@ e3eda15 v0.3.6.1 adjusted readme to fit version numbers for ease of use
         > Also adjusted version number which was slightly off due to accidental repetition
 
 ec541a4 v0.3.6.2 fixed space between courses and "course link"
-        v0.3.7
+33ce9b9 v0.3.7 migrated version changes to a new file & slight formatting
+        v0.3.7.1 adjusted centering for bordered class
