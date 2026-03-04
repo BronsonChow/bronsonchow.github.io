@@ -21,6 +21,10 @@ li img {
     height: auto;
     width: 1.1rem;
 }
+ol {
+    font-family: Dosis;
+    font-size: 1.1rem;
+}
 ul {
     font-family: Dosis;
     font-size: 1.1rem;
