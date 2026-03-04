@@ -5,37 +5,44 @@ h1 {
     margin: 0;
     text-shadow: 0.1rem 0.1rem 0.3rem #04254E;
 }
-
 h2 {
     font-family: Oswald, sans-serif;
     font-size: 1.5rem;
 }
-
 li img {
     height: auto;
     width: 1.1rem;
 }
-
 ul {
     font-family: Dosis;
     font-size: 1.1rem;
 }
-
 p {
     font-family: Dosis;
     font-size: 1.1rem;
 }
-
+.navbar {
+    padding: 0;
+}
+.navbar-brand {
+    color: #FFFFFF;
+    font-family: Oswald, sans-serif;
+    font-size: 2rem;
+    margin-right: 1rem;
+    text-shadow: 0.1rem 0.1rem 0.3rem #04254E;
+    transition: 0.2s;
+}
+.navbar-brand:hover {
+    color: #04254E;
+}
 .jumbotron {
     background-color: #CFCFCF;
     margin: 0;
     padding-bottom: 0px;
 }
-
 .lead {
     color: #04254E;
 }
-
 .subtext {
     color: #9C9C9C;
 }
