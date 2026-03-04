@@ -62,3 +62,12 @@ p {
     max-height: 100%;
     width: auto;
 }
+.bordered {
+    align-items: center;
+    border: 0.1rem solid #000000;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
