@@ -50,3 +50,10 @@ p {
 .subtext {
     color: #9C9C9C;
 }
+.credit {
+    font-size: 0.75rem;
+}
+.img-fluid {
+    max-height: 100%;
+    width: auto;
+}
