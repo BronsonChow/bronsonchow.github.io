@@ -18,4 +18,37 @@ a : [n]
     Tweaks
 
 History:
-ea1bbb7 v0.1.2 Added image & formatting
+ea1bbb7 Create index.html
+9270d8f First website build
+99dc1c7 v0.1.2 Added image & formatting
+29fce03 v0.1.2.1 variable formatting and rewording
+4789989 v0.1.3 Added image of creature
+c59804c v0.1.4 Added CSS reset for body
+66670c4 v0.1.5 cleaned up end horizontal rule and recentered footer
+d594486 v0.1.5.1 removed unit identifiers for zeroes
+6ad915f v0.1.5.2 external links open in new tab
+4241a57 v0.1.6 swapped from internal to external css
+c732be3 v0.1.7 font change
+84d23eb v0.2.0 bootstrap initialization & minor fixes
+1148e3f v0.2.1 added jumbotron
+521d532 v0.2.2 adjusted existing fil to use bootstrap & other changes
+        > Added logos to each link url
+        > Replaced fixed footer with normal one
+        > Columns and rows for different sections
+        > Consolidated certain headers into one row
+46efece v0.2.2.1 optimized image sizing
+aa885a1 v0.2.3 adjusted font import and removed unnecessary heading
+290ae71 v0.2.4 added navigation bar with temporary buttons
+81920a8 v0.2.5 functional lab1/2/3 links for navbar
+b9f9d7c v0.2.6 added light/dark theme button
+f35d117 v0.2.7 editted navbar
+c523af0 v0.3 set up lab3.html
+0bd9020 v0.3.1 changed jumbotron subheader
+e741eeb v0.3.2 added paragraph (type)
+42d9490 v0.3.4 adjusted a few continuity errors
+40e9a3f v.0.3.4 added table of contents
+5bef45a v0.3.5 tweaked borders and img/credit alignment
+e3eda15 v0.3.6.1 adjusted readme to fit version numbers for ease of use
+        > Also adjusted version number which was slightly off due to accidental repetition
+
+        v0.3.6.2 fixed space between courses and "course link"
