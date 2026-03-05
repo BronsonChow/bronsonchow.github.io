@@ -56,8 +56,9 @@ ec541a4 v0.3.6.2 fixed space between courses and "course link"
 33ce9b9 v0.3.7 migrated version changes to a new file & slight formatting
 2cedccd v0.3.7.1 adjusted centering for bordered class
 bab1a1a v0.3.8 updated index
-        v0.3.9 partially filled section 2 & more
+70cc284 v0.3.9 partially filled section 2 & more
         > redid section headers
         > tuned column formatting
         > replaced links with buttons
         > new 'centered' class
+        v0.3.9.1 possible image fix
