@@ -65,4 +65,6 @@ a5eddba v0.3.9.1 possible image fix
 7281bbc v0.3.10 added remaining section 2
 7010f09 v0.3.11 added colored png of keyboards for visual assistance
         > Added section color legend table
-        v0.3.11.1 added submission date and submission commit id
+0ffb17b v0.3.11.1 added submission date and submission commit id
+1b27e17 v0.3.11.1-f1 lab3 correction
+        v0.3.11.2 back to status quo
