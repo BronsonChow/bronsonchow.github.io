@@ -63,5 +63,6 @@ bab1a1a v0.3.8 updated index
         > new 'centered' class
 a5eddba v0.3.9.1 possible image fix
 7281bbc v0.3.10 added remaining section 2
-        v0.3.11 added colored png of keyboards for visual assistance
+7010f09 v0.3.11 added colored png of keyboards for visual assistance
         > Added section color legend table
+        v0.3.11.1 added submission date and submission commit id
