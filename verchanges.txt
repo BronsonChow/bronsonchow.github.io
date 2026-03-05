@@ -62,4 +62,6 @@ bab1a1a v0.3.8 updated index
         > replaced links with buttons
         > new 'centered' class
 a5eddba v0.3.9.1 possible image fix
-        v0.3.10 added remaining section 2
+7281bbc v0.3.10 added remaining section 2
+        v0.3.11 added colored png of keyboards for visual assistance
+        > Added section color legend table
