@@ -61,4 +61,5 @@ bab1a1a v0.3.8 updated index
         > tuned column formatting
         > replaced links with buttons
         > new 'centered' class
-        v0.3.9.1 possible image fix
+a5eddba v0.3.9.1 possible image fix
+        v0.3.10 added remaining section 2
