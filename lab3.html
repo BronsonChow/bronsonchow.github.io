@@ -7,7 +7,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Dosis|Oswald' rel='stylesheet'>
-        <title>Keyboard Info</title>
+        <title>Lab 3</title>
     </head>
 
     <body>
@@ -22,20 +22,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Misc Pages</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="keyb.html">Custom Keyboard Info</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CSC 225 Labs</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="README.md">Lab 1 - readme</a></li>
                                 <li><a class="dropdown-item" href="StarterPage.html">Lab 2 - Starter Page</a></li>
                                 <li><a class="dropdown-item disabled" aria-disabled="true">Lab 3 - Bootstrap</a></li>
                             </ul>
-                        </li>
-                        <div class="me-4"></div>
-                        <li class="nav-item align-items-center d-flex">
-                            <i class="fa fa-sun-o"></i>
-                            <div class="ms-2 form-check form-switch ml-auto">
-                                <input class="form-check-input" type="checkbox" role="switch" id="themingSwitcher" />
-                            </div>
-                            <i class="fa fa-moon-o"></i>
                         </li>
                     </ul>
                 </div>
@@ -48,7 +46,7 @@
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-11">
-                        <h1 class="display-3">Mechnical Keyboard Information Guide</h1>
+                        <h1 class="display-3">Mechnical Keyboard Information <i class="fa fa-code-fork" aria-hidden="true"></i></h1>
                         <p class="lead">Switches, Materials, Modding and more</p>
                     </div>
                 </div>
@@ -58,29 +56,25 @@
 
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-md-5 bordered">
+                <div class="col-md-4 bordered">
                     <p class="centered">Prelude</p>
                     <p>
-                        I will not be addressing the question <span class="subtext"><i>why do I need one</i></span> because it is already assumed you are interested in mechanical keyboards.
-                        This page exists simply as a hub for mechnical keyboard information.
-                        I am also using this page to voice my opinions on some topics, though I will try to remain factual.
-                        Some sections will have a succinct description as to not overbloat the page.
-                        More in-depth and better information can be found elsewhere.
+                        This portion has been significantly shortened for the purposes of meeting the requirements for Lab 3.
                     </p>
                 </div>
                 <div class="col-md-1"></div>
-                <div class="col-md-2 bordered">
+                <div class="col-md-4 bordered">
                     <div class="row justify-content-around">
                         <div class="col-sm-6">
                             <p class="centered">Sections</p>
                             <ul>
-                                <div class="row"><a class="btn btn-light" href="#sect1" role="button">Type</a></div>
-                                <div class="row"><a class="btn btn-light" href="#sect2" role="button">Size</a></div>
-                                <div class="row"><a class="btn btn-light" href="#sect3" role="button">Layout</a></div>
-                                <div class="row"><a class="btn btn-light" href="#sect4" role="button">Keycaps</a></div>
-                                <div class="row"><a class="btn btn-light" href="#sect5" role="button">Switches</a></div>
-                                <div class="row"><a class="btn btn-light" href="#sect6" role="button">Modding</a></div>
-                                <div class="row"><a class="btn btn-light" href="#sect7" role="button">Tools</a></div>
+                                <li><a href="#sect1">Type</a></li>
+                                <li>Size</li>
+                                <li>Layout</li>
+                                <li>Keycaps</li>
+                                <li>Switches</li>
+                                <li>Modding</li>
+                                <li>Tools</li>
                             </ul>
                         </div>
                         <div class="col-sm-6 centered">
@@ -115,297 +109,7 @@
                     </div>
                 </div>
             </div>
-            <div style="margin-top: 1rem;"></div>
-            <div class="row justify-content-center">
-                <a class="btn btn-light" href="#" role="button" style="max-width: 6.5rem;">
-                    <i class="fa fa-angle-double-up" style="margin: 0;"></i>
-                    <p style="margin: 0;">Back to top</p>
-                </a>
-            </div>
         </div>
-
-        <div id="sect2"></div>
-        <hr class="my-4">
-        &nbsp;
-        <div class="container-fluid">
-            <h1 class="centered" style="margin-bottom: 2rem;">2. Size : The Dealbreaker</h1>
-            <p class="centered">Nearly all custom HE/mechanical keyboards are per key programmable. The sections display the default configuration.</p>
-            <p class="centered" style="margin: 0;">Section Color Convention:</p>
-            <div class="row justify-content-center">
-                <div class="col-md-3">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Section Name</th>
-                            <th scope="col">Color</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Alphabet Keys</td>
-                            <td style="background-color: #FF0000; color: #FFFFFF;">Red</td>
-                        </tr>
-                        <tr>
-                            <td>Numeric Key</td>
-                            <td style="background-color: #FFA500; color: #FFFFFF;">Orange</td>
-                        </tr>
-                        <tr>
-                            <td>Misc. Alphanumerics</td>
-                            <td style="background-color: #FFFF00; color: #000000;">Yellow</td>
-                        </tr>
-                        <tr>
-                            <td>Navigation Keys</td>
-                            <td style="background-color: #00FFFF; color: #000000;">Cyan</td>
-                        </tr>
-                        <tr>
-                            <td>Arrow Keys</td>
-                            <td style="background-color: #00A5FF; color: #000000;">Sky Blue</td>
-                        </tr>
-                        <tr>
-                            <td>Function Row</td>
-                            <td style="background-color: #0000FF; color: #FFFFFF;">Blue</td>
-                        </tr>
-                        <tr>
-                            <td>Number Pad</td>
-                            <td style="background-color: #000068; color: #FFFFFF;">Dark Blue</td>
-                        </tr>
-                    </tbody>
-                </table>
-                </div>
-            </div>
-            <div style="margin-top: 1rem;"></div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 bordered centered">
-                    <img class="img-fluid" src="./assets/keybsize/100keyb.png"/>
-                    <img class="img-fluid" src="./assets/keybsize/100keybcol.png"/>
-                </div>
-                <div class="col-md-4">
-                    <ul>
-                        <h2>100% +</h2>
-                        <li>The universal standard</li>
-                        <li>Anything bigger just adds macro keys</li>
-                        <li>Possible alternatives include volume knob</li>
-                        <li>Sections:</li>
-                        <ul>
-                            <li>Alphanumerics</li>
-                            <li>Function row</li>
-                            <li>Navigation pad</li>
-                            <li>Arrow pad</li>
-                            <li>Numpad</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-            <div style="margin-top: 1rem;"></div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 bordered centered">
-                    <img class="img-fluid" src="./assets/keybsize/95keyb.png"/>
-                    <img class="img-fluid" src="./assets/keybsize/95keybcol.png"/>
-                </div>
-                <div class="col-md-4">
-                    <ul>
-                        <h2>95%</h2>
-                        <li>A bit more compact</li>
-                        <li>Usually for those who never use the <i>full</i> control pad, but they swear by the numpad</li>
-                        <li>Right side control row keycaps typically resized to normal width</li>
-                        <li>Sections:</li>
-                        <ul>
-                            <li>Alphanumerics</li>
-                            <li>Function row</li>
-                            <li>Navigation row</li>
-                            <li>Arrow pad</li>
-                            <li>Numpad</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-            <div style="margin-top: 1rem;"></div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 bordered centered">
-                    <img class="img-fluid" src="./assets/keybsize/80keyb.png"/>
-                    <img class="img-fluid" src="./assets/keybsize/80keybcol.png"/>
-                </div>
-                <div class="col-md-4">
-                    <ul>
-                        <h2>80%</h2>
-                        <li>If you think trading the numpad for space is a good deal</li>
-                        <li>Sometimes seen with 1 less column of navigation pad keys on the right</li>
-                        <li>Sections:</li>
-                        <ul>
-                            <li>Alphanumerics</li>
-                            <li>Function row</li>
-                            <li>Navigation pad</li>
-                            <li>Arrow pad</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-            <div style="margin-top: 1rem;"></div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 bordered centered">
-                    <img class="img-fluid" src="./assets/keybsize/75keyb.png"/>
-                    <img class="img-fluid" src="./assets/keybsize/75keybcol.png"/>
-                </div>
-                <div class="col-md-4">
-                    <ul>
-                        <h2>75%</h2>
-                        <li>Noticeably less rectangular</li>
-                        <li>If you think that even 80% has too many navigation keys</li>
-                        <li>Most likely reprogrammed into macro keys</li>
-                        <li>Sections:</li>
-                        <ul>
-                            <li>Alphanumerics</li>
-                            <li>Function row</li>
-                            <li>Navigation column</li>
-                            <li>Arrow pad</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-            <div style="margin-top: 1rem;"></div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 bordered centered">
-                    <img class="img-fluid" src="./assets/keybsize/65keyb.png"/>
-                    <img class="img-fluid" src="./assets/keybsize/65keybcol.png"/>
-                </div>
-                <div class="col-md-4">
-                    <ul>
-                        <h2>65%</h2>
-                        <li>Now we enter the territory of exercising the function key</li>
-                        <li>The major update being the lack of a function row</li>
-                        <li>If you dislike repositioning your hand to reach for macros/nagivation keys</li>
-                        <li>More efficient than larger sizes if you don't mind utilizing the function key</li>
-                        <li>Sections:</li>
-                        <ul>
-                            <li>Nearly all alphanumerics</li>
-                            <li>Navigation column</li>
-                            <li>Arrow pad</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-            <div style="margin-top: 1rem;"></div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 bordered centered">
-                    <img class="img-fluid" src="./assets/keybsize/60keyb.png"/>
-                    <img class="img-fluid" src="./assets/keybsize/60keybcol.png"/>
-                </div>
-                <div class="col-md-4">
-                    <ul>
-                        <h2>60%</h2>
-                        <li>The free thinker's keyboard</li>
-                        <li>You have no need for the arrow pad because the thought occured to you: <span class="subtext">Why do I have an arrow pad when I can just remap the wasd keys?</span></li>
-                        <li>Near maximum efficiency; there is barely a need to lift your wrists</li>
-                        <li>Sections:</li>
-                        <ul>
-                            <li>Nearly all alphanumerics</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-            <div style="margin-top: 1rem;"></div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 bordered centered">
-                    <img class="img-fluid" src="./assets/keybsize/50keyb.png"/>
-                    <img class="img-fluid" src="./assets/keybsize/50keybcol.png"/>
-                </div>
-                <div class="col-md-4">
-                    <ul>
-                        <h2>50%</h2>
-                        <li>The largest length/width ratio</li>
-                        <li>Why stop at the arrow pad? Let's just remove the number row because we can just remap that</li>
-                        <li>Some alphanumerics were harmed in the making of this keyboard</li>
-                        <li>A couple navigation/macro keys typically on the left side</li>
-                        <li>The key layout varies a lot by this point</li>
-                        <li>Sections:</li>
-                        <ul>
-                            <li>All of the alphabet remain</li>
-                            <li>Some miscellaneous alphanumeric keys</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-            <div style="margin-top: 1rem;"></div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 bordered centered">
-                    <img class="img-fluid" src="./assets/keybsize/40keyb.png"/>
-                    <img class="img-fluid" src="./assets/keybsize/40keybcol.png"/>
-                </div>
-                <div class="col-md-4">
-                    <ul>
-                        <h2>40%</h2>
-                        <li>The "final" frontier</li>
-                        <li>Anything other than the alphabet is near useless to you</li>
-                        <li>You use the function key more than the alphabet</li>
-                        <li>Sometimes seen with a perfect grid layout</li>
-                        <li>Not unusual to have a split spacebar either</li>
-                        <li>Sections:</li>
-                        <ul>
-                            <li>All of the alphabet remain</li>
-                            <li>Few miscellaneous alphanumeric keys</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-            <div style="margin-top: 1rem;"></div>
-            <div class="row justify-content-center">
-                <a class="btn btn-light" href="#" role="button" style="max-width: 6.5rem;">
-                    <i class="fa fa-angle-double-up" style="margin: 0;"></i>
-                    <p style="margin: 0;">Back to top</p>
-                </a>
-            </div>
-        </div>
-
-        <div id="sect3"></div>
-        <hr class="my-4">
-        &nbsp;
-        <div class="container-fluid">
-            <h2 class="centered" style="margin-bottom: 2rem;">3. Layout : ANSI v ISO</h2>
-            <div class="row justify-content-center">
-
-            </div>
-        </div>
-
-        <div id="sect4"></div>
-        <hr class="my-4">
-        &nbsp;
-        <div class="container-fluid">
-            <h2 class="centered" style="margin-bottom: 2rem;">4. Keycaps : Big GMK is Listening</h2>
-            <div class="row justify-content-center">
-
-            </div>
-        </div>
-
-        <div id="sect1"></div>
-        <hr class="my-4">
-        &nbsp;
-        <div class="container-fluid">
-            <h2 class="centered" style="margin-bottom: 2rem;">5. Switches : Clacky or Thocky?</h2>
-            <div class="row justify-content-center">
-
-            </div>
-        </div>
-
-        <div id="sect1"></div>
-        <hr class="my-4">
-        &nbsp;
-        <div class="container-fluid">
-            <h2 class="centered" style="margin-bottom: 2rem;">6. Modding : Tape, Foam, and More Foam</h2>
-            <div class="row justify-content-center">
-
-            </div>
-        </div>
-
-        <div id="sect1"></div>
-        <hr class="my-4">
-        &nbsp;
-        <div class="container-fluid">
-            <h2 class="centered" style="margin-bottom: 2rem;">7. Tools : Time Savers</h2>
-            <div class="row justify-content-center">
-
-            </div>
-        </div>
-
         <hr class="my-4">
         <div class="container text-center">
             <div class="row">
