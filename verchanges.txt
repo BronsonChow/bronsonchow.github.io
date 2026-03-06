@@ -69,7 +69,8 @@ a5eddba v0.3.9.1 possible image fix
 1b27e17 v0.3.11.1-f1 lab3 correction
 c7223ac v0.3.11.2 back to status quo
 c9743dc v0.3.11.3 buttons are now in an unordered list
-        v0.3.12 separated lab3.html into keyb.html
+123fb0d v0.3.12 separated lab3.html into keyb.html
         > done to simultaneously:
             > meet the requirements of lab 3
             > continue working on keyboard information page
+        v0.3.12.1 adjusted column size for section legend
