@@ -7,12 +7,71 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Dosis|Oswald' rel='stylesheet'>
+        <script>
+            function welcome()
+            {
+                alert("Welcome to Chow's Ordering Store!");
+                var name = prompt("What is your name?", "John Deere");
+                var item = prompt("What item would you like to buy?", "tractor");
+                var amt = prompt("How many of those would you like?", "39");
+                const date = new Date();
+                const hour = date.getHours();
+                const minute = date.getMinutes();
+                const time = hour + ":" + minute;
+                
+                var overflow = date.getDate() + 7;
+                if (overflow > 31)
+                {
+                    if (date.getMonth() == 11)
+                    {
+                        date.setFullYear(date.getFullYear() + 1);
+                        date.setMonth(0);
+                    }
+                    date.setMonth(date.getMonth() + 1);
+                    date.setDate(overflow - 31);
+                }
+                const delivery = (date.getMonth() + 1) + " / " + (date.getDate() + 7) + " / " + date.getFullYear();
+
+                var greeting;
+
+                if (hour >= 18 || hour < 6)
+                {
+                    greeting = "Good evening";
+                }
+                else if (hour >= 12)
+                {
+                    greeting = "Good afternoon";
+                }
+                else if (hour >= 6)
+                {
+                    greeting = "Good morning";
+                }
+
+                if (name != null)
+                {
+                    document.getElementById("getName").innerHTML =
+                    greeting + " " + name + ", thank you for your purchase!<br>The current time is " + time;
+                }
+
+                if (item != null)
+                {
+                    document.getElementById("getItems").innerHTML =
+                    "You requested to buy a " + item + " " + amt + "x times.<br>Your item will be delivered by about " + delivery;
+                }
+            }
+        </script>
         <title>Lab 4</title>
     </head>
-    <body>
+
+    <body onload="welcome()">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         <div id="nav-container"></div>
-    
+        
+        <div class="container-fluid">
+            <p id="getName"></p>
+            <p id="getItems"></p>
+        </div>
+
         <script src="navbar.js"></script>
     </body>
 </html>

@@ -75,4 +75,5 @@ c9743dc v0.3.11.3 buttons are now in an unordered list
             > continue working on keyboard information page
 fcad103 v0.3.12.1 adjusted column size for section legend
 8d93cb6 v0.4 set up lab4.html
-        v0.4.0.1 reusable navbar using js
+2c13715 v0.4.0.1 reusable navbar using js
+        v0.4.1 filled out architecture for lab 4
