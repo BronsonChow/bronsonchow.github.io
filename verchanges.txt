@@ -76,4 +76,5 @@ c9743dc v0.3.11.3 buttons are now in an unordered list
 fcad103 v0.3.12.1 adjusted column size for section legend
 8d93cb6 v0.4 set up lab4.html
 2c13715 v0.4.0.1 reusable navbar using js
-        v0.4.1 filled out architecture for lab 4
+889ee21 v0.4.1 filled out architecture for lab 4
+        v0.4.1.1 optimized variables for redundancy & completed date overflow calculation

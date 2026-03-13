@@ -11,38 +11,35 @@
             function welcome()
             {
                 alert("Welcome to Chow's Ordering Store!");
+                const date = new Date();
                 var name = prompt("What is your name?", "John Deere");
                 var item = prompt("What item would you like to buy?", "tractor");
                 var amt = prompt("How many of those would you like?", "39");
-                const date = new Date();
-                const hour = date.getHours();
-                const minute = date.getMinutes();
-                const time = hour + ":" + minute;
-                
-                var overflow = date.getDate() + 7;
-                if (overflow > 31)
-                {
-                    if (date.getMonth() == 11)
-                    {
-                        date.setFullYear(date.getFullYear() + 1);
-                        date.setMonth(0);
-                    }
-                    date.setMonth(date.getMonth() + 1);
-                    date.setDate(overflow - 31);
-                }
-                const delivery = (date.getMonth() + 1) + " / " + (date.getDate() + 7) + " / " + date.getFullYear();
-
                 var greeting;
+                var time = date.getHours() + ":" + date.getMinutes();
+                var month = date.getMonth() + 1;
+                var day = date.getDate() + 7;
+                var year = date.getFullYear();
+                
+                if (day > 31)
+                {
+                    if (month == 11)
+                    {
+                        year++;
+                        month = 0;
+                    }
+                    month++;
+                    day -= 31;
+                }
+                var delivery = month + " / " + day + " / " + year;
 
-                if (hour >= 18 || hour < 6)
+                if (date.getHours() >= 18 || hour < 6)
                 {
                     greeting = "Good evening";
-                }
-                else if (hour >= 12)
+                } else if (date.getHours() >= 12)
                 {
                     greeting = "Good afternoon";
-                }
-                else if (hour >= 6)
+                } else if (date.getHours() >= 6)
                 {
                     greeting = "Good morning";
                 }
@@ -50,13 +47,19 @@
                 if (name != null)
                 {
                     document.getElementById("getName").innerHTML =
-                    greeting + " " + name + ", thank you for your purchase!<br>The current time is " + time;
+                    greeting + " " + name + ", thank you for your purchase!";
                 }
 
-                if (item != null)
+                if (item != null && amt > 0 && amt <= 99)
                 {
                     document.getElementById("getItems").innerHTML =
-                    "You requested to buy a " + item + " " + amt + "x times.<br>Your item will be delivered by about " + delivery;
+                    "The current time is " + time +
+                    "<br>You requested to buy " + item + " ( " + amt + " ) times.<br>Your item will be delivered by " + delivery +
+                    "<br><br>We hope to see you again soon!";
+                } else if (amt <= 0 || amt > 99)
+                {
+                    document.getElementById("getItems").innerHTML =
+                    "Invalid item amount; " + item + " ( " + amt + " ) is not within the available parameters ( 1-99 )";
                 }
             }
         </script>
