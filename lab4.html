@@ -12,9 +12,9 @@
             {
                 alert("Welcome to Chow's Ordering Store!");
                 const date = new Date();
-                var name = prompt("What is your name?", "John Deere");
-                var item = prompt("What item would you like to buy?", "tractor");
-                var amt = prompt("How many of those would you like?", "39");
+                const name = prompt("What is your name?", "John Deere");
+                const item = prompt("What item would you like to buy?", "tractor");
+                const amt = prompt("How many of those would you like?", "39");
                 var greeting;
                 var time = date.getHours() + ":" + date.getMinutes();
                 var month = date.getMonth() + 1;
@@ -32,8 +32,8 @@
                     day -= 31;
                 }
                 var delivery = month + " / " + day + " / " + year;
-
-                if (date.getHours() >= 18 || hour < 6)
+                document.getElementById("getName").innerHTML = "test4 ";
+                if (date.getHours() >= 18 || date.getHours() < 6)
                 {
                     greeting = "Good evening";
                 } else if (date.getHours() >= 12)
@@ -43,7 +43,7 @@
                 {
                     greeting = "Good morning";
                 }
-
+                document.getElementById("getName").innerHTML = "test5 ";
                 if (name != null)
                 {
                     document.getElementById("getName").innerHTML =
