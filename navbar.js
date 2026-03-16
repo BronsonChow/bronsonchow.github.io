@@ -20,6 +20,7 @@ const navigation = `
                         <li><a class="dropdown-item" href="StarterPage.html">Lab 2 - Starter Page</a></li>
                         <li><a class="dropdown-item" href="lab3.html">Lab 3 - Bootstrap</a></li>
                         <li><a class="dropdown-item" href="lab4.html">Lab 4 - JavaScript</a></li>
+                        <li><a class="dropdown-item" href="lab5.html">Lab 5 - JavaScript contd.</a></li>
                     </ul>
                 </li>
                 <div class="me-4"></div>
