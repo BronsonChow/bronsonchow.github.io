@@ -1,5 +1,5 @@
 const navigation = `
-<nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+<nav class="navbar navbar-expand-md fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html">BC</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

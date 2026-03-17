@@ -79,4 +79,5 @@ fcad103 v0.3.12.1 adjusted column size for section legend
 889ee21 v0.4.1 filled out architecture for lab 4
 dbb20c9 v0.4.1.1 optimized variables for redundancy & completed date overflow calculation
 2fdb473 v0.4.1.2 fixed error with missing hour variable
-        v0.5 set up lab5.html
+240b656 v0.5 set up lab5.html
+        v0.5.1 filled out architecture for lab 5 & slight navbar/jumbotron palette swap

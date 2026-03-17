@@ -38,6 +38,8 @@ table {
     font-size: 1.1rem;
 }
 .navbar {
+    height: 3.5rem;
+    background-color: #809ec2;
     padding: 0;
 }
 .navbar-brand {
@@ -52,7 +54,7 @@ table {
     color: #04254E;
 }
 .jumbotron {
-    background-color: #CFCFCF;
+    background-color: #a9b6c7;
     margin: 0;
     padding-bottom: 0px;
 }
