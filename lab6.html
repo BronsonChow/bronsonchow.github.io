@@ -10,13 +10,18 @@
         <script>
             var img_tracker = true;
 
+            async function cat_info()
+            {
+                const response = await fetch('https://brianobruno.github.io/cats.json');
+                const result = await response.text();
+                catget = JSON.parse(result);
+            }
+
             function swap_img()
             {
-                var image = document.getElementById('catimg');
-
                 if (img_tracker)
                 {
-                    catimg.src = "./assets/doro.png";
+                    catimg.src = catget.catPhoto;
                     img_tracker = !img_tracker;
                 } else
                 {
@@ -28,7 +33,7 @@
         <title>Lab 6</title>
     </head>
 
-    <body>
+    <body onload="cat_info()">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         
         <div id="nav-container"></div>
@@ -48,15 +53,10 @@
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 centered">
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#catinfo" aria-expanded="false" aria-controls="catinfo">Display Cat Facts</button>
-                </div>
-                <div class="col-md-6 centered">
-                    <button class="btn btn-primary" type="button" onclick="swap_img();">Swap Cat Image</button>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-md-6">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#catinfo" aria-expanded="false" aria-controls="catinfo">Display Cat Facts</button>
+                    </div>
                     <div class="collapse multi-collapse" id="catinfo">
                         <div class="card card-body">
                             <p id="catinfo"></p>
@@ -64,8 +64,11 @@
                     </div>
                 </div>
                 <div class="col-md-6">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-light" type="button" onclick="swap_img();">Swap Cat Image</button>
+                    </div>
                     <div class="card card-body">
-                        <img id="catimg" src="./assets/minecraftcat.png"/>
+                        <img id="catimg" style="height: auto; max-width: 100%;" src="./assets/minecraftcat.png"/>
                     </div>
                 </div>
             </div>

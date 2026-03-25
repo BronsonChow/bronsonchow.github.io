@@ -82,5 +82,6 @@ dbb20c9 v0.4.1.1 optimized variables for redundancy & completed date overflow ca
 240b656 v0.5 set up lab5.html
 d04a09c v0.5.1 filled out architecture for lab 5 & slight navbar/jumbotron palette swap
 d53974c v0.6 set up lab6.html
-        v0.6.1 swap image button working
+f1fa6b2 v0.6.1 swap image button working
         > removed debug tests from lab4.html
+        v0.6.2 fetch image from api correctly displayed

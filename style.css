@@ -80,3 +80,6 @@ table {
     justify-content: center;
     display: flex;
 }
+.btn-light {
+    border-color: #e7e7e7;
+}
