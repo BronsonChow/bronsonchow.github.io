@@ -7,15 +7,69 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Dosis|Oswald' rel='stylesheet'>
-        
+        <script>
+            var img_tracker = true;
+
+            function swap_img()
+            {
+                var image = document.getElementById('catimg');
+
+                if (img_tracker)
+                {
+                    catimg.src = "./assets/doro.png";
+                    img_tracker = !img_tracker;
+                } else
+                {
+                    catimg.src = "./assets/minecraftcat.png";
+                    img_tracker = !img_tracker;
+                }
+            }
+        </script>
         <title>Lab 6</title>
     </head>
 
     <body>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        
         <div id="nav-container"></div>
         
-        
+        <div class="jumbotron">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                        <h1 class="display-3">Cat Information</h1>
+                        <p class="lead">Learn some cat facts !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        &nbsp;
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 centered">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#catinfo" aria-expanded="false" aria-controls="catinfo">Display Cat Facts</button>
+                </div>
+                <div class="col-md-6 centered">
+                    <button class="btn btn-primary" type="button" onclick="swap_img();">Swap Cat Image</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="collapse multi-collapse" id="catinfo">
+                        <div class="card card-body">
+                            <p id="catinfo"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-body">
+                        <img id="catimg" src="./assets/minecraftcat.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="navbar.js"></script>
     </body>
