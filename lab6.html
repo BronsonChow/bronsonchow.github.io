@@ -16,11 +16,12 @@
                 const result = await response.text();
                 catget = JSON.parse(result);
 
-                const catcont = document.getElementById("showinfo");            
+                const catcont = document.getElementById("showinfo");     
+                catget.facts.sort((x, y) => x.factId - y.factId);       
                 for (const i of catget.facts)
                 {
                     const p = document.createElement("p")
-                    p.textContent = i.text;
+                    p.textContent = i.factId + ": " + i.text;
                     catcont.appendChild(p);
                     console.log(i.factId);
                 }
