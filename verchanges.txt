@@ -87,4 +87,5 @@ f1fa6b2 v0.6.1 swap image button working
 3d8e3fb v0.6.2 fetch image from api correctly displayed
 a37f02b v0.6.3 display cat facts
 4452a65 v0.6.4 sorted cat facts in order of id
-        v0.6.4.1 adjusted tag format
+ecd1804 v0.6.4.1 adjusted tag format
+        v0.6.4.2 cleaned up unnecessary bits
