@@ -90,4 +90,5 @@ a37f02b v0.6.3 display cat facts
 ecd1804 v0.6.4.1 adjusted tag format
 796cbf5 v0.6.4.2 cleaned up unnecessary bits
 2b89de5 v0.7 set up final.html
-        v0.7.0.1 set up template.html for ease of page creation
+7de626b v0.7.0.1 set up template.html for ease of page creation
+        v0.7.1 added 1 potential API to list
