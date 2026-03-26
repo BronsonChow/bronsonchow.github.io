@@ -84,4 +84,5 @@ d04a09c v0.5.1 filled out architecture for lab 5 & slight navbar/jumbotron palet
 d53974c v0.6 set up lab6.html
 f1fa6b2 v0.6.1 swap image button working
         > removed debug tests from lab4.html
-        v0.6.2 fetch image from api correctly displayed
+3d8e3fb v0.6.2 fetch image from api correctly displayed
+        v0.6.3 display cat facts
