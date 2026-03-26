@@ -16,14 +16,16 @@
                 const result = await response.text();
                 catget = JSON.parse(result);
 
-                const catcont = document.getElementById("showinfo");     
-                catget.facts.sort((x, y) => x.factId - y.factId);       
+                const catcont = document.getElementById("showinfo");
+                catget.facts.sort((x, y) => x.factId - y.factId);
                 for (const i of catget.facts)
                 {
-                    const p = document.createElement("p")
-                    p.textContent = i.factId + ": " + i.text;
-                    catcont.appendChild(p);
-                    console.log(i.factId);
+                    const n = document.createElement("th");
+                    const p = document.createElement("td");
+                    n.textContent = i.factId + ": ";
+                    p.textContent = i.text;
+                    catcont.append(n, p);
+                    catcont.append(document.createElement("br"));
                 }
             }
 
