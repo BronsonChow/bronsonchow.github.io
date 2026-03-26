@@ -22,6 +22,8 @@ const navigation = `
                         <li><a class="dropdown-item" href="lab4.html">Lab 4 - JavaScript</a></li>
                         <li><a class="dropdown-item" href="lab5.html">Lab 5 - JavaScript contd.</a></li>
                         <li><a class="dropdown-item" href="lab6.html">Lab 6 - Rest API</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="final.html">Final Project</a></li>
                     </ul>
                 </li>
                 <div class="me-4"></div>
