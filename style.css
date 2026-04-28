@@ -38,7 +38,7 @@ table {
     font-size: 1.1rem;
 }
 .navbar {
-    height: 3.5rem;
+    min-height: 4rem;
     background-color: #809ec2;
     padding: 0;
 }

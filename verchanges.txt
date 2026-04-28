@@ -93,4 +93,5 @@ ecd1804 v0.6.4.1 adjusted tag format
 7de626b v0.7.0.1 set up template.html for ease of page creation
 bdf5db2 v0.7.1 added 1 potential API to list
 d0efc3e v0.7.2 added remaining potential APIs to list
-        v0.7.3 organized html into individual folders with respective navbars
+457ff79 v0.7.3 organized html into individual folders with respective navbars
+        v0.7.3.1 fixed "transparent" navbar collapse

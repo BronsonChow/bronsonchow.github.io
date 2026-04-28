@@ -26,18 +26,20 @@ const navigation = `
                         <li><a class="dropdown-item" href="final.html">Final Project</a></li>
                     </ul>
                 </li>
+                <!--
                 <div class="me-4"></div>
-                <li class="nav-item align-items-center d-flex"> <!--TODO nonfunctional light/dark mode-->
+                <li class="nav-item align-items-center d-flex">
                     <i class="fa fa-sun-o"></i>
                     <div class="ms-2 form-check form-switch ml-auto">
                         <input class="form-check-input" type="checkbox" role="switch" id="themingSwitcher" />
                     </div>
                     <i class="fa fa-moon-o"></i>
                 </li>
+                -->
             </ul>
         </div>
     </div>
 </nav>
-<div style="margin:3.5rem"></div>
+<div style="margin:4rem"></div>
 `;
 document.getElementById("nav").insertAdjacentHTML('afterbegin', navigation);
