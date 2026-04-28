@@ -94,4 +94,5 @@ ecd1804 v0.6.4.1 adjusted tag format
 bdf5db2 v0.7.1 added 1 potential API to list
 d0efc3e v0.7.2 added remaining potential APIs to list
 457ff79 v0.7.3 organized html into individual folders with respective navbars
-        v0.7.3.1 fixed "transparent" navbar collapse
+04010ad v0.7.3.1 fixed "transparent" navbar collapse
+        v0.7.4 mockup of final project layout
