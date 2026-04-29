@@ -95,4 +95,5 @@ bdf5db2 v0.7.1 added 1 potential API to list
 d0efc3e v0.7.2 added remaining potential APIs to list
 457ff79 v0.7.3 organized html into individual folders with respective navbars
 04010ad v0.7.3.1 fixed "transparent" navbar collapse
-        v0.7.4 mockup of final project layout
+00ada71 v0.7.4 mockup of final project layout
+        v0.7.5 added html for each page in final

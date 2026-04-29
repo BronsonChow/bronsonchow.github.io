@@ -23,7 +23,7 @@ const navigation = `
                         <li><a class="dropdown-item" href="../labs/lab5.html">Lab 5 - JavaScript contd.</a></li>
                         <li><a class="dropdown-item" href="../labs/lab6.html">Lab 6 - Rest API</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="../labs/final.html">Final Project</a></li>
+                        <li><a class="dropdown-item" href="../labs/final/final.html">Final Project</a></li>
                     </ul>
                 </li>
                 <div class="me-4"></div>
