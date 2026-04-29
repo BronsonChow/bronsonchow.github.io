@@ -83,3 +83,8 @@ table {
 .btn-light {
     border-color: #e7e7e7;
 }
+#songCell {
+    max-width: 40rem;
+    border-radius: 0.5rem 2rem;
+    border: 0.1rem solid #000000;
+}

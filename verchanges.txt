@@ -96,4 +96,5 @@ d0efc3e v0.7.2 added remaining potential APIs to list
 457ff79 v0.7.3 organized html into individual folders with respective navbars
 04010ad v0.7.3.1 fixed "transparent" navbar collapse
 00ada71 v0.7.4 mockup of final project layout
-        v0.7.5 added html for each page in final
+63bf481 v0.7.5 added html for each page in final
+        v0.7.6 mockup of final/favorites/ song cell layout
