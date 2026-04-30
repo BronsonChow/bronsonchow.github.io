@@ -1,7 +1,12 @@
 const songCell = document.getElementById("favSongs");
 const producerCell = document.getElementById("favProducers");
 const favSongs = [178119, 805916, 820162, 131090, 812344, 829512, 160589, 164107, 166391, 850999, 129109, 753120, 642667];
-const favProducers = [144288];
+const favProducers = [144288, 28, 99484];
+const favProducersM = [
+    {id: 28, alias: "ピノキオP", voicebanks: "Hatsune Miku V4X (Original), Hatsune Miku V4X (Dark)", lang: "Japanese, English"}
+,   {id: 144288, alias: "TAK / DORIDORI", voicebanks: "Hatsune Miku V4X (Original), Kasane Teto SV", lang: "Japanese, Korean, English"}
+,   {id: 99484, alias: " ", voicebanks: " ", lang: " "}
+];
 
 async function loadSongs()
 {
@@ -28,7 +33,32 @@ async function loadSongs()
         }
     }
 }
-function createSongCells()
+async function loadProducers()
+{
+    for (let favProducerId of favProducers)
+    {
+        const cacheKey = `cachedProducer${favProducerId}`;
+        const producerExist = localStorage.getItem(cacheKey);
+
+        if (producerExist)
+        {
+            console.log(`Loading producer ID ${favProducerId} from localStorage`);
+            continue;
+        }
+        try
+        {
+            const result = await fetch(`https://vocadb.net/api/artists/${favProducerId}?fields=MainPicture&lang=English`);
+            const producer = await result.json();
+            localStorage.setItem(cacheKey, JSON.stringify(producer));
+            console.log(`Producer ${favProducerId} successfully saved to localStorage`);
+        }
+        catch (error)
+        {
+            console.warn(`Error for producer ${favProducerId}`);
+        }
+    }
+}
+function createFavCells()
 {
     for (let i = 0; i < localStorage.length; i++)
     {
@@ -55,28 +85,55 @@ function createSongCells()
                 <div class="row">
                     <div class="col-md-3 centered">
                         <div class="image-container">
-                            <img class="img-fluid" src="${song.mainPicture.urlOriginal}" title="${song.name}"/>
+                            <img class="img-fluid" style="transform: scale(1.5);" src="${song.mainPicture.urlOriginal}" title="${song.name}"/>
                         </div>
                     </div>
                     <div class="col-md-9">
                         <p><b>${song.name}</b></p>
                         <p>
-                            Producer(s): ${song.artistString} <br>
-                            Length: ${minutes}:${formattedSeconds} <br>
-                            Published: ${formattedDate} <br>
+                            <b>Producer(s):</b> ${song.artistString} <br>
+                            <b>Length:</b> ${minutes}:${formattedSeconds} <br>
+                            <b>Published:</b> ${formattedDate} <br>
                             <a target="_blank" href="https://vocadb.net/S/${song.id}">VocaDB link</a>
                         </p>
                     </div>
                 </div>
             </div>
             `;
+            songCell.appendChild(cell);
         }
-        songCell.appendChild(cell);
+        if (key.startsWith('cachedProducer'))
+        {
+            const producer = JSON.parse(localStorage.getItem(key));
+            const alias = favProducersM.find(p => p.id === producer.id)?.alias;
+            const voicebanks = favProducersM.find(p => p.id === producer.id)?.voicebanks;
+            const lang = favProducersM.find(p => p.id === producer.id)?.lang;
+            
+            cell.innerHTML =
+            `
+            &nbsp;
+            <div class="container-fluid" id="producerCell">
+                <div class="row">
+                    <div class="col-md-3 centered">
+                        <div class="image-container">
+                            <img class="img-fluid" src="${producer.mainPicture.urlOriginal}" title="${producer.name}"/>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <p><b>${producer.name}</b></p>
+                        <p>
+                            <b>Aliases:</b> ${alias}<br>
+                            <b>Main Voicebank(s):</b> ${voicebanks} <br>
+                            <b>Main Language(s):</b> ${lang} <br>
+                            <a target="_blank" href="https://vocadb.net/Ar/${producer.id}">VocaDB link</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            `;
+            producerCell.appendChild(cell);
+        }
     }
-}
-async function loadProducers()
-{
-
 }
 function getLocalStorageUsage()
 {
@@ -103,8 +160,7 @@ async function testLog()
 }
 
 loadSongs();
-// loadProducers();
-createSongCells();
-// createProducerCells();
+loadProducers();
+createFavCells();
 testLog();
 // localStorage.clear();

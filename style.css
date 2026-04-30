@@ -37,6 +37,9 @@ table {
     font-family: Dosis;
     font-size: 1.1rem;
 }
+.row {
+    margin: 0 auto;
+}
 .navbar {
     min-height: 4rem;
     background-color: #809ec2;
@@ -93,11 +96,15 @@ table {
 .image-container img {
     width: 100%;
     height: 100%;
-    transform: scale(1.5);
     object-fit: cover;
     object-position: center;
 }
 #songCell {
+    max-width: 50rem;
+    border-radius: 0.5rem 2rem;
+    border: 0.2rem solid #a9b6c7;
+}
+#producerCell {
     max-width: 50rem;
     border-radius: 0.5rem 2rem;
     border: 0.2rem solid #a9b6c7;
