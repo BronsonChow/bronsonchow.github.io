@@ -97,4 +97,6 @@ d0efc3e v0.7.2 added remaining potential APIs to list
 04010ad v0.7.3.1 fixed "transparent" navbar collapse
 00ada71 v0.7.4 mockup of final project layout
 63bf481 v0.7.5 added html for each page in final
-        v0.7.6 mockup of final/favorites/ song cell layout
+ef7f2d3 v0.7.6 mockup of final/favorites/ song cell layout
+        v0.7.7 favorite song cells format finalized
+        > removed footer section for keyb.html
