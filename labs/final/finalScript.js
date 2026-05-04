@@ -1,11 +1,16 @@
-const songCell = document.getElementById("favSongs");
-const producerCell = document.getElementById("favProducers");
+const songIndex = document.getElementById("favSongIndex");
+const songCell = document.getElementById("favSongCells");
+const producerIndex = document.getElementById("favProducerIndex");
+const producerCell = document.getElementById("favProducerCells");
 const favSongs = [178119, 805916, 820162, 131090, 812344, 829512, 164107, 166391, 850999, 129109, 753120, 642667, 131087, 198286, 588814, 506793, 1508];
-const favProducers = [144288, 28, 99484];
+const favProducers = [144288, 28, 99484, 53, 23155, 144555];
 const favProducersM = [
     {id: 28, alias: "ピノキオP", voicebanks: "Hatsune Miku V4X (Original), Hatsune Miku V4X (Dark)", lang: "Japanese, English"}
 ,   {id: 144288, alias: "TAK / DORIDORI", voicebanks: "Hatsune Miku V4X (Original), Kasane Teto SV", lang: "Japanese, Korean, English"}
-,   {id: 99484, alias: " ", voicebanks: " ", lang: " "}
+,   {id: 99484, alias: "", voicebanks: "Hatsune Miku V4 (English)", lang: "English"}
+,   {id: 53, alias: "GenjitsutouhiP", voicebanks: "Hatsune Miku, GUMI, Megurine Luka", lang: "Japanese"}
+,   {id: 23155, alias: "", voicebanks: "Kasane Teto SV, V3 GUMI", lang: "English"}
+,   {id: 144555, alias: "東京真中, Tokyo Manaka", voicebanks: "Kasane Teto SV, Chis-A, Hatsune Miku", lang: "Japanese"}
 ];
 const data = [];
 
@@ -74,13 +79,13 @@ function createSongIndex()
             `
             <div class="container-fluid" id="songIndex">
                 <div class="row justify-content-center">
-                    <div class="col-md-10" style="max-width: 400px;">
+                    <div class="col-lg-10" style="max-width: 400px;">
                         <a class="btn btn-light centered" href="#${song?.id}" role="button" style="padding: 0;"><b>${song?.name}</b></a>
                     </div>
                 </div>
             </div>
             `;
-            songCell.appendChild(cell);
+            songIndex.appendChild(cell);
         }
     }
 }
@@ -110,12 +115,12 @@ function createSongCells()
             <a class="anchor" id="${song.id}"></a>
             <div class="container-fluid" id="songCell">
                 <div class="row">
-                    <div class="col-md-3 centered" style="padding-left: 0px;">
+                    <div class="col-lg-3 centered" style="padding-left: 0px;">
                         <div class="image-container">
                             <img class="img-fluid" style="transform: scale(1.5);" src="${song?.mainPicture?.urlOriginal}" title="${song.name}"/>
                         </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-lg-9">
                         <p><b>${song.name}</b></p>
                         <p>
                             <b>Producer(s):</b> ${song.artistString} <br>
@@ -146,13 +151,13 @@ function createProducerIndex()
             `
             <div class="container-fluid" id="producerIndex">
                 <div class="row justify-content-center">
-                    <div class="col-md-10" style="max-width: 400px;">
+                    <div class="col-lg-10" style="max-width: 400px;">
                         <a class="btn btn-light centered" href="#${producer?.id}" role="button" style="padding: 0;"><b>${producer?.name}</b></a>
                     </div>
                 </div>
             </div>
             `;
-            producerCell.appendChild(cell);
+            producerIndex.appendChild(cell);
         }
     }
 }
@@ -175,12 +180,12 @@ function createProducerCells()
             &nbsp;
             <div class="container-fluid" id="producerCell">
                 <div class="row">
-                    <div class="col-md-3 centered" style="padding-left: 5px;">
+                    <div class="col-lg-3 centered" style="padding-left: 0px;">
                         <div class="image-container">
                             <img class="img-fluid" src="${producer?.mainPicture?.urlOriginal}" title="${producer.name}"/>
                         </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-lg-9">
                         <p><b>${producer.name}</b></p>
                         <p>
                             <b>Aliases:</b> ${alias}<br>

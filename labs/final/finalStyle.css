@@ -1,3 +1,27 @@
+body {
+    background-color: #DAEBFF;
+}
+h1 {
+    color: #FFFFFF;
+    font-family: Oswald, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 0.1rem 0.1rem 0.3rem #04254E;
+}
+.cell {
+    padding: 1rem;
+    border-radius: 0.5rem 2rem;
+    background-color: #FFFFFF;
+}
+.btn-light {
+    border-color: #DAEBFF;
+    --bs-btn-bg: #ECF4FE;
+    --bs-btn-hover-bg: #FFFFFF;
+    --bs-btn-hover-border-color: #04254E;
+    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-active-bg: #04254E;
+    --bs-btn-active-border-color: #04254E;
+}
 .image-container {
     height: 10rem;
     border-radius: 0.5rem 2rem;
@@ -9,16 +33,38 @@
     object-fit: cover;
     object-position: center;
 }
+.jumbotron {
+    background-color: #8BBCF9;
+    margin: 0;
+    padding-bottom: 0px;
+}
+.navbar {
+    min-height: 4rem;
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #8BBCF9;
+    padding: 0;
+}
+.navbar-brand {
+    color: #FFFFFF;
+    font-family: Oswald, sans-serif;
+    font-size: 2rem;
+    margin-right: 1rem;
+    text-shadow: 0.1rem 0.1rem 0.3rem #04254E;
+    transition: 0.2s;
+}
+.navbar-brand:hover {
+    color: #04254E;
+}
 #songCell {
     max-width: 50rem;
     border-radius: 0.5rem 2rem;
-    background-color: #809ec2;
+    background-color: #FFFFFF;
     padding: 0;
 }
 #producerCell {
     max-width: 50rem;
     border-radius: 0.5rem 2rem;
-    background-color: #809ec2;
+    background-color: #FFFFFF;
     padding: 0;
 }
 #songIndex {

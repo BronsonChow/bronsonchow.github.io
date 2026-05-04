@@ -106,5 +106,6 @@ f9b2293 v0.7.7 favorite song cells format finalized
 bdd4c21 v0.7.9.1 separated song/producer cell creation into respective asynchronous loading functions
 84c6411 v0.7.9.2 array object sorting test
 4770575 v0.7.9.3 songs listed alphabetically
-        v0.7.9.4 button to sort songs by alphabetically/id
+3142a3a v0.7.9.4 button to sort songs by alphabetically/id
         > separated style.css's final's components into separate stylesheet (finalStyle.css)
+        v0.7.10 revamped css for final's pages
