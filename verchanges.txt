@@ -102,4 +102,5 @@ f9b2293 v0.7.7 favorite song cells format finalized
         > removed footer section for keyb.html
 82b9ce6 v0.7.8 favorite artist cells format mostly done
         > fixed margin bug with row div
-        v0.7.9 possible fix for producers not showing up
+0d19f1a v0.7.9 possible fix for producers not showing up
+        v0.7.9.1 separated song/producer cell creation into respective asynchronous loading functions

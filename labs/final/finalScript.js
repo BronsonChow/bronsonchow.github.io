@@ -1,6 +1,6 @@
 const songCell = document.getElementById("favSongs");
 const producerCell = document.getElementById("favProducers");
-const favSongs = [178119, 805916, 820162, 131090, 812344, 829512, 160589, 164107, 166391, 850999, 129109, 753120, 642667];
+const favSongs = [178119, 805916, 820162, 131090, 812344, 829512, 164107, 166391, 850999, 129109, 753120, 642667];
 const favProducers = [144288, 28, 99484];
 const favProducersM = [
     {id: 28, alias: "ピノキオP", voicebanks: "Hatsune Miku V4X (Original), Hatsune Miku V4X (Dark)", lang: "Japanese, English"}
@@ -32,6 +32,7 @@ async function loadSongs()
             console.warn(`Error for song ${favSongId}`);
         }
     }
+    createSongCells();
 }
 async function loadProducers()
 {
@@ -57,12 +58,13 @@ async function loadProducers()
             console.warn(`Error for producer ${favProducerId}`);
         }
     }
+    createProducerCells();
 }
-function createFavCells()
+function createSongCells()
 {
     for (let i = 0; i < localStorage.length; i++)
     {
-        const cell = document.createElement("paragraph");
+        const cell = document.createElement("p");
         const key = localStorage.key(i);
 
         if (key.startsWith('cachedSong'))
@@ -102,6 +104,15 @@ function createFavCells()
             `;
             songCell.appendChild(cell);
         }
+    }
+}
+function createProducerCells()
+{
+    for (let i = 0; i < localStorage.length; i++)
+    {
+        const cell = document.createElement("p");
+        const key = localStorage.key(i);
+
         if (key.startsWith('cachedProducer'))
         {
             const producer = JSON.parse(localStorage.getItem(key));
@@ -161,6 +172,5 @@ async function testLog()
 
 loadSongs();
 loadProducers();
-createFavCells();
 testLog();
 // localStorage.clear();
