@@ -7,8 +7,9 @@ const favProducersM = [
 ,   {id: 144288, alias: "TAK / DORIDORI", voicebanks: "Hatsune Miku V4X (Original), Kasane Teto SV", lang: "Japanese, Korean, English"}
 ,   {id: 99484, alias: " ", voicebanks: " ", lang: " "}
 ];
+const data = [];
 
-async function loadSongs()
+async function loadData()
 {
     for (let favSongId of favSongs)
     {
@@ -32,11 +33,6 @@ async function loadSongs()
             console.warn(`Error for song ${favSongId}`);
         }
     }
-    createSongIndex();
-    createSongCells();
-}
-async function loadProducers()
-{
     for (let favProducerId of favProducers)
     {
         const cacheKey = `cachedProducer${favProducerId}`;
@@ -59,6 +55,9 @@ async function loadProducers()
             console.warn(`Error for producer ${favProducerId}`);
         }
     }
+    sortData();
+    createSongIndex();
+    createSongCells();
     createProducerCells();
 }
 function createSongIndex()
@@ -66,18 +65,18 @@ function createSongIndex()
     for (let i = 0; i < localStorage.length; i++)
     {
         const cell = document.createElement("div");
-        const key = localStorage.key(i);
+        const key = data[i]?.dataKey;
 
         if (key.startsWith('cachedSong'))
         {
-            const song = JSON.parse(localStorage.getItem(key));
+            const song = JSON.parse(localStorage.getItem(`cachedSong${data[i]?.id}`));
             
             cell.innerHTML =
             `
             <div class="container-fluid" id="songIndex">
                 <div class="row justify-content-center">
                     <div class="col-md-10" style="max-width: 400px;">
-                        <a class="btn btn-light centered" href="#${song.id}" role="button" style="padding: 0;"><b>${song.name}</b></a>
+                        <a class="btn btn-light centered" href="#${song?.id}" role="button" style="padding: 0;"><b>${song?.name}</b></a>
                     </div>
                 </div>
             </div>
@@ -91,11 +90,11 @@ function createSongCells()
     for (let i = 0; i < localStorage.length; i++)
     {
         const cell = document.createElement("div");
-        const key = localStorage.key(i);
+        const key = data[i]?.dataKey;
 
         if (key.startsWith('cachedSong'))
         {
-            const song = JSON.parse(localStorage.getItem(key));
+            const song = JSON.parse(localStorage.getItem(`cachedSong${data[i]?.id}`));
             const minutes = Math.floor(song.lengthSeconds / 60);
             const seconds = song.lengthSeconds % 60;
             const formattedSeconds = seconds.toString().padStart(2, '0');
@@ -138,11 +137,11 @@ function createProducerCells()
     for (let i = 0; i < localStorage.length; i++)
     {
         const cell = document.createElement("div");
-        const key = localStorage.key(i);
+        const key = data[i]?.dataKey;
 
         if (key.startsWith('cachedProducer'))
         {
-            const producer = JSON.parse(localStorage.getItem(key));
+            const producer = JSON.parse(localStorage.getItem(`cachedProducer${data[i]?.id}`));
             const alias = favProducersM.find(p => p.id === producer.id)?.alias;
             const voicebanks = favProducersM.find(p => p.id === producer.id)?.voicebanks;
             const lang = favProducersM.find(p => p.id === producer.id)?.lang;
@@ -190,26 +189,15 @@ function getLocalStorageUsage()
     console.log(`LocalStorage Bytes Remaining: ${remainingBytes}`);
     console.log(`LocalStorage Percentage Used: ${formattedPercentage} %`);
 }
-function sortLocalStorage()
+function sortData()
 {
-    const array = [];
     for (let i = 0; i < localStorage.length; i++)
     {
         const key = localStorage.key(i);
-        const arrayJSON = JSON.parse(localStorage.getItem(key));
-        array.push({arrayJSON});
-        console.log(arrayJSON.name);
+        const dataJSON = JSON.parse(localStorage.getItem(key));
+        data.push({id: dataJSON?.id, name: dataJSON?.name, dataKey: key});
     }
-    array.sort((x, y) => x?.arrayJSON?.name?.localeCompare(y?.arrayJSON?.name, undefined, { sensitivity: 'base' }));
-    for (let i = 0; i < localStorage.length; i++)
-    {
-        console.log(array[i]);
-    }
-    for (let i = 0; i < localStorage.length; i++)
-    {
-        const key = localStorage.key(i);
-        console.log(key);
-    }
+    data.sort((x, y) => x?.name?.localeCompare(y?.name, undefined, { sensitivity: 'base' }));
 }
 async function testLog()
 {
@@ -218,8 +206,4 @@ async function testLog()
     getLocalStorageUsage(); 
 }
 
-loadSongs();
-loadProducers();
 testLog();
-// localStorage.clear();
-sortTest();
