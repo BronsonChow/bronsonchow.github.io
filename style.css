@@ -1,3 +1,11 @@
+/*
+Palette
+    C9F8F3 Light turq
+    2AE4CC Turquoise
+    222222 Dark Gray
+    DB504A Darkish Copper
+    FF6F59 Copper
+*/
 h1 {
     color: #FFFFFF;
     font-family: Oswald, sans-serif;
@@ -91,30 +99,4 @@ table {
 }
 .btn-light {
     border-color: #e7e7e7;
-}
-.image-container {
-    height: 10rem;
-    border: 0.2rem solid #a9b6c7;
-    border-radius: 0.5rem 2rem;
-    overflow: hidden;
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-#songCell {
-    max-width: 50rem;
-    border-radius: 0.5rem 2rem;
-    border: 0.2rem solid #a9b6c7;
-}
-#producerCell {
-    max-width: 50rem;
-    border-radius: 0.5rem 2rem;
-    border: 0.2rem solid #a9b6c7;
-}
-#songIndex {
-    object-position: center;
 }

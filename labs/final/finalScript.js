@@ -1,6 +1,6 @@
 const songCell = document.getElementById("favSongs");
 const producerCell = document.getElementById("favProducers");
-const favSongs = [178119, 805916, 820162, 131090, 812344, 829512, 164107, 166391, 850999, 129109, 753120, 642667, 131087, 198286, 588814, 506793];
+const favSongs = [178119, 805916, 820162, 131090, 812344, 829512, 164107, 166391, 850999, 129109, 753120, 642667, 131087, 198286, 588814, 506793, 1508];
 const favProducers = [144288, 28, 99484];
 const favProducersM = [
     {id: 28, alias: "ピノキオP", voicebanks: "Hatsune Miku V4X (Original), Hatsune Miku V4X (Dark)", lang: "Japanese, English"}
@@ -55,9 +55,8 @@ async function loadData()
             console.warn(`Error for producer ${favProducerId}`);
         }
     }
-    sortData();
-    createSongIndex();
-    createSongCells();
+    sortDataAlphabetically();
+    createProducerIndex();
     createProducerCells();
 }
 function createSongIndex()
@@ -69,7 +68,7 @@ function createSongIndex()
 
         if (key.startsWith('cachedSong'))
         {
-            const song = JSON.parse(localStorage.getItem(`cachedSong${data[i]?.id}`));
+            const song = JSON.parse(localStorage.getItem(`${data[i]?.dataKey}`));
             
             cell.innerHTML =
             `
@@ -94,7 +93,7 @@ function createSongCells()
 
         if (key.startsWith('cachedSong'))
         {
-            const song = JSON.parse(localStorage.getItem(`cachedSong${data[i]?.id}`));
+            const song = JSON.parse(localStorage.getItem(`${data[i]?.dataKey}`));
             const minutes = Math.floor(song.lengthSeconds / 60);
             const seconds = song.lengthSeconds % 60;
             const formattedSeconds = seconds.toString().padStart(2, '0');
@@ -111,7 +110,7 @@ function createSongCells()
             <a class="anchor" id="${song.id}"></a>
             <div class="container-fluid" id="songCell">
                 <div class="row">
-                    <div class="col-md-3 centered">
+                    <div class="col-md-3 centered" style="padding-left: 0px;">
                         <div class="image-container">
                             <img class="img-fluid" style="transform: scale(1.5);" src="${song?.mainPicture?.urlOriginal}" title="${song.name}"/>
                         </div>
@@ -132,6 +131,31 @@ function createSongCells()
         }
     }
 }
+function createProducerIndex()
+{
+    for (let i = 0; i < localStorage.length; i++)
+    {
+        const cell = document.createElement("div");
+        const key = data[i]?.dataKey;
+
+        if (key.startsWith('cachedProducer'))
+        {
+            const producer = JSON.parse(localStorage.getItem(`${data[i]?.dataKey}`));
+            
+            cell.innerHTML =
+            `
+            <div class="container-fluid" id="producerIndex">
+                <div class="row justify-content-center">
+                    <div class="col-md-10" style="max-width: 400px;">
+                        <a class="btn btn-light centered" href="#${producer?.id}" role="button" style="padding: 0;"><b>${producer?.name}</b></a>
+                    </div>
+                </div>
+            </div>
+            `;
+            producerCell.appendChild(cell);
+        }
+    }
+}
 function createProducerCells()
 {
     for (let i = 0; i < localStorage.length; i++)
@@ -141,7 +165,7 @@ function createProducerCells()
 
         if (key.startsWith('cachedProducer'))
         {
-            const producer = JSON.parse(localStorage.getItem(`cachedProducer${data[i]?.id}`));
+            const producer = JSON.parse(localStorage.getItem(`${data[i]?.dataKey}`));
             const alias = favProducersM.find(p => p.id === producer.id)?.alias;
             const voicebanks = favProducersM.find(p => p.id === producer.id)?.voicebanks;
             const lang = favProducersM.find(p => p.id === producer.id)?.lang;
@@ -151,7 +175,7 @@ function createProducerCells()
             &nbsp;
             <div class="container-fluid" id="producerCell">
                 <div class="row">
-                    <div class="col-md-3 centered">
+                    <div class="col-md-3 centered" style="padding-left: 5px;">
                         <div class="image-container">
                             <img class="img-fluid" src="${producer?.mainPicture?.urlOriginal}" title="${producer.name}"/>
                         </div>
@@ -189,15 +213,42 @@ function getLocalStorageUsage()
     console.log(`LocalStorage Bytes Remaining: ${remainingBytes}`);
     console.log(`LocalStorage Percentage Used: ${formattedPercentage} %`);
 }
-function sortData()
+function sortDataAlphabetically()
 {
+    data.length = 0;
     for (let i = 0; i < localStorage.length; i++)
     {
         const key = localStorage.key(i);
         const dataJSON = JSON.parse(localStorage.getItem(key));
-        data.push({id: dataJSON?.id, name: dataJSON?.name, dataKey: key});
+        data.push({name: dataJSON?.name, dataKey: key});
     }
     data.sort((x, y) => x?.name?.localeCompare(y?.name, undefined, { sensitivity: 'base' }));
+    
+    songCell.innerHTML = '';
+    createSongIndex();
+    createSongCells();    
+}
+function sortDataId()
+{
+    data.length = 0;
+    for (let i = 0; i < localStorage.length; i++)
+    {
+        const key = localStorage.key(i);
+        const dataJSON = JSON.parse(localStorage.getItem(key));
+        if (dataJSON.publishDate === undefined)
+        {
+            data.push({name: dataJSON?.name, dataKey: key, date: ''});
+        }
+        else
+        {
+            data.push({name: dataJSON?.name, dataKey: key, date: Date.parse(dataJSON?.publishDate)});
+        }
+    }
+    data.sort((a, b) => a.date - b.date);
+
+    songCell.innerHTML = '';
+    createSongIndex();
+    createSongCells();
 }
 async function testLog()
 {

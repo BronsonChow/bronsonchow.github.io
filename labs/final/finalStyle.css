@@ -1,0 +1,29 @@
+.image-container {
+    height: 10rem;
+    border-radius: 0.5rem 2rem;
+    overflow: hidden;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#songCell {
+    max-width: 50rem;
+    border-radius: 0.5rem 2rem;
+    background-color: #809ec2;
+    padding: 0;
+}
+#producerCell {
+    max-width: 50rem;
+    border-radius: 0.5rem 2rem;
+    background-color: #809ec2;
+    padding: 0;
+}
+#songIndex {
+    object-position: center;
+}
+#producerIndex {
+    object-position: center;
+}
