@@ -103,4 +103,5 @@ f9b2293 v0.7.7 favorite song cells format finalized
 82b9ce6 v0.7.8 favorite artist cells format mostly done
         > fixed margin bug with row div
 0d19f1a v0.7.9 possible fix for producers not showing up
-        v0.7.9.1 separated song/producer cell creation into respective asynchronous loading functions
+bdd4c21 v0.7.9.1 separated song/producer cell creation into respective asynchronous loading functions
+        v0.7.9.2 array object sorting test

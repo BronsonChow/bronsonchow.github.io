@@ -1,6 +1,6 @@
 const songCell = document.getElementById("favSongs");
 const producerCell = document.getElementById("favProducers");
-const favSongs = [178119, 805916, 820162, 131090, 812344, 829512, 164107, 166391, 850999, 129109, 753120, 642667];
+const favSongs = [178119, 805916, 820162, 131090, 812344, 829512, 164107, 166391, 850999, 129109, 753120, 642667, 131087, 198286, 588814, 506793];
 const favProducers = [144288, 28, 99484];
 const favProducersM = [
     {id: 28, alias: "ピノキオP", voicebanks: "Hatsune Miku V4X (Original), Hatsune Miku V4X (Dark)", lang: "Japanese, English"}
@@ -32,6 +32,7 @@ async function loadSongs()
             console.warn(`Error for song ${favSongId}`);
         }
     }
+    createSongIndex();
     createSongCells();
 }
 async function loadProducers()
@@ -60,11 +61,36 @@ async function loadProducers()
     }
     createProducerCells();
 }
+function createSongIndex()
+{
+    for (let i = 0; i < localStorage.length; i++)
+    {
+        const cell = document.createElement("div");
+        const key = localStorage.key(i);
+
+        if (key.startsWith('cachedSong'))
+        {
+            const song = JSON.parse(localStorage.getItem(key));
+            
+            cell.innerHTML =
+            `
+            <div class="container-fluid" id="songIndex">
+                <div class="row justify-content-center">
+                    <div class="col-md-10" style="max-width: 400px;">
+                        <a class="btn btn-light centered" href="#${song.id}" role="button" style="padding: 0;"><b>${song.name}</b></a>
+                    </div>
+                </div>
+            </div>
+            `;
+            songCell.appendChild(cell);
+        }
+    }
+}
 function createSongCells()
 {
     for (let i = 0; i < localStorage.length; i++)
     {
-        const cell = document.createElement("p");
+        const cell = document.createElement("div");
         const key = localStorage.key(i);
 
         if (key.startsWith('cachedSong'))
@@ -83,6 +109,7 @@ function createSongCells()
             cell.innerHTML =
             `
             &nbsp;
+            <a class="anchor" id="${song.id}"></a>
             <div class="container-fluid" id="songCell">
                 <div class="row">
                     <div class="col-md-3 centered">
@@ -110,7 +137,7 @@ function createProducerCells()
 {
     for (let i = 0; i < localStorage.length; i++)
     {
-        const cell = document.createElement("p");
+        const cell = document.createElement("div");
         const key = localStorage.key(i);
 
         if (key.startsWith('cachedProducer'))
@@ -158,19 +185,41 @@ function getLocalStorageUsage()
     const maxBytes = 5 * 1024 * 1024;
     const remainingBytes = maxBytes - totalBytes;
     const percentageUsed = (totalBytes / maxBytes) * 100;
-    // const formattedPercentage = (Math.round(percentageUsed * 100000) / 100000).toFixed(5);
+    const formattedPercentage = (Math.round(percentageUsed * 100000) / 100000).toFixed(5);
     console.log(`LocalStorage Bytes Allocated: ${totalBytes}`);
     console.log(`LocalStorage Bytes Remaining: ${remainingBytes}`);
-    console.log(`LocalStorage Percentage Used: ${percentageUsed} %`);
+    console.log(`LocalStorage Percentage Used: ${formattedPercentage} %`);
+}
+function sortLocalStorage()
+{
+    const array = [];
+    for (let i = 0; i < localStorage.length; i++)
+    {
+        const key = localStorage.key(i);
+        const arrayJSON = JSON.parse(localStorage.getItem(key));
+        array.push({arrayJSON});
+        console.log(arrayJSON.name);
+    }
+    array.sort((x, y) => x?.arrayJSON?.name?.localeCompare(y?.arrayJSON?.name, undefined, { sensitivity: 'base' }));
+    for (let i = 0; i < localStorage.length; i++)
+    {
+        console.log(array[i]);
+    }
+    for (let i = 0; i < localStorage.length; i++)
+    {
+        const key = localStorage.key(i);
+        console.log(key);
+    }
 }
 async function testLog()
 {
     console.log({ ...localStorage });
-    getLocalStorageUsage();
     console.log('localStorage Objects: ' + localStorage.length);
+    getLocalStorageUsage(); 
 }
 
 loadSongs();
 loadProducers();
 testLog();
 // localStorage.clear();
+sortTest();

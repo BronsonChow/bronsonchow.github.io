@@ -9,6 +9,12 @@ a {
     font-family: Dosis;
     font-size: 1.1rem;
 }
+a.anchor {
+    display: block;
+    position: relative;
+    top: -4.5rem;
+    visibility: hidden;
+}
 h2 {
     font-family: Oswald, sans-serif;
     font-size: 1.5rem;
@@ -108,4 +114,7 @@ table {
     max-width: 50rem;
     border-radius: 0.5rem 2rem;
     border: 0.2rem solid #a9b6c7;
+}
+#songIndex {
+    object-position: center;
 }
