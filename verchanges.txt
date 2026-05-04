@@ -100,5 +100,6 @@ d0efc3e v0.7.2 added remaining potential APIs to list
 ef7f2d3 v0.7.6 mockup of final/favorites/ song cell layout
 f9b2293 v0.7.7 favorite song cells format finalized
         > removed footer section for keyb.html
-        v0.7.8 favorite artist cells format mostly done
+82b9ce6 v0.7.8 favorite artist cells format mostly done
         > fixed margin bug with row div
+        v0.7.9 possible fix for producers not showing up

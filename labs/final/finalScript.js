@@ -85,7 +85,7 @@ function createFavCells()
                 <div class="row">
                     <div class="col-md-3 centered">
                         <div class="image-container">
-                            <img class="img-fluid" style="transform: scale(1.5);" src="${song.mainPicture.urlOriginal}" title="${song.name}"/>
+                            <img class="img-fluid" style="transform: scale(1.5);" src="${song?.mainPicture?.urlOriginal}" title="${song.name}"/>
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -116,7 +116,7 @@ function createFavCells()
                 <div class="row">
                     <div class="col-md-3 centered">
                         <div class="image-container">
-                            <img class="img-fluid" src="${producer.mainPicture.urlOriginal}" title="${producer.name}"/>
+                            <img class="img-fluid" src="${producer?.mainPicture?.urlOriginal}" title="${producer.name}"/>
                         </div>
                     </div>
                     <div class="col-md-9">
