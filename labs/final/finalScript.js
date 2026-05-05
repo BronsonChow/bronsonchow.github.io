@@ -66,7 +66,7 @@ async function loadData()
 }
 function createSongIndex()
 {
-    for (let i = 0; i < localStorage.length; i++)
+    for (let i = 0; i < data.length; i++)
     {
         const cell = document.createElement("div");
         const key = data[i]?.dataKey;
@@ -80,7 +80,7 @@ function createSongIndex()
             <div class="container-fluid" id="songIndex">
                 <div class="row justify-content-center">
                     <div class="col-lg-10" style="max-width: 400px;">
-                        <a class="btn btn-light centered" href="#${song?.id}" role="button" style="padding: 0;"><b>${song?.name}</b></a>
+                        <a class="btn btn-light centered" href="#${song?.id}" role="button" style="padding: 0;">${song?.name}</a>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@ function createSongIndex()
 }
 function createSongCells()
 {
-    for (let i = 0; i < localStorage.length; i++)
+    for (let i = 0; i < data.length; i++)
     {
         const cell = document.createElement("div");
         const key = data[i]?.dataKey;
@@ -138,7 +138,7 @@ function createSongCells()
 }
 function createProducerIndex()
 {
-    for (let i = 0; i < localStorage.length; i++)
+    for (let i = 0; i < data.length; i++)
     {
         const cell = document.createElement("div");
         const key = data[i]?.dataKey;
@@ -152,7 +152,7 @@ function createProducerIndex()
             <div class="container-fluid" id="producerIndex">
                 <div class="row justify-content-center">
                     <div class="col-lg-10" style="max-width: 400px;">
-                        <a class="btn btn-light centered" href="#${producer?.id}" role="button" style="padding: 0;"><b>${producer?.name}</b></a>
+                        <a class="btn btn-light centered" href="#${producer?.id}" role="button" style="padding: 0;">${producer?.name}</a>
                     </div>
                 </div>
             </div>
@@ -163,7 +163,7 @@ function createProducerIndex()
 }
 function createProducerCells()
 {
-    for (let i = 0; i < localStorage.length; i++)
+    for (let i = 0; i < data.length; i++)
     {
         const cell = document.createElement("div");
         const key = data[i]?.dataKey;
@@ -178,6 +178,7 @@ function createProducerCells()
             cell.innerHTML =
             `
             &nbsp;
+            <a class="anchor" id="${producer.id}"></a>
             <div class="container-fluid" id="producerCell">
                 <div class="row">
                     <div class="col-lg-3 centered" style="padding-left: 0px;">
@@ -200,6 +201,12 @@ function createProducerCells()
             producerCell.appendChild(cell);
         }
     }
+}
+async function testLog()
+{
+    console.log({ ...localStorage });
+    console.log('localStorage Objects: ' + localStorage.length);
+    getLocalStorageUsage(); 
 }
 function getLocalStorageUsage()
 {
@@ -229,6 +236,7 @@ function sortDataAlphabetically()
     }
     data.sort((x, y) => x?.name?.localeCompare(y?.name, undefined, { sensitivity: 'base' }));
     
+    songIndex.innerHTML = '';
     songCell.innerHTML = '';
     createSongIndex();
     createSongCells();    
@@ -251,15 +259,9 @@ function sortDataId()
     }
     data.sort((a, b) => a.date - b.date);
 
+    songIndex.innerHTML = '';
     songCell.innerHTML = '';
     createSongIndex();
     createSongCells();
 }
-async function testLog()
-{
-    console.log({ ...localStorage });
-    console.log('localStorage Objects: ' + localStorage.length);
-    getLocalStorageUsage(); 
-}
-
 testLog();

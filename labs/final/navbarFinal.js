@@ -1,3 +1,17 @@
+var themeLight = true;
+function themingSwitcher()
+{
+    if (themeLight)
+    {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+        themeLight = !themeLight;
+    }
+    else
+    {
+        document.documentElement.setAttribute('data-bs-theme', 'light');
+        themeLight = !themeLight;
+    }
+}
 const navigation = `
 <nav class="navbar navbar-expand-md fixed-top">
     <div class="container-fluid">
@@ -26,16 +40,14 @@ const navigation = `
                         <li><a class="dropdown-item" href="final.html">Final Project</a></li>
                     </ul>
                 </li>
-                <!--
                 <div class="me-4"></div>
                 <li class="nav-item align-items-center d-flex">
                     <i class="fa fa-sun-o"></i>
                     <div class="ms-2 form-check form-switch ml-auto">
-                        <input class="form-check-input" type="checkbox" role="switch" id="themingSwitcher" />
+                        <input class="form-check-input" type="checkbox" role="switch" onclick="themingSwitcher()" />
                     </div>
                     <i class="fa fa-moon-o"></i>
                 </li>
-                -->
             </ul>
         </div>
     </div>

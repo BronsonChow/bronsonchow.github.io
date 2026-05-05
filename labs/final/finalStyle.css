@@ -1,5 +1,9 @@
 body {
+    color: #04254E;
     background-color: #DAEBFF;
+}
+b {
+    color: #0954AE;
 }
 h1 {
     color: #FFFFFF;
@@ -8,19 +12,31 @@ h1 {
     margin: 0;
     text-shadow: 0.1rem 0.1rem 0.3rem #04254E;
 }
+.btn {
+    font-family: Dosis;
+    font-size: 1.1rem;
+    background-color: #ECF4FE; /* Inactive background color */
+}
+.btn-light {
+    border-color: transparent;/* Inactive border color */
+    --bs-btn-active-color: #FFFFFF; /* Active text color */
+    --bs-btn-active-bg: #F34616; /* Active background color */
+    --bs-btn-active-border-color: transparent; /* Active border color */
+    --bs-btn-color: #04254E; /* Button text color */
+    --bs-btn-hover-color: #04254E; /* Hover text color */
+
+    /* Hover background color */
+    --bs-btn-bg: #FBC1B1;
+    --bs-btn-hover-bg: #FBC1B1;
+
+    /* Hover border color */
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-border-color: transparent;
+}
 .cell {
     padding: 1rem;
     border-radius: 0.5rem 2rem;
     background-color: #FFFFFF;
-}
-.btn-light {
-    border-color: #DAEBFF;
-    --bs-btn-bg: #ECF4FE;
-    --bs-btn-hover-bg: #FFFFFF;
-    --bs-btn-hover-border-color: #04254E;
-    --bs-btn-active-color: #FFFFFF;
-    --bs-btn-active-bg: #04254E;
-    --bs-btn-active-border-color: #04254E;
 }
 .image-container {
     height: 10rem;
@@ -72,4 +88,58 @@ h1 {
 }
 #producerIndex {
     object-position: center;
+}
+[data-bs-theme="dark"] {
+    body {
+        color: #FFFFFF;
+        background-color: #04254E;
+    }
+    h1 {
+        text-shadow: 0.1rem 0.1rem 0.3rem #8BBCF9;
+    }
+    b {
+        color: #8BBCF9;
+    }
+    .btn {
+        background-color: #04254E; /* Inactive background color */
+    }
+    .btn-light {
+        border-color: transparent;/* Inactive border color */
+        --bs-btn-active-color: #FFFFFF; /* Active text color */
+        --bs-btn-active-bg: #AE2D09; /* Active background color */
+        --bs-btn-active-border-color: transparent; /* Active border color */
+        --bs-btn-color: #8BBCF9; /* Button text color */
+        --bs-btn-hover-color: #FFFFFF; /* Hover text color */
+
+        /* Hover background color */
+        --bs-btn-bg: #04254E;
+        --bs-btn-hover-bg: #04254E;
+
+        /* Hover border color */
+        --bs-btn-border-color: transparent;
+        --bs-btn-hover-border-color: transparent;
+    }
+    .cell {
+        background-color: #063A74;
+    }
+    .jumbotron {
+        background-color: #021327;
+    }
+    .navbar {
+        background-color: #063A74;
+        border-bottom: 2px solid #021327;
+    }
+    .navbar-brand {
+        color: #FFFFFF;
+        text-shadow: 0.1rem 0.1rem 0.3rem #8BBCF9;
+    }
+    .navbar-brand:hover {
+        color: #8BBCF9;
+    }
+    #songCell {
+        background-color: #063A74;
+    }
+    #producerCell {
+        background-color: #063A74;
+    }
 }
