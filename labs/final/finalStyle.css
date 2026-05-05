@@ -15,23 +15,24 @@ h1 {
 .btn {
     font-family: Dosis;
     font-size: 1.1rem;
-    background-color: #ECF4FE; /* Inactive background color */
-}
-.btn-light {
-    border-color: transparent;/* Inactive border color */
+
+    background-color: #8BBCF9; /* Inactive background color */
+    border-color: #8BBCF9;/* Inactive border color */
+    --bs-btn-active-border-color: transparent; /* Active border color */
+    --bs-btn-hover-border-color: transparent;
+
     --bs-btn-active-color: #FFFFFF; /* Active text color */
     --bs-btn-active-bg: #F34616; /* Active background color */
-    --bs-btn-active-border-color: transparent; /* Active border color */
+    
     --bs-btn-color: #04254E; /* Button text color */
     --bs-btn-hover-color: #04254E; /* Hover text color */
 
     /* Hover background color */
     --bs-btn-bg: #FBC1B1;
     --bs-btn-hover-bg: #FBC1B1;
-
-    /* Hover border color */
-    --bs-btn-border-color: transparent;
-    --bs-btn-hover-border-color: transparent;
+}
+.btn-primary {
+    background-color: #FFFFFF; /* Inactive background color */
 }
 .cell {
     padding: 1rem;
@@ -89,7 +90,7 @@ h1 {
 #producerIndex {
     object-position: center;
 }
-[data-bs-theme="dark"] {
+[data-bs-theme="blue"] {
     body {
         color: #FFFFFF;
         background-color: #04254E;
@@ -101,23 +102,15 @@ h1 {
         color: #8BBCF9;
     }
     .btn {
-        background-color: #04254E; /* Inactive background color */
-    }
-    .btn-light {
-        border-color: transparent;/* Inactive border color */
         --bs-btn-active-color: #FFFFFF; /* Active text color */
-        --bs-btn-active-bg: #AE2D09; /* Active background color */
-        --bs-btn-active-border-color: transparent; /* Active border color */
-        --bs-btn-color: #8BBCF9; /* Button text color */
-        --bs-btn-hover-color: #FFFFFF; /* Hover text color */
+        --bs-btn-active-bg: #F34616; /* Active background color */
+        
+        --bs-btn-color: #04254E; /* Button text color */
+        --bs-btn-hover-color: #04254E; /* Hover text color */
 
         /* Hover background color */
-        --bs-btn-bg: #04254E;
-        --bs-btn-hover-bg: #04254E;
-
-        /* Hover border color */
-        --bs-btn-border-color: transparent;
-        --bs-btn-hover-border-color: transparent;
+        --bs-btn-bg: #FBC1B1;
+        --bs-btn-hover-bg: #FBC1B1;
     }
     .cell {
         background-color: #063A74;

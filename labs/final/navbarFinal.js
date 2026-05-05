@@ -1,9 +1,11 @@
 var themeLight = true;
+
 function themingSwitcher()
 {
+    //localStorage.setItem(colorMode, themeLight{mode: 'dark'});
     if (themeLight)
     {
-        document.documentElement.setAttribute('data-bs-theme', 'dark');
+        document.documentElement.setAttribute('data-bs-theme', 'blue');
         themeLight = !themeLight;
     }
     else

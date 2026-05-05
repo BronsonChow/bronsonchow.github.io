@@ -80,7 +80,7 @@ function createSongIndex()
             <div class="container-fluid" id="songIndex">
                 <div class="row justify-content-center">
                     <div class="col-lg-10" style="max-width: 400px;">
-                        <a class="btn btn-light centered" href="#${song?.id}" role="button" style="padding: 0;">${song?.name}</a>
+                        <a class="btn centered" href="#${song?.id}" role="button" style="padding: 0;">${song?.name}</a>
                     </div>
                 </div>
             </div>
@@ -152,7 +152,7 @@ function createProducerIndex()
             <div class="container-fluid" id="producerIndex">
                 <div class="row justify-content-center">
                     <div class="col-lg-10" style="max-width: 400px;">
-                        <a class="btn btn-light centered" href="#${producer?.id}" role="button" style="padding: 0;">${producer?.name}</a>
+                        <a class="btn centered" href="#${producer?.id}" role="button" style="padding: 0;">${producer?.name}</a>
                     </div>
                 </div>
             </div>
