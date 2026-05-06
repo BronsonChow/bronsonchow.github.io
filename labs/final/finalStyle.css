@@ -119,8 +119,12 @@ h1 {
         background-color: #021327;
     }
     .navbar {
+        --bs-navbar-color: #FFFFFF;
         background-color: #063A74;
         border-bottom: 2px solid #021327;
+    }
+    .nav-link {
+        color: #FFFFFF;
     }
     .navbar-brand {
         color: #FFFFFF;
