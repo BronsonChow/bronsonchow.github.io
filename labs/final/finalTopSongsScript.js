@@ -31,42 +31,52 @@ async function loadTopRated()
 }
 function createTopSongCells()
 {
-    const cell = document.createElement("div");
     const topSongsArray = JSON.parse(localStorage.getItem(`cachedTopSongs${ratingMax}`));
 
     for (let i = 0; i < ratingMax; i++)
     {
+        const cell = document.createElement("div");
         const song = topSongsArray[i];
+
+        const minutes = Math.floor(song.lengthSeconds / 60);
+        const seconds = song.lengthSeconds % 60;
+        const formattedSeconds = seconds.toString().padStart(2, '0');
+        var date = new Date(`${song.publishDate}`.replace(/-/g, '\/').replace(/T.+/, ''));
+        var formattedDate = new Intl.DateTimeFormat("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "2-digit",
+        }).format(date);
         
         cell.innerHTML =
         `
-        <p>${i}</p>
+        &nbsp;
+        <a class="anchor" id="${song.id}"></a>
+        <div class="container-fluid" id="songCell">
+            <div class="row">
+                <div class="col-lg-3 centered" style="padding-left: 0px;">
+                    <div class="image-container">
+                        <img class="img-fluid" style="transform: scale(1.5);" src="${song?.mainPicture?.urlOriginal}" title="${song.name}"/>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="title">
+                        <h1>${i+1}.</h1>
+                        <h2><b>${song.name}</b></h2>
+                    </div>
+                    <p>
+                        <b>Producer(s):</b> ${song.artistString} <br>
+                        <b>Length:</b> ${minutes}:${formattedSeconds} <br>
+                        <b>Published:</b> ${formattedDate} <br>
+                        <b>Favorites:</b> ${song.favoritedTimes} <br>
+                        <b>Ratings:</b> ${song.ratingScore} <br>
+                        <a target="_blank" href="https://vocadb.net/S/${song.id}">VocaDB link</a>
+                    </p>
+                </div>
+            </div>
+        </div>
         `;
         songTopRatedCell.appendChild(cell);
         console.log(i);
     }
-    /*
-
-<div class="container-fluid" id="songCell">
-    <div class="row">
-        <div class="col-lg-3 centered" style="padding-left: 0px;">
-            <div class="image-container">
-                <img class="img-fluid" style="transform: scale(1.5);" src="${song?.mainPicture?.urlOriginal}" title="${song.name}"/>
-            </div>
-        </div>
-        <div class="col-lg-9">
-            <p><b>${song.name}</b></p>
-            <p>
-                <b>Producer(s):</b> ${song.artistString} <br>
-                <b>Length:</b> ${minutes}:${formattedSeconds} <br>
-                <b>Published:</b> ${formattedDate} <br>
-                <b>Favorites:</b> ${song.favoritedTimes} <br>
-                <b>Ratings:</b> ${song.ratingScore} <br>
-                <a target="_blank" href="https://vocadb.net/S/${song.id}">VocaDB link</a>
-            </p>
-        </div>
-    </div>
-</div>
-
-    */
 }
