@@ -6,12 +6,12 @@ function themingSwitcher()
     if (themeLight)
     {
         document.documentElement.setAttribute('data-bs-theme', 'blue');
-        themeLight = !themeLight;
+        themeLight = false;
     }
     else
     {
         document.documentElement.setAttribute('data-bs-theme', 'light');
-        themeLight = !themeLight;
+        themeLight = true;
     }
 }
 const navigation = `

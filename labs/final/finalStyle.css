@@ -109,18 +109,6 @@ h1 {
     b {
         color: #8BBCF9;
     }
-    .btn {
-        border-color: #063A74;
-
-        --bs-btn-active-color: #FFFFFF;
-        --bs-btn-active-bg: #F34616;
-        
-        --bs-btn-color: #04254E;
-        --bs-btn-hover-color: #04254E;
-
-        --bs-btn-bg: #FBC1B1;
-        --bs-btn-hover-bg: #FBC1B1;
-    }
     .cell {
         background-color: #063A74;
     }
