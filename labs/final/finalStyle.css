@@ -1,6 +1,8 @@
 body {
     color: #04254E;
     background-color: #DAEBFF;
+    
+    --bs-tertiary-bg: #DAEBFF;
 }
 b {
     color: #0954AE;
@@ -102,6 +104,9 @@ h1 {
     body {
         color: #FFFFFF;
         background-color: #04254E;
+
+        --bs-body-color: #8BBCF9;
+        --bs-tertiary-bg: #04254E;
     }
     h1 {
         text-shadow: 0.1rem 0.1rem 0.3rem #8BBCF9;
@@ -112,11 +117,15 @@ h1 {
     .cell {
         background-color: #063A74;
     }
+    .dropdown-menu {
+        --bs-dropdown-bg: #063A74;
+    }
     .jumbotron {
         background-color: #021327;
     }
     .navbar {
         --bs-navbar-color: #FFFFFF;
+        --bs-navbar-active-color: #8BBCF9;
         background-color: #063A74;
         border-bottom: 2px solid #021327;
     }

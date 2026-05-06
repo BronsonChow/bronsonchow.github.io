@@ -2,6 +2,9 @@ const songIndex = document.getElementById("favSongIndex");
 const songCell = document.getElementById("favSongCells");
 const producerIndex = document.getElementById("favProducerIndex");
 const producerCell = document.getElementById("favProducerCells");
+const songTopRatedCell = document.getElementById("topRatedSongs");
+const ratingSlider = document.getElementById("maxSongs");
+
 const favSongs = [178119, 805916, 820162, 131090, 812344, 829512, 164107, 166391, 850999, 129109, 753120, 642667, 131087, 198286, 588814, 506793, 1508];
 const favProducers = [144288, 28, 99484, 53, 23155, 144555];
 const favProducersM = [
@@ -9,11 +12,12 @@ const favProducersM = [
 ,   {id: 144288, alias: "TAK / DORIDORI", voicebanks: "Hatsune Miku V4X (Original), Kasane Teto SV", lang: "Japanese, Korean, English"}
 ,   {id: 99484, alias: "", voicebanks: "Hatsune Miku V4 (English)", lang: "English"}
 ,   {id: 53, alias: "GenjitsutouhiP", voicebanks: "Hatsune Miku, GUMI, Megurine Luka", lang: "Japanese"}
-,   {id: 23155, alias: "", voicebanks: "Kasane Teto SV, V3 GUMI", lang: "English"}
+,   {id: 23155, alias: "JamieP", voicebanks: "Kasane Teto SV, V3 GUMI", lang: "English"}
 ,   {id: 144555, alias: "東京真中, Tokyo Manaka", voicebanks: "Kasane Teto SV, Chis-A, Hatsune Miku", lang: "Japanese"}
 ];
-const data = [];
-const ratingMax = 25;
+const songData = [];
+const producerData = [];
+const songTopData = [];
 
 async function loadData()
 {
@@ -61,24 +65,45 @@ async function loadData()
             console.warn(`Error for producer ${favProducerId}`);
         }
     }
-    sortDataAlphabetically();
-    createProducerIndex();
-    createProducerCells();
+    sortSongDataAlphabetically();
+    sortProducerDataAlphabetically();
 }
 async function loadTopRated()
 {
-    // https://vocadb.net/api/songs/top-rated?maxResults=${ratingMax}&fields=MainPicture&languagePreference=English
+    const ratingMax = ratingSlider.getAttribute('max');
+    const cacheKey = `cachedTopSongs${ratingMax}`;
+    const dbExist = localStorage.getItem(cacheKey);
+
+    if (dbExist)
+    {
+        console.log(`Loading top ${ratingMax} songs from localStorage`);
+    }
+    else
+    {
+        try
+        {
+            const result = await fetch(`https://vocadb.net/api/songs/top-rated?maxResults=${ratingMax}&fields=MainPicture&languagePreference=English`);
+            const topSongs = await result.json();
+            localStorage.setItem(cacheKey, JSON.stringify(topSongs));
+            console.log(`Top ${ratingMax} songs successfully saved to localStorage`);
+        }
+        catch (error)
+        {
+            console.warn(`Error for fetching top ${ratingMax} songs`);
+        }
+    }
+    createTopSongCells();
 }
 function createSongIndex()
 {
-    for (let i = 0; i < data.length; i++)
+    for (let i = 0; i < songData.length; i++)
     {
         const cell = document.createElement("div");
-        const key = data[i]?.dataKey;
+        const key = songData[i]?.dataKey;
 
         if (key.startsWith('cachedSong'))
         {
-            const song = JSON.parse(localStorage.getItem(`${data[i]?.dataKey}`));
+            const song = JSON.parse(localStorage.getItem(`${songData[i]?.dataKey}`));
             
             cell.innerHTML =
             `
@@ -96,14 +121,14 @@ function createSongIndex()
 }
 function createSongCells()
 {
-    for (let i = 0; i < data.length; i++)
+    for (let i = 0; i < songData.length; i++)
     {
         const cell = document.createElement("div");
-        const key = data[i]?.dataKey;
+        const key = songData[i]?.dataKey;
 
         if (key.startsWith('cachedSong'))
         {
-            const song = JSON.parse(localStorage.getItem(`${data[i]?.dataKey}`));
+            const song = JSON.parse(localStorage.getItem(`${songData[i]?.dataKey}`));
             const minutes = Math.floor(song.lengthSeconds / 60);
             const seconds = song.lengthSeconds % 60;
             const formattedSeconds = seconds.toString().padStart(2, '0');
@@ -143,14 +168,14 @@ function createSongCells()
 }
 function createProducerIndex()
 {
-    for (let i = 0; i < data.length; i++)
+    for (let i = 0; i < producerData.length; i++)
     {
         const cell = document.createElement("div");
-        const key = data[i]?.dataKey;
+        const key = producerData[i]?.dataKey;
 
         if (key.startsWith('cachedProducer'))
         {
-            const producer = JSON.parse(localStorage.getItem(`${data[i]?.dataKey}`));
+            const producer = JSON.parse(localStorage.getItem(`${producerData[i]?.dataKey}`));
             
             cell.innerHTML =
             `
@@ -168,14 +193,14 @@ function createProducerIndex()
 }
 function createProducerCells()
 {
-    for (let i = 0; i < data.length; i++)
+    for (let i = 0; i < producerData.length; i++)
     {
         const cell = document.createElement("div");
-        const key = data[i]?.dataKey;
+        const key = producerData[i]?.dataKey;
 
         if (key.startsWith('cachedProducer'))
         {
-            const producer = JSON.parse(localStorage.getItem(`${data[i]?.dataKey}`));
+            const producer = JSON.parse(localStorage.getItem(`${producerData[i]?.dataKey}`));
             const alias = favProducersM.find(p => p.id === producer.id)?.alias;
             const voicebanks = favProducersM.find(p => p.id === producer.id)?.voicebanks;
             const lang = favProducersM.find(p => p.id === producer.id)?.lang;
@@ -207,6 +232,10 @@ function createProducerCells()
         }
     }
 }
+function createTopSongCells()
+{
+    console.log("create top songs");
+}
 async function testLog()
 {
     console.log({ ...localStorage });
@@ -232,41 +261,74 @@ function getLocalStorageUsage()
 }
 function sortDataAlphabetically()
 {
-    data.length = 0;
+    sortSongDataAlphabetically();
+    sortProducerDataAlphabetically();
+}
+function sortSongDataAlphabetically()
+{
+    songData.length = 0;
     for (let i = 0; i < localStorage.length; i++)
     {
         const key = localStorage.key(i);
         const dataJSON = JSON.parse(localStorage.getItem(key));
-        data.push({name: dataJSON?.name, dataKey: key});
+        if (key.startsWith('cachedSong'))
+        {
+            songData.push({name: dataJSON?.name, dataKey: key});
+        }
     }
-    data.sort((x, y) => x?.name?.localeCompare(y?.name, undefined, { sensitivity: 'base' }));
+    songData.sort((x, y) => x?.name?.localeCompare(y?.name, undefined, { sensitivity: 'base' }));
     
     songIndex.innerHTML = '';
     songCell.innerHTML = '';
     createSongIndex();
     createSongCells();    
 }
+function sortProducerDataAlphabetically()
+{
+    producerData.length = 0;
+    for (let i = 0; i < localStorage.length; i++)
+    {
+        const key = localStorage.key(i);
+        const dataJSON = JSON.parse(localStorage.getItem(key));
+        if (key.startsWith('cachedProducer'))
+        {
+            producerData.push({name: dataJSON?.name, dataKey: key});
+        }
+    }
+    producerData.sort((x, y) => x?.name?.localeCompare(y?.name, undefined, { sensitivity: 'base' }));
+    
+    producerIndex.innerHTML = '';
+    producerCell.innerHTML = '';
+    createProducerIndex();
+    createProducerCells();  
+}
 function sortDataId()
 {
-    data.length = 0;
+    console.log(songData.length);
+    console.log(producerData.length);
+    sortSongDataId();
+}
+function sortSongDataId()
+{
+    songData.length = 0;
     for (let i = 0; i < localStorage.length; i++)
     {
         const key = localStorage.key(i);
         const dataJSON = JSON.parse(localStorage.getItem(key));
         if (dataJSON.publishDate === undefined)
         {
-            data.push({name: dataJSON?.name, dataKey: key, date: ''});
+            songData.push({name: dataJSON?.name, dataKey: key, date: ''});
         }
         else
         {
-            data.push({name: dataJSON?.name, dataKey: key, date: Date.parse(dataJSON?.publishDate)});
+            songData.push({name: dataJSON?.name, dataKey: key, date: Date.parse(dataJSON?.publishDate)});
         }
     }
-    data.sort((a, b) => a.date - b.date);
+    songData.sort((a, b) => a.date - b.date);
 
     songIndex.innerHTML = '';
     songCell.innerHTML = '';
     createSongIndex();
     createSongCells();
 }
-testLog();
+// testLog();

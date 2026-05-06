@@ -50,34 +50,30 @@
         <!-- Main core -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3"></div>
+                <div class="col-lg-2"></div>
                 <!-- Song display section -->
-                <div class="col-md-6">
+                <div class="col-lg-8">
                     <div class="container-fluid cell">
-                        <!-- Buttons for song rating date range -->
-                        <div class="container-fluid centered">
-                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked/>
-                                <label class="btn btn-primary" for="btnradio1">Weekly</label>
-
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"/>
-                                <label class="btn btn-primary" for="btnradio2">Monthly</label>
-
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off"/>
-                                <label class="btn btn-primary" for="btnradio3">All Time</label>
+                        <!-- Header and description -->
+                            <div class="container-fluid" style="text-align: center;">
+                                <h1>Top Songs by Rating Count of All Time</h1>
+                                <p>on vocadb.net</p>
                             </div>
-                        </div>
                         <!-- Buttons for song max range -->
                         <div class="container-fluid centered">
                             <div class="form-group mt-4 text-center">
-                            <label for="maxSongs" class="form-label">Display Amount: </label>
-                            <input type="range" class="form-range" min="1" max="25" id="maxSongs" width="500">
+                                <label for="maxSongs" class="form-label">Display Amount: </label>
+                                <input type="range" class="form-range" min="1" max="25" id="maxSongs" width="500">
+                            </div>
                         </div>
-                        &nbsp;
-                        <p id="topRatedSongs"></p>
+                    </div>
+                    &nbsp;
+                    <!-- Song cell(s) -->
+                    <div class="row row-cols-2">
+                        <p id="topRatedSongs">test</p>
                     </div>
                 </div>
-                <div class="col-lg-3"></div>
+                <div class="col-lg-2"></div>
             </div>
         </div>
         &nbsp;
