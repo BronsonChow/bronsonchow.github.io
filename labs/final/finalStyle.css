@@ -13,26 +13,34 @@ h1 {
     text-shadow: 0.1rem 0.1rem 0.3rem #04254E;
 }
 .btn {
+    /* ALL buttons */
     font-family: Dosis;
     font-size: 1.1rem;
+    border-color: #FFFFFF;
 
-    background-color: #8BBCF9; /* Inactive background color */
-    border-color: #8BBCF9;/* Inactive border color */
-    --bs-btn-active-border-color: transparent; /* Active border color */
-    --bs-btn-hover-border-color: transparent;
-
-    --bs-btn-active-color: #FFFFFF; /* Active text color */
-    --bs-btn-active-bg: #F34616; /* Active background color */
+    /* INDEX buttons */
+    background-color: #8BBCF9; /* index background color */
     
-    --bs-btn-color: #04254E; /* Button text color */
-    --bs-btn-hover-color: #04254E; /* Hover text color */
-
-    /* Hover background color */
-    --bs-btn-bg: #FBC1B1;
-    --bs-btn-hover-bg: #FBC1B1;
+    --bs-btn-hover-border-color: transparent; /* all but radio hover border color */
+    --bs-btn-hover-bg: #FBC1B1; /* a hover background */
 }
 .btn-primary {
-    background-color: #FFFFFF; /* Inactive background color */
+    /* RADIO & PAGE buttons */
+    background-color: #DAEBFF; /* both background color */
+    --bs-btn-active-border-color: transparent; /* both border color */
+    --bs-btn-active-color: #FFFFFF; /* both text color */
+    --bs-btn-active-bg: #F34616; /* both background color */
+
+    /* RADIO buttons */
+    --bs-btn-color: #04254E; /* radio text color */
+    --bs-btn-bg: #FBC1B1; /* radio hover background */
+    --bs-btn-border-color: transparent; /* radio border color */
+
+    /* PAGE buttons */
+    --bs-btn-hover-color: #04254E; /* a hover text color */
+}
+.btn.disabled {
+    background-color: #7fa8dd;
 }
 .cell {
     padding: 1rem;
@@ -102,13 +110,14 @@ h1 {
         color: #8BBCF9;
     }
     .btn {
-        --bs-btn-active-color: #FFFFFF; /* Active text color */
-        --bs-btn-active-bg: #F34616; /* Active background color */
-        
-        --bs-btn-color: #04254E; /* Button text color */
-        --bs-btn-hover-color: #04254E; /* Hover text color */
+        border-color: #063A74;
 
-        /* Hover background color */
+        --bs-btn-active-color: #FFFFFF;
+        --bs-btn-active-bg: #F34616;
+        
+        --bs-btn-color: #04254E;
+        --bs-btn-hover-color: #04254E;
+
         --bs-btn-bg: #FBC1B1;
         --bs-btn-hover-bg: #FBC1B1;
     }

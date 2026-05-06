@@ -26,7 +26,7 @@
                             <div class="btn-group">
                                 <a href="final.html" class="btn btn-primary active" aria-current="page">My Favorites</a>
                                 <a href="finalTopSongs.html" class="btn btn-primary">Top Songs by Rating Count</a>
-                                <a href="finalSearch.html" class="btn btn-primary">Specific Search</a>
+                                <a href="finalSearch.html" class="btn btn-primary disabled" aria-disabled="true">Specific Search</a>
                             </div>
                         </p>
                     </div>
@@ -43,12 +43,12 @@
                         <h1 class="centered">Songs</h1>
                         &nbsp;
                         <div class="container-fluid centered">
-                            <div class="btn-group" aria-label="Basic radio toggle button group" style="max-width: 10.5rem;">
+                            <div class="btn-group" aria-label="Basic radio toggle button group" style="max-width: 15rem;">
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked/>
                                 <label class="btn btn-primary" for="btnradio1" onclick="sortDataAlphabetically()">Alphabetical</label>
 
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"/>
-                                <label class="btn btn-primary" for="btnradio2" onclick="sortDataId()">ID</label>
+                                <label class="btn btn-primary" for="btnradio2" onclick="sortDataId()">Publish Date</label>
                             </div>
                         </div>
                         &nbsp;

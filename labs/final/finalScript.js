@@ -13,6 +13,7 @@ const favProducersM = [
 ,   {id: 144555, alias: "東京真中, Tokyo Manaka", voicebanks: "Kasane Teto SV, Chis-A, Hatsune Miku", lang: "Japanese"}
 ];
 const data = [];
+const ratingMax = 25;
 
 async function loadData()
 {
@@ -63,6 +64,10 @@ async function loadData()
     sortDataAlphabetically();
     createProducerIndex();
     createProducerCells();
+}
+async function loadTopRated()
+{
+    // https://vocadb.net/api/songs/top-rated?maxResults=${ratingMax}&fields=MainPicture&languagePreference=English
 }
 function createSongIndex()
 {
@@ -205,7 +210,6 @@ function createProducerCells()
 async function testLog()
 {
     console.log({ ...localStorage });
-    console.log('localStorage Objects: ' + localStorage.length);
     getLocalStorageUsage(); 
 }
 function getLocalStorageUsage()
@@ -221,6 +225,7 @@ function getLocalStorageUsage()
     const remainingBytes = maxBytes - totalBytes;
     const percentageUsed = (totalBytes / maxBytes) * 100;
     const formattedPercentage = (Math.round(percentageUsed * 100000) / 100000).toFixed(5);
+    console.log('localStorage Objects: ' + localStorage.length);
     console.log(`LocalStorage Bytes Allocated: ${totalBytes}`);
     console.log(`LocalStorage Bytes Remaining: ${remainingBytes}`);
     console.log(`LocalStorage Percentage Used: ${formattedPercentage} %`);
