@@ -1,3 +1,3 @@
-# Just a website project
+# Website for CSC 225
 
-Currently catered for a course
+Link to homepage: https://bronsonchow.github.io/
