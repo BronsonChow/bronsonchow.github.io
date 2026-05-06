@@ -118,4 +118,5 @@ ab01bf5 v0.7.11.4 reorganized buttons in stylesheet
         > set up finalTopSongs.html
         > temporarily disabled finalSearch.html button
 f1c5145 v0.7.11.5 removed unnecessary styles in finalStyle.css and added comments
-        v0.7.12 added logic for fetching top X songs from vocadb api
+5f8066e v0.7.12 added logic for fetching top X songs from vocadb api
+        v0.7.12.1 todo fix appendChild? bug

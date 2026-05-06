@@ -2,8 +2,6 @@ const songIndex = document.getElementById("favSongIndex");
 const songCell = document.getElementById("favSongCells");
 const producerIndex = document.getElementById("favProducerIndex");
 const producerCell = document.getElementById("favProducerCells");
-const songTopRatedCell = document.getElementById("topRatedSongs");
-const ratingSlider = document.getElementById("maxSongs");
 
 const favSongs = [178119, 805916, 820162, 131090, 812344, 829512, 164107, 166391, 850999, 129109, 753120, 642667, 131087, 198286, 588814, 506793, 1508];
 const favProducers = [144288, 28, 99484, 53, 23155, 144555];
@@ -17,7 +15,6 @@ const favProducersM = [
 ];
 const songData = [];
 const producerData = [];
-const songTopData = [];
 
 async function loadData()
 {
@@ -68,32 +65,6 @@ async function loadData()
     sortSongDataAlphabetically();
     sortProducerDataAlphabetically();
 }
-async function loadTopRated()
-{
-    const ratingMax = ratingSlider.getAttribute('max');
-    const cacheKey = `cachedTopSongs${ratingMax}`;
-    const dbExist = localStorage.getItem(cacheKey);
-
-    if (dbExist)
-    {
-        console.log(`Loading top ${ratingMax} songs from localStorage`);
-    }
-    else
-    {
-        try
-        {
-            const result = await fetch(`https://vocadb.net/api/songs/top-rated?maxResults=${ratingMax}&fields=MainPicture&languagePreference=English`);
-            const topSongs = await result.json();
-            localStorage.setItem(cacheKey, JSON.stringify(topSongs));
-            console.log(`Top ${ratingMax} songs successfully saved to localStorage`);
-        }
-        catch (error)
-        {
-            console.warn(`Error for fetching top ${ratingMax} songs`);
-        }
-    }
-    createTopSongCells();
-}
 function createSongIndex()
 {
     for (let i = 0; i < songData.length; i++)
@@ -129,6 +100,7 @@ function createSongCells()
         if (key.startsWith('cachedSong'))
         {
             const song = JSON.parse(localStorage.getItem(`${songData[i]?.dataKey}`));
+            
             const minutes = Math.floor(song.lengthSeconds / 60);
             const seconds = song.lengthSeconds % 60;
             const formattedSeconds = seconds.toString().padStart(2, '0');
@@ -201,6 +173,7 @@ function createProducerCells()
         if (key.startsWith('cachedProducer'))
         {
             const producer = JSON.parse(localStorage.getItem(`${producerData[i]?.dataKey}`));
+            
             const alias = favProducersM.find(p => p.id === producer.id)?.alias;
             const voicebanks = favProducersM.find(p => p.id === producer.id)?.voicebanks;
             const lang = favProducersM.find(p => p.id === producer.id)?.lang;
@@ -231,10 +204,6 @@ function createProducerCells()
             producerCell.appendChild(cell);
         }
     }
-}
-function createTopSongCells()
-{
-    console.log("create top songs");
 }
 async function testLog()
 {
