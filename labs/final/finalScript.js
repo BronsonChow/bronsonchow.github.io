@@ -23,7 +23,8 @@ async function loadData()
         const cacheKey = `cachedSong${favSongId}`;
         const songExist = localStorage.getItem(cacheKey);
         
-        if (songExist && cacheKey.startsWith('cached'))
+        console.log(songExist);
+        if (songExist)
         {
             console.log(`Loading song ID ${favSongId} from localStorage`);
             continue;
@@ -45,7 +46,7 @@ async function loadData()
         const cacheKey = `cachedProducer${favProducerId}`;
         const producerExist = localStorage.getItem(cacheKey);
 
-        if (producerExist && cacheKey.startsWith('cached'))
+        if (producerExist)
         {
             console.log(`Loading producer ID ${favProducerId} from localStorage`);
             continue;
@@ -243,9 +244,10 @@ function sortSongDataAlphabetically()
     for (let i = 0; i < localStorage.length; i++)
     {
         const key = localStorage.key(i);
-        const dataJSON = JSON.parse(localStorage.getItem(key));
+
         if (key.startsWith('cachedSong'))
         {
+            const dataJSON = JSON.parse(localStorage.getItem(key));
             songData.push({name: dataJSON?.name, dataKey: key});
         }
     }
@@ -262,9 +264,10 @@ function sortProducerDataAlphabetically()
     for (let i = 0; i < localStorage.length; i++)
     {
         const key = localStorage.key(i);
-        const dataJSON = JSON.parse(localStorage.getItem(key));
+
         if (key.startsWith('cachedProducer'))
         {
+            const dataJSON = JSON.parse(localStorage.getItem(key));
             producerData.push({name: dataJSON?.name, dataKey: key});
         }
     }
@@ -287,7 +290,11 @@ function sortSongDataId()
     for (let i = 0; i < localStorage.length; i++)
     {
         const key = localStorage.key(i);
-        const dataJSON = JSON.parse(localStorage.getItem(key));
+        
+        if (key.startsWith('cachedSong'))
+        {
+            const dataJSON = JSON.parse(localStorage.getItem(key));
+        }
         if (dataJSON.publishDate === undefined)
         {
             songData.push({name: dataJSON?.name, dataKey: key, date: ''});

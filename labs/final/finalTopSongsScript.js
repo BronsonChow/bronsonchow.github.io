@@ -10,7 +10,7 @@ async function loadTopRated()
     const cacheKey = `cachedTopSongs${ratingMax}`;
     const dbExist = localStorage.getItem(cacheKey);
 
-    if (dbExist && cacheKey.startsWith('cached'))
+    if (dbExist)
     {
         console.log(`Loading top ${ratingMax} songs from localStorage`);
     }
