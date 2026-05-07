@@ -23,7 +23,7 @@ async function loadData()
         const cacheKey = `cachedSong${favSongId}`;
         const songExist = localStorage.getItem(cacheKey);
         
-        if (songExist)
+        if (songExist && cacheKey.startsWith('cached'))
         {
             console.log(`Loading song ID ${favSongId} from localStorage`);
             continue;
@@ -45,7 +45,7 @@ async function loadData()
         const cacheKey = `cachedProducer${favProducerId}`;
         const producerExist = localStorage.getItem(cacheKey);
 
-        if (producerExist)
+        if (producerExist && cacheKey.startsWith('cached'))
         {
             console.log(`Loading producer ID ${favProducerId} from localStorage`);
             continue;

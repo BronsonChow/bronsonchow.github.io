@@ -10,7 +10,7 @@ async function loadTopRated()
     const cacheKey = `cachedTopSongs${ratingMax}`;
     const dbExist = localStorage.getItem(cacheKey);
 
-    if (dbExist)
+    if (dbExist && cacheKey.startsWith('cached'))
     {
         console.log(`Loading top ${ratingMax} songs from localStorage`);
     }
@@ -28,8 +28,8 @@ async function loadTopRated()
             console.warn(`Error for fetching top ${ratingMax} songs`);
         }
     }
-    createTopSongIndex(ratingMax);
-    createTopSongCells(ratingMax);
+    createTopSongIndex(13);
+    createTopSongCells(13);
 }
 function createTopSongIndex(sliderValue)
 {
