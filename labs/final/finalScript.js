@@ -290,18 +290,18 @@ function sortSongDataId()
     for (let i = 0; i < localStorage.length; i++)
     {
         const key = localStorage.key(i);
-        
+
         if (key.startsWith('cachedSong'))
         {
             const dataJSON = JSON.parse(localStorage.getItem(key));
-        }
-        if (dataJSON.publishDate === undefined)
-        {
-            songData.push({name: dataJSON?.name, dataKey: key, date: ''});
-        }
-        else
-        {
-            songData.push({name: dataJSON?.name, dataKey: key, date: Date.parse(dataJSON?.publishDate)});
+            if (dataJSON.publishDate === undefined)
+            {
+                songData.push({name: dataJSON?.name, dataKey: key, date: ''});
+            }
+            else
+            {
+                songData.push({name: dataJSON?.name, dataKey: key, date: Date.parse(dataJSON?.publishDate)});
+            }
         }
     }
     songData.sort((a, b) => a.date - b.date);
