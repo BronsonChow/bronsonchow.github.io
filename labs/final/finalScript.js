@@ -124,7 +124,7 @@ function createSongCells()
                     </div>
                     <div class="col-lg-9">
                         <div class="title">
-                            <h1>${song.name}</h1>
+                            <h2><b>${song.name}</b></h2>
                         </div>
                         <p>
                             <b>Producer(s):</b> ${song.artistString} <br>
@@ -193,7 +193,7 @@ function createProducerCells()
                     </div>
                     <div class="col-lg-9">
                         <div class="title">
-                            <h1>${producer.name}</h1>
+                            <h2><b>${producer.name}</b></h2>
                         </div>
                         <p>
                             <b>Aliases:</b> ${alias}<br>

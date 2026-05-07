@@ -121,4 +121,5 @@ f1c5145 v0.7.11.5 removed unnecessary styles in finalStyle.css and added comment
 5f8066e v0.7.12 added logic for fetching top X songs from vocadb api
 34d31cc v0.7.12.1 todo fix appendChild? bug
 9f4bac5 v0.7.13 fixed appendChild bug and redid cell names
-        v0.7.14 finalized as far as course requirements
+9a46e70 v0.7.14 finalized as far as course requirements
+        v0.7.14.1 recolored fonts for headers in finalStyle.css

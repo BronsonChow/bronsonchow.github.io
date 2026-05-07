@@ -26,7 +26,9 @@ h2 {
     text-shadow: 0.1rem 0.1rem 0.1rem #8BBCF9;
 }
 .title h1 {
+    color: #8BBCF9;
     margin-right: 0.5rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #04254E;
 }
 .btn {
     /* ALL buttons */
@@ -119,7 +121,7 @@ h2 {
         color: #FFFFFF;
         background-color: #04254E;
 
-        --bs-body-color: #8BBCF9;
+        --bs-body-color: #04254E;
         --bs-tertiary-bg: #04254E;
     }
     h1 {
@@ -127,6 +129,13 @@ h2 {
     }
     b {
         color: #8BBCF9;
+    }
+    .title h1,
+    .title h2  {
+        color: #FFFFFF;
+    }
+    .title h2 {
+        text-shadow: 0.1rem 0.1rem 0.3rem #021327;
     }
     .cell {
         background-color: #063A74;
