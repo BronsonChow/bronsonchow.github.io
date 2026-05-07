@@ -1,8 +1,6 @@
 # Website Documentation for CSC 225
 Link to homepage: https://bronsonchow.github.io/
   
-Link to the API section: [VocaDB API General Information](#API-General-Information)
-  
 ### VocaDB API General Information
 API requests are not protected by any key, it is a public API. However, anything that modifies data, such as POST or DELETE, requires a key which requires contacting the website administrators to be approved and whitelisted.
   
