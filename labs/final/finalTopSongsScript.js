@@ -1,6 +1,7 @@
+const songTopRatedIndex = document.getElementById("topRatedSongIndex");
 const songTopRatedCell = document.getElementById("topRatedSongs");
 const ratingSlider = document.getElementById("maxSongs");
-const ratingMax = ratingSlider.getAttribute('max');
+const ratingMax = ratingSlider.getAttribute("max");
 
 const songTopData = [];
 
@@ -27,13 +28,36 @@ async function loadTopRated()
             console.warn(`Error for fetching top ${ratingMax} songs`);
         }
     }
-    createTopSongCells();
+    createTopSongIndex(ratingMax);
+    createTopSongCells(ratingMax);
 }
-function createTopSongCells()
+function createTopSongIndex(sliderValue)
 {
     const topSongsArray = JSON.parse(localStorage.getItem(`cachedTopSongs${ratingMax}`));
 
-    for (let i = 0; i < ratingMax; i++)
+    for (let i = 0; i < sliderValue; i++)
+    {
+        const cell = document.createElement("div");
+        const song = topSongsArray[i];
+        
+        cell.innerHTML =
+        `
+        <div class="container-fluid" id="songIndex">
+            <div class="row justify-content-center">
+                <div class="col-lg-10" style="max-width: 400px;">
+                    <a class="btn centered" href="#${song?.id}" role="button" style="padding: 0;">${song?.name}</a>
+                </div>
+            </div>
+        </div>
+        `;
+        songTopRatedIndex.appendChild(cell);
+    }
+}
+function createTopSongCells(sliderValue)
+{
+    const topSongsArray = JSON.parse(localStorage.getItem(`cachedTopSongs${ratingMax}`));
+
+    for (let i = 0; i < sliderValue; i++)
     {
         const cell = document.createElement("div");
         const song = topSongsArray[i];
@@ -77,6 +101,14 @@ function createTopSongCells()
         </div>
         `;
         songTopRatedCell.appendChild(cell);
-        console.log(i);
     }
+}
+function displayTopSongs(value)
+{
+    const test = document.getElementById('valueDisplay').innerHTML = value;
+    
+    songTopRatedIndex.innerHTML = '';
+    songTopRatedCell.innerHTML = '';
+    createTopSongIndex(value);
+    createTopSongCells(value);
 }

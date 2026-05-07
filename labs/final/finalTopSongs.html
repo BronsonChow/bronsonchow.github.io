@@ -62,9 +62,14 @@
                         <!-- Buttons for song max range -->
                         <div class="container-fluid centered">
                             <div class="form-group mt-4 text-center">
-                                <label for="maxSongs" class="form-label">Display Amount: </label>
-                                <input type="range" class="form-range" min="1" max="25" id="maxSongs" width="500">
+                                <label for="maxSongs" class="form-label">Display Amount: <span id="valueDisplay">25</span></label>
+                                <input type="range" class="form-range" min="1" max="25" id="maxSongs" width="500"
+                                    oninput="displayTopSongs(this.value)">
                             </div>
+                        </div>
+                        &nbsp;
+                        <div class="overflow-auto">
+                            <p id="topRatedSongIndex"></p>
                         </div>
                     </div>
                     <!-- Song cell(s) -->
