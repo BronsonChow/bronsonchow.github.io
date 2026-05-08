@@ -129,3 +129,4 @@ d2cf3c3 v0.7.14.1 recolored fonts for headers in finalStyle.css
         v0.8 removed style.css link to keep 1 stylesheet per project
         v0.8.1 reworked entire folder structure and created new voca.html for further vocaloid site development
         v0.8.1.1 created todoVoca.md
+        v0.8.1.2 updated todoVoca.md

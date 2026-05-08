@@ -43,6 +43,9 @@ const navigation = `
                         <li><a class="dropdown-item" href="../../labs/final/final.html">Final Project</a></li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="todoVoca.md">Future Plans List</a>
+                </li>
                 <div class="me-4"></div>
                 <li class="nav-item align-items-center d-flex">
                     <i class="fa fa-sun-o"></i>
@@ -51,6 +54,7 @@ const navigation = `
                     </div>
                     <i class="fa fa-moon-o"></i>
                 </li>
+                <div class="me-4"></div>
             </ul>
         </div>
     </div>
