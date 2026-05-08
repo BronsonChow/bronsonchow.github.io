@@ -44,7 +44,7 @@ const navigation = `
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="todoVoca.md">Future Plans List</a>
+                    <a class="nav-link" target="_blank" href="https://docs.google.com/spreadsheets/d/15gTjHYgSWRcKoOGMVjodmE6AoESzgY2RV_Dej49yHBo/edit?usp=sharing">Future Plans List</a>
                 </li>
                 <div class="me-4"></div>
                 <li class="nav-item align-items-center d-flex">

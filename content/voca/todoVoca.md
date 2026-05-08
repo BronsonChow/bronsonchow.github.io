@@ -1,6 +1,0 @@
-- fix dark mode button bug
-- dark mode retain throughout domain (localStorage solution)
-- optimize stylesheet with dark mode interaction
-- gridded carousel replacement
-- search function (fuzzy search) for looking up songs quickly
-- Google spreadsheets api to import existing spreadsheet data and display on frontend
