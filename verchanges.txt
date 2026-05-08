@@ -128,3 +128,4 @@ d2cf3c3 v0.7.14.1 recolored fonts for headers in finalStyle.css
         v0.7.14.4 fixed localStorage bug in v0.7.14.3 where dataJSON was outside of if statement
         v0.8 removed style.css link to keep 1 stylesheet per project
         v0.8.1 reworked entire folder structure and created new voca.html for further vocaloid site development
+        v0.8.1.1 created todoVoca.md

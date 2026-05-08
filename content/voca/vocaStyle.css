@@ -1,5 +1,13 @@
+:root {
+    --cobalt-blue: #0954AE;
+    --dark-blue: #04254E;
+    --light-blue: #8BBCF9;
+    --really-light-blue: #DAEBFF;
+    --bright-copper: #F34616;
+    --light-copper: #FBC1B1;
+}
 a {
-    color: #0954AE;
+    color: var(--cobalt-blue);
     font-family: Dosis;
     font-size: 1.1rem;
 }
@@ -9,41 +17,44 @@ a.anchor {
     top: -4.5rem;
     visibility: hidden;
 }
+a.dropdown-item {
+    transition: 0.2s;
+}
 body {
-    color: #04254E;
-    background-color: #DAEBFF;
+    color: var(--dark-blue);
+    background-color: var(--really-light-blue);
     font-family: Dosis;
-    --bs-tertiary-bg: #DAEBFF;
+    --bs-tertiary-bg: var(--really-light-blue);
 }
 b.b1 {
-    color: #0954AE;
+    color: var(--cobalt-blue);
 }
 h1 {
     color: #FFFFFF;
     font-family: Oswald, sans-serif;
     font-size: 2rem;
     margin: 0;
-    text-shadow: 0.1rem 0.1rem 0.3rem #04254E;
+    text-shadow: 0.1rem 0.1rem 0.3rem var(--dark-blue);
 }
 h1.jumbo {
     font-size: 4rem;
 }
 h1.cellh {
-    color: #0954AE;
+    color: var(--cobalt-blue);
     font-size: 1.5rem;
-    text-shadow: 0.1rem 0.1rem 0.1rem #8BBCF9;
+    text-shadow: 0.1rem 0.1rem 0.1rem var(--light-blue);
 }
 h1.cellrank {
-    color: #8BBCF9;
+    color: var(--light-blue);
     margin-right: 0.5rem;
-    text-shadow: 0.1rem 0.1rem 0.1rem #04254E;
+    text-shadow: 0.1rem 0.1rem 0.1rem var(--dark-blue);
 }
 p {
     font-size: 1.1rem;
 }
 ul {
     font-family: Dosis;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 .cellh h1 {
     font-size: 1.5rem;
@@ -57,28 +68,28 @@ ul {
     border-color: #FFFFFF;
 
     /* INDEX buttons */
-    background-color: #8BBCF9; /* index background color */
+    background-color: var(--light-blue); /* index background color */
     
     --bs-btn-hover-border-color: transparent; /* all but radio hover border color */
-    --bs-btn-hover-bg: #FBC1B1; /* a hover background */
+    --bs-btn-hover-bg: var(--light-copper); /* a hover background */
 }
 .btn-primary {
     /* RADIO & PAGE buttons */
-    background-color: #DAEBFF; /* both background color */
+    background-color: var(--really-light-blue); /* both background color */
     --bs-btn-active-border-color: transparent; /* both border color */
     --bs-btn-active-color: #FFFFFF; /* both text color */
-    --bs-btn-active-bg: #F34616; /* both background color */
+    --bs-btn-active-bg: var(--bright-copper); /* both background color */
 
     /* RADIO buttons */
-    --bs-btn-color: #04254E; /* radio text color */
-    --bs-btn-bg: #FBC1B1; /* radio hover background */
+    --bs-btn-color: var(--dark-blue); /* radio text color */
+    --bs-btn-bg: var(--light-copper); /* radio hover background */
     --bs-btn-border-color: transparent; /* radio border color */
 
     /* PAGE buttons */
-    --bs-btn-hover-color: #04254E; /* a hover text color */
+    --bs-btn-hover-color: var(--dark-blue); /* a hover text color */
 }
 .btn.disabled {
-    background-color: #7fa8dd;
+    background-color: var(--light-blue);
 }
 .cell {
     padding: 1rem;
@@ -107,26 +118,28 @@ ul {
     width: auto;
 }
 .jumbotron {
-    background-color: #8BBCF9;
+    background-color: var(--light-blue);
     margin: 0;
     padding-bottom: 0px;
 }
 .navbar {
     min-height: 4rem;
     background-color: #FFFFFF;
-    border-bottom: 2px solid #8BBCF9;
+    border-bottom: 2px solid var(--light-blue);
     padding: 0;
+    --bs-navbar-hover-color: var(--light-blue);
+    --bs-navbar-active-color: var(--cobalt-blue);
 }
 .navbar-brand {
     color: #FFFFFF;
     font-family: Oswald, sans-serif;
     font-size: 2rem;
     margin-right: 1rem;
-    text-shadow: 0.1rem 0.1rem 0.3rem #04254E;
+    text-shadow: 0.1rem 0.1rem 0.3rem var(--dark-blue);
     transition: 0.2s;
 }
 .navbar-brand:hover {
-    color: #04254E;
+    color: var(--dark-blue);
 }
 .row {
     margin: 0 auto;
