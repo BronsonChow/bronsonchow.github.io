@@ -1,10 +1,21 @@
+a {
+    color: #0954AE;
+    font-family: Dosis;
+    font-size: 1.1rem;
+}
+a.anchor {
+    display: block;
+    position: relative;
+    top: -4.5rem;
+    visibility: hidden;
+}
 body {
     color: #04254E;
     background-color: #DAEBFF;
-    
+    font-family: Dosis;
     --bs-tertiary-bg: #DAEBFF;
 }
-b {
+b.b1 {
     color: #0954AE;
 }
 h1 {
@@ -14,28 +25,30 @@ h1 {
     margin: 0;
     text-shadow: 0.1rem 0.1rem 0.3rem #04254E;
 }
-h2 {
-    font-family: Dosis;
+h1.jumbo {
+    font-size: 4rem;
 }
-.alert h1,
-.alert a {
-    color: #FF0000;
-    display: inline;
-    font-size: 2rem;
-    text-align: center;
-}
-.title h1,
-.title h2 {
+h1.cellh {
     color: #0954AE;
-    display: inline;
     font-size: 1.5rem;
-    text-align: center;
     text-shadow: 0.1rem 0.1rem 0.1rem #8BBCF9;
 }
-.title h1 {
+h1.cellrank {
     color: #8BBCF9;
     margin-right: 0.5rem;
     text-shadow: 0.1rem 0.1rem 0.1rem #04254E;
+}
+p {
+    font-size: 1.1rem;
+}
+ul {
+    font-family: Dosis;
+    font-size: 1.1rem;
+}
+.cellh h1 {
+    font-size: 1.5rem;
+    display: inline;
+    text-align: center;
 }
 .btn {
     /* ALL buttons */
@@ -72,6 +85,12 @@ h2 {
     border-radius: 0.5rem 2rem;
     background-color: #FFFFFF;
 }
+.centered {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
 .image-container {
     height: 10rem;
     border-radius: 0.5rem 2rem;
@@ -82,6 +101,10 @@ h2 {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+.img-fluid {
+    max-height: 25rem;
+    width: auto;
 }
 .jumbotron {
     background-color: #8BBCF9;
@@ -105,13 +128,10 @@ h2 {
 .navbar-brand:hover {
     color: #04254E;
 }
-#songCell {
-    max-width: 50rem;
-    border-radius: 0.5rem 2rem;
-    background-color: #FFFFFF;
-    padding: 0;
+.row {
+    margin: 0 auto;
 }
-#producerCell {
+#songCell {
     max-width: 50rem;
     border-radius: 0.5rem 2rem;
     background-color: #FFFFFF;
@@ -119,6 +139,12 @@ h2 {
 }
 #songIndex {
     object-position: center;
+}
+#producerCell {
+    max-width: 50rem;
+    border-radius: 0.5rem 2rem;
+    background-color: #FFFFFF;
+    padding: 0;
 }
 #producerIndex {
     object-position: center;

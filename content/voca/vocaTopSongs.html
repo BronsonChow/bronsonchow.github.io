@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="fn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Dosis|Oswald' rel='stylesheet'>
+
+        <link href="vocaStyle.css" rel="stylesheet">
+
+        <title>BC's Vocaloid Project</title>
+    </head>
+
+    <body onload="loadTopRated()">
+        <div id="nav"></div><script src="navbarVoca.js"></script>
+
+        <div id="sect1"></div>
+        <div class="jumbotron">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                        <h1 class="display-3">Top Songs by Rating Count</h1>
+                        <p class="lead">
+                            <div class="btn-group">
+                                <a href="voca.html" class="btn btn-primary">My Favorites</a>
+                                <a href="vocaTopSongs.html" class="btn btn-primary active" aria-current="page">Top Songs by Rating Count</a>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        &nbsp;
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="container-fluid cell">
+                            <div class="container-fluid" style="text-align: center;">
+                                <h1>Top Songs by Rating Count of All Time</h1>
+                                <p>on vocadb.net</p>
+                            </div>
+                        <div class="container-fluid centered">
+                            <div class="form-group mt-4 text-center">
+                                <label for="maxSongs" class="form-label">Display Amount: <span id="valueDisplay">13</span></label>
+                                <input type="range" class="form-range" min="1" max="25" id="maxSongs" width="500"
+                                    oninput="displayTopSongs(this.value)">
+                            </div>
+                        </div>
+                        &nbsp;
+                        <div class="overflow-auto">
+                            <p id="topRatedSongIndex"></p>
+                        </div>
+                    </div>
+                    <p id="topRatedSongs"></p>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+        &nbsp;
+
+        <div class="row justify-content-center">
+            <a class="btn btn-light" href="#" role="button" style="max-width: 6.5rem;">
+                <i class="fa fa-angle-double-up" style="margin: 0;"></i>
+                <p style="margin: 0;">Back to top</p>
+            </a>
+        </div>
+
+        <hr class="my-4">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col align-self-start">
+                    <a target="_blank" href="https://vocadb.net/">Information used from VocaDB</a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="vocaTopSongsScript.js"></script>
+</html>

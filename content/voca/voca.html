@@ -1,65 +1,49 @@
 <!DOCTYPE html>
 <html xmlns="fn" lang="en" data-bs-theme="light">
     <head>
-        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-        <!-- Google Fonts -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Dosis|Oswald' rel='stylesheet'>
+        
+        <link href="vocaStyle.css" rel="stylesheet">
 
-        <!-- Stylesheets -->
-        <link href="../../style.css" rel="stylesheet">
-        <link href="finalStyle.css" rel="stylesheet">
-
-        <!-- Title -->
-        <title>Final Project</title>
+        <title>BC's Vocaloid Project</title>
     </head>
 
     <body onload="loadData()">
-        <!-- Script for navbar -->
-        <div id="nav"></div><script src="navbarFinal.js"></script>
+        <div id="nav"></div><script src="navbarVoca.js"></script>
 
-        <!-- Jumbotron -->
         <div id="sect1"></div>
         <div class="jumbotron">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-11">
-                        <h1 class="display-3">My Favorite Songs & Producers</h1>
-                        <p class="lead">
-                            <!-- Other pages -->
+                        <h1 class="jumbo">My Favorite Songs & Producers</h1>
+                        <p>
                             <div class="btn-group">
-                                <a href="final.html" class="btn btn-primary active" aria-current="page">My Favorites</a>
-                                <a href="finalTopSongs.html" class="btn btn-primary">Top Songs by Rating Count</a>
-                                <a href="finalSearch.html" class="btn btn-primary disabled" aria-disabled="true">Specific Search</a>
+                                <a href="voca.html" class="btn btn-primary active" aria-current="page">My Favorites</a>
+                                <a href="vocaTopSongs.html" class="btn btn-primary">Top Songs by Rating Count</a>
                             </div>
                         </p>
-                        <div class="alert" style="color: #FF0000">
-                            <h1>Further development moved to <a href="../../content/voca/voca.html"><h1>/Personal Projects/Vocaloid Stuff</h1></a></h1>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
         &nbsp;
 
-        <!-- Main core -->
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-2"></div>
-                <!-- Song display section -->
                 <div class="col-lg-4">
                     <div class="container-fluid cell">
                         <h1 class="centered">Songs</h1>
                         &nbsp;
-                        <!-- Buttons for song index -->
                         <div class="container-fluid centered">
                             <div class="btn-group" aria-label="Basic radio toggle button group" style="max-width: 15rem;">
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked/>
@@ -70,27 +54,21 @@
                             </div>
                         </div>
                         &nbsp;
-                        <!-- Song index button(s) -->
                         <p id="favSongIndex"></p>
                     </div>
-                    <!-- Song cell(s) -->
                     <p id="favSongCells"></p>
                 </div>
-                <!-- Producer display section -->
                 <div class="col-lg-4">
                     <div class="container-fluid cell">
                         <h1 class="centered">Producers</h1> <br>
-                        <!-- Producer index button(s) -->
                         <p id="favProducerIndex"></p>
                     </div>
-                    <!-- Producer cell(s) -->
                     <p id="favProducerCells"></p>
                 </div>
                 <div class="col-lg-2"></div>
             </div>
         </div>
 
-        <!-- Navigation button -->
         <div class="row justify-content-center">
             <a class="btn btn-light" href="#" role="button" style="max-width: 6.5rem;">
                 <i class="fa fa-angle-double-up" style="margin: 0;"></i>
@@ -98,7 +76,6 @@
             </a>
         </div>
 
-        <!-- Footer -->
         <hr class="my-4">
         <div class="container text-center">
             <div class="row">
@@ -109,6 +86,5 @@
         </div>
         &nbsp;
     </body>
-    <!-- Script for backend JavaScript -->
-    <script src="finalScript.js"></script>
+    <script src="vocaScript.js"></script>
 </html>

@@ -26,21 +26,21 @@ const navigation = `
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Personal Projects</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../../content/keyboard/keyb.html">Custom Keyboard Info</a></li>
-                        <li><a class="dropdown-item" href="../../content/voca/voca.html">Vocaloid Stuff</a></li>
+                        <li><a class="dropdown-item" href="../keyboard/keyb.html">Custom Keyboard Info</a></li>
+                        <li><a class="dropdown-item" href="voca.html">Vocaloid Stuff</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CSC 225 Labs</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="../../README.md">Lab 1 - readme</a></li>
-                        <li><a class="dropdown-item" href="../StarterPage.html">Lab 2 - Starter Page</a></li>
-                        <li><a class="dropdown-item" href="../lab3.html">Lab 3 - Bootstrap</a></li>
-                        <li><a class="dropdown-item" href="../lab4.html">Lab 4 - JavaScript</a></li>
-                        <li><a class="dropdown-item" href="../lab5.html">Lab 5 - JavaScript contd.</a></li>
-                        <li><a class="dropdown-item" href="../lab6.html">Lab 6 - Rest API</a></li>
+                        <li><a class="dropdown-item" href="../../StarterPage.html">Lab 2 - Starter Page</a></li>
+                        <li><a class="dropdown-item" href="../../labs/lab3.html">Lab 3 - Bootstrap</a></li>
+                        <li><a class="dropdown-item" href="../../labs/lab4.html">Lab 4 - JavaScript</a></li>
+                        <li><a class="dropdown-item" href="../../labs/lab5.html">Lab 5 - JavaScript contd.</a></li>
+                        <li><a class="dropdown-item" href="../../labs/lab6.html">Lab 6 - Rest API</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="final.html">Final Project</a></li>
+                        <li><a class="dropdown-item" href="../../labs/final/final.html">Final Project</a></li>
                     </ul>
                 </li>
                 <div class="me-4"></div>

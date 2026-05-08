@@ -8,9 +8,10 @@ const navigation = `
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Misc Pages</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Personal Projects</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../content/keyb.html">Custom Keyboard Info</a></li>
+                        <li><a class="dropdown-item" href="../content/keyboard/keyb.html">Custom Keyboard Info</a></li>
+                        <li><a class="dropdown-item" href="../content/voca/voca.html">Vocaloid Stuff</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -23,7 +24,7 @@ const navigation = `
                         <li><a class="dropdown-item" href="lab5.html">Lab 5 - JavaScript contd.</a></li>
                         <li><a class="dropdown-item" href="lab6.html">Lab 6 - Rest API</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="final/final.html">Final Project</a></li>
+                        <li><a class="dropdown-item" href="/final/final.html">Final Project</a></li>
                     </ul>
                 </li>
                 <!--
