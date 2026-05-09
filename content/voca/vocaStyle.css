@@ -1,6 +1,8 @@
 :root {
     --cobalt-blue: #0954AE;
+    --medium-blue: #063A74;
     --dark-blue: #04254E;
+    --really-dark-blue: #021327;;
     --light-blue: #8BBCF9;
     --really-light-blue: #DAEBFF;
     --bright-copper: #F34616;
@@ -61,32 +63,24 @@ ul {
     display: inline;
     text-align: center;
 }
-.btn {
-    /* ALL buttons */
-    font-family: Dosis;
-    font-size: 1.1rem;
-    border-color: #FFFFFF;
-
-    /* INDEX buttons */
-    background-color: var(--light-blue); /* index background color */
-    
-    --bs-btn-hover-border-color: transparent; /* all but radio hover border color */
-    --bs-btn-hover-bg: var(--light-copper); /* a hover background */
+.btn-voca {
+    color: var(--cobalt-blue);
+    background-color: #FFFFFF;
+    border-color: var(--dark-blue);
+    --bs-btn-active-bg: var(--bright-copper);
+    --bs-btn-active-border-color: transparent;
+    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-bg: var(--light-copper);
 }
-.btn-primary {
-    /* RADIO & PAGE buttons */
-    background-color: var(--really-light-blue); /* both background color */
-    --bs-btn-active-border-color: transparent; /* both border color */
-    --bs-btn-active-color: #FFFFFF; /* both text color */
-    --bs-btn-active-bg: var(--bright-copper); /* both background color */
-
-    /* RADIO buttons */
-    --bs-btn-color: var(--dark-blue); /* radio text color */
-    --bs-btn-bg: var(--light-copper); /* radio hover background */
-    --bs-btn-border-color: transparent; /* radio border color */
-
-    /* PAGE buttons */
-    --bs-btn-hover-color: var(--dark-blue); /* a hover text color */
+.btn-voca-index {
+    color: var(--cobalt-blue);
+    background-color: var(--really-light-blue);
+    padding: 0;
+    --bs-btn-hover-bg: var(--light-copper);
+}
+.btn-voca:hover {
+    color: var(--dark-blue);
+    background-color: var(--light-copper);
 }
 .btn.disabled {
     background-color: var(--light-blue);
@@ -141,6 +135,9 @@ ul {
 .navbar-brand:hover {
     color: var(--dark-blue);
 }
+.range-voca {
+    --form-range-track-width: 100%;
+}
 .row {
     margin: 0 auto;
 }
@@ -162,56 +159,57 @@ ul {
 #producerIndex {
     object-position: center;
 }
-[data-bs-theme="blue"] {
+[data-bs-theme="voca-dark"] {
     body {
         color: #FFFFFF;
-        background-color: #04254E;
+        background-color: var(--dark-blue);
 
-        --bs-body-color: #04254E;
-        --bs-tertiary-bg: #04254E;
+        --bs-body-color: #FFFFFF;
+        --bs-tertiary-bg: var(--dark-blue);
     }
     h1 {
-        text-shadow: 0.1rem 0.1rem 0.3rem #8BBCF9;
+        text-shadow: 0.1rem 0.1rem 0.3rem var(--light-blue);
     }
     b {
-        color: #8BBCF9;
+        color: var(--light-blue);
     }
-    .title h1,
-    .title h2  {
-        color: #FFFFFF;
+    .btn-voca-index {
+        color: var(--light-blue);
+        background-color: var(--dark-blue);
     }
-    .title h2 {
-        text-shadow: 0.1rem 0.1rem 0.3rem #021327;
+    .btn-voca-index:hover {
+        color: var(--dark-blue);
+        background-color: var(--light-copper) !important;
     }
     .cell {
-        background-color: #063A74;
+        background-color: var(--medium-blue);
     }
     .dropdown-menu {
-        --bs-dropdown-bg: #063A74;
+        --bs-dropdown-bg: var(--medium-blue);
     }
     .jumbotron {
-        background-color: #021327;
+        background-color: var(--really-dark-blue);
     }
     .navbar {
         --bs-navbar-color: #FFFFFF;
-        --bs-navbar-active-color: #8BBCF9;
-        background-color: #063A74;
-        border-bottom: 2px solid #021327;
+        --bs-navbar-active-color: var(--light-blue);
+        background-color: var(--medium-blue);
+        border-bottom: 2px solid var(--really-dark-blue);
     }
     .nav-link {
         color: #FFFFFF;
     }
     .navbar-brand {
         color: #FFFFFF;
-        text-shadow: 0.1rem 0.1rem 0.3rem #8BBCF9;
+        text-shadow: 0.1rem 0.1rem 0.3rem var(--light-blue);
     }
     .navbar-brand:hover {
-        color: #8BBCF9;
+        color: var(--light-blue);
     }
     #songCell {
-        background-color: #063A74;
+        background-color: var(--medium-blue);
     }
     #producerCell {
-        background-color: #063A74;
+        background-color: var(--medium-blue);
     }
 }

@@ -1,6 +1,6 @@
-Everything is subject to change
+# Everything is subject to change
 
-Commits and versions guide
+# Commits and versions guide
 x.y.z.a
 
 x : [0, 1]
@@ -18,116 +18,118 @@ a : [n]
     Tweaks
     Bug fixes
 
-History:
-ea1bbb7 Create index.html
-9270d8f First website build
-99dc1c7 v0.1.2 Added image & formatting
-29fce03 v0.1.2.1 variable formatting and rewording
-4789989 v0.1.3 Added image of creature
-c59804c v0.1.4 Added CSS reset for body
-66670c4 v0.1.5 cleaned up end horizontal rule and recentered footer
-d594486 v0.1.5.1 removed unit identifiers for zeroes
-6ad915f v0.1.5.2 external links open in new tab
-4241a57 v0.1.6 swapped from internal to external css
-c732be3 v0.1.7 font change
-84d23eb v0.2.0 bootstrap initialization & minor fixes
-1148e3f v0.2.1 added jumbotron
-521d532 v0.2.2 adjusted existing fil to use bootstrap & other changes
+# History:
+
+Create index.html
+First website build
+v0.1.2 Added image & formatting
+v0.1.2.1 variable formatting and rewording
+v0.1.3 Added image of creature
+v0.1.4 Added CSS reset for body
+v0.1.5 cleaned up end horizontal rule and recentered footer
+v0.1.5.1 removed unit identifiers for zeroes
+v0.1.5.2 external links open in new tab
+v0.1.6 swapped from internal to external css
+v0.1.7 font change
+v0.2.0 bootstrap initialization & minor fixes
+v0.2.1 added jumbotron
+v0.2.2 adjusted existing fil to use bootstrap & other changes
         > Added logos to each link url
         > Replaced fixed footer with normal one
         > Columns and rows for different sections
         > Consolidated certain headers into one row
-46efece v0.2.2.1 optimized image sizing
-aa885a1 v0.2.3 adjusted font import and removed unnecessary heading
-290ae71 v0.2.4 added navigation bar with temporary buttons
-81920a8 v0.2.5 functional lab1/2/3 links for navbar
-b9f9d7c v0.2.6 added light/dark theme button
-f35d117 v0.2.7 editted navbar
-c523af0 v0.3 set up lab3.html
-0bd9020 v0.3.1 changed jumbotron subheader
-e741eeb v0.3.2 added paragraph (type)
-42d9490 v0.3.4 adjusted a few continuity errors
-40e9a3f v.0.3.4 added table of contents
-5bef45a v0.3.5 tweaked borders and img/credit alignment
-e3eda15 v0.3.6.1 adjusted readme to fit version numbers for ease of use
+v0.2.2.1 optimized image sizing
+v0.2.3 adjusted font import and removed unnecessary heading
+v0.2.4 added navigation bar with temporary buttons
+v0.2.5 functional lab1/2/3 links for navbar
+v0.2.6 added light/dark theme button
+v0.2.7 editted navbar
+v0.3 set up lab3.html
+v0.3.1 changed jumbotron subheader
+v0.3.2 added paragraph (type)
+v0.3.4 adjusted a few continuity errors
+v.0.3.4 added table of contents
+v0.3.5 tweaked borders and img/credit alignment
+v0.3.6.1 adjusted readme to fit version numbers for ease of use
         > Also adjusted version number which was slightly off due to accidental repetition
-
-ec541a4 v0.3.6.2 fixed space between courses and "course link"
-33ce9b9 v0.3.7 migrated version changes to a new file & slight formatting
-2cedccd v0.3.7.1 adjusted centering for bordered class
-bab1a1a v0.3.8 updated index
-70cc284 v0.3.9 partially filled section 2 & more
+v0.3.6.2 fixed space between courses and "course link"
+v0.3.7 migrated version changes to a new file & slight formatting
+v0.3.7.1 adjusted centering for bordered class
+v0.3.8 updated index
+v0.3.9 partially filled section 2 & more
         > redid section headers
         > tuned column formatting
         > replaced links with buttons
         > new 'centered' class
-a5eddba v0.3.9.1 possible image fix
-7281bbc v0.3.10 added remaining section 2
-7010f09 v0.3.11 added colored png of keyboards for visual assistance
+v0.3.9.1 possible image fix
+v0.3.10 added remaining section 2
+v0.3.11 added colored png of keyboards for visual assistance
         > Added section color legend table
-0ffb17b v0.3.11.1 added submission date and submission commit id
-1b27e17 v0.3.11.1-f1 lab3 correction
-c7223ac v0.3.11.2 back to status quo
-c9743dc v0.3.11.3 buttons are now in an unordered list
-123fb0d v0.3.12 separated lab3.html into keyb.html
+v0.3.11.1 added submission date and submission commit id
+v0.3.11.1-f1 lab3 correction
+v0.3.11.2 back to status quo
+v0.3.11.3 buttons are now in an unordered list
+v0.3.12 separated lab3.html into keyb.html
         > done to simultaneously:
             > meet the requirements of lab 3
             > continue working on keyboard information page
-fcad103 v0.3.12.1 adjusted column size for section legend
-8d93cb6 v0.4 set up lab4.html
-2c13715 v0.4.0.1 reusable navbar using js
-889ee21 v0.4.1 filled out architecture for lab 4
-dbb20c9 v0.4.1.1 optimized variables for redundancy & completed date overflow calculation
-2fdb473 v0.4.1.2 fixed error with missing hour variable
-240b656 v0.5 set up lab5.html
-d04a09c v0.5.1 filled out architecture for lab 5 & slight navbar/jumbotron palette swap
-d53974c v0.6 set up lab6.html
-f1fa6b2 v0.6.1 swap image button working
+v0.3.12.1 adjusted column size for section legend
+v0.4 set up lab4.html
+v0.4.0.1 reusable navbar using js
+v0.4.1 filled out architecture for lab 4
+v0.4.1.1 optimized variables for redundancy & completed date overflow calculation
+v0.4.1.2 fixed error with missing hour variable
+v0.5 set up lab5.html
+v0.5.1 filled out architecture for lab 5 & slight navbar/jumbotron palette swap
+v0.6 set up lab6.html
+v0.6.1 swap image button working
         > removed debug tests from lab4.html
-3d8e3fb v0.6.2 fetch image from api correctly displayed
-a37f02b v0.6.3 display cat facts
-4452a65 v0.6.4 sorted cat facts in order of id
-ecd1804 v0.6.4.1 adjusted tag format
-796cbf5 v0.6.4.2 cleaned up unnecessary bits
-2b89de5 v0.7 set up final.html
-7de626b v0.7.0.1 set up template.html for ease of page creation
-bdf5db2 v0.7.1 added 1 potential API to list
-d0efc3e v0.7.2 added remaining potential APIs to list
-457ff79 v0.7.3 organized html into individual folders with respective navbars
-04010ad v0.7.3.1 fixed "transparent" navbar collapse
-00ada71 v0.7.4 mockup of final project layout
-63bf481 v0.7.5 added html for each page in final
-ef7f2d3 v0.7.6 mockup of final/favorites/ song cell layout
-f9b2293 v0.7.7 favorite song cells format finalized
+v0.6.2 fetch image from api correctly displayed
+v0.6.3 display cat facts
+v0.6.4 sorted cat facts in order of id
+v0.6.4.1 adjusted tag format
+v0.6.4.2 cleaned up unnecessary bits
+v0.7 set up final.html
+v0.7.0.1 set up template.html for ease of page creation
+v0.7.1 added 1 potential API to list
+v0.7.2 added remaining potential APIs to list
+v0.7.3 organized html into individual folders with respective navbars
+v0.7.3.1 fixed "transparent" navbar collapse
+v0.7.4 mockup of final project layout
+v0.7.5 added html for each page in final
+v0.7.6 mockup of final/favorites/ song cell layout
+v0.7.7 favorite song cells format finalized
         > removed footer section for keyb.html
-82b9ce6 v0.7.8 favorite artist cells format mostly done
+v0.7.8 favorite artist cells format mostly done
         > fixed margin bug with row div
-0d19f1a v0.7.9 possible fix for producers not showing up
-bdd4c21 v0.7.9.1 separated song/producer cell creation into respective asynchronous loading functions
-84c6411 v0.7.9.2 array object sorting test
-4770575 v0.7.9.3 songs listed alphabetically
-3142a3a v0.7.9.4 button to sort songs by alphabetically/id
+v0.7.9 possible fix for producers not showing up
+v0.7.9.1 separated song/producer cell creation into respective asynchronous loading functions
+v0.7.9.2 array object sorting test
+v0.7.9.3 songs listed alphabetically
+v0.7.9.4 button to sort songs by alphabetically/id
         > separated style.css's final's components into separate stylesheet (finalStyle.css)
-c7a72d4 v0.7.10 revamped css for final's pages
-19299f8 v0.7.11 functional dark mode button, still some minor bugs
-537edf6 v0.7.11.1 dark mode buttons temporary fix for button background not changing color
+v0.7.10 revamped css for final's pages
+v0.7.11 functional dark mode button, still some minor bugs
+v0.7.11.1 dark mode buttons temporary fix for button background not changing color
         > issue with transparency and button class
-95ef3d2 v0.7.11.2 dark mode navbar text properly colored
-a7c2875 v0.7.11.3 removed creature.png
-ab01bf5 v0.7.11.4 reorganized buttons in stylesheet
+v0.7.11.2 dark mode navbar text properly colored
+v0.7.11.3 removed creature.png
+v0.7.11.4 reorganized buttons in stylesheet
         > set up finalTopSongs.html
         > temporarily disabled finalSearch.html button
-f1c5145 v0.7.11.5 removed unnecessary styles in finalStyle.css and added comments
-5f8066e v0.7.12 added logic for fetching top X songs from vocadb api
-34d31cc v0.7.12.1 todo fix appendChild? bug
-9f4bac5 v0.7.13 fixed appendChild bug and redid cell names
-9a46e70 v0.7.14 finalized as far as course requirements
-d2cf3c3 v0.7.14.1 recolored fonts for headers in finalStyle.css
-1cc9774 v0.7.14.2 fixed bug with localStorage having pre-existing data
-585a6c6 v0.7.14.3 fixed localStorage bug in v0.7.14.2
-        v0.7.14.4 fixed localStorage bug in v0.7.14.3 where dataJSON was outside of if statement
-        v0.8 removed style.css link to keep 1 stylesheet per project
-        v0.8.1 reworked entire folder structure and created new voca.html for further vocaloid site development
-        v0.8.1.1 created todoVoca.md
-        v0.8.1.2 updated todoVoca.md
-        v0.8.1.3 swapped todo list to Google sheets
+v0.7.11.5 removed unnecessary styles in finalStyle.css and added comments
+v0.7.12 added logic for fetching top X songs from vocadb api
+v0.7.12.1 todo fix appendChild? bug
+v0.7.13 fixed appendChild bug and redid cell names
+v0.7.14 finalized as far as course requirements
+v0.7.14.1 recolored fonts for headers in finalStyle.css
+v0.7.14.2 fixed bug with localStorage having pre-existing data
+v0.7.14.3 fixed localStorage bug in v0.7.14.2
+v0.7.14.4 fixed localStorage bug in v0.7.14.3 where dataJSON was outside of if statement
+v0.8 removed style.css link to keep 1 stylesheet per project
+v0.8.1 reworked entire folder structure and created new voca.html for further vocaloid site development
+v0.8.1.1 created todoVoca.md
+v0.8.1.2 updated todoVoca.md
+v0.8.1.3 swapped todo list to Google sheets
+v0.8.2 fixed* dark mode buttons; custom button classes
+        

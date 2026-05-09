@@ -45,7 +45,7 @@ function createTopSongIndex(sliderValue)
         <div class="container-fluid" id="songIndex">
             <div class="row justify-content-center">
                 <div class="col-lg-10" style="max-width: 400px;">
-                    <a class="btn centered" href="#${song?.id}" role="button" style="padding: 0;">${song?.name}</a>
+                    <a class="btn btn-voca-index centered" href="#${song?.id}" id="voca-index">${song?.name}</a>
                 </div>
             </div>
         </div>

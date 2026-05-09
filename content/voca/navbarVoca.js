@@ -5,12 +5,12 @@ function themingSwitcher()
     //localStorage.setItem(colorMode, themeLight{mode: 'dark'});
     if (themeLight)
     {
-        document.documentElement.setAttribute('data-bs-theme', 'blue');
+        document.documentElement.setAttribute('data-bs-theme', 'voca-dark');
         themeLight = false;
     }
     else
     {
-        document.documentElement.setAttribute('data-bs-theme', 'light');
+        document.documentElement.setAttribute('data-bs-theme', 'voca-light');
         themeLight = true;
     }
 }
