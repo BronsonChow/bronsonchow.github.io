@@ -132,4 +132,4 @@ v0.8.1.1 created todoVoca.md
 v0.8.1.2 updated todoVoca.md
 v0.8.1.3 swapped todo list to Google sheets
 v0.8.2 fixed* dark mode buttons; custom button classes
-        
+v0.8.3 replaced jumbotron with hero elements on voca.html

@@ -38,9 +38,6 @@ h1 {
     margin: 0;
     text-shadow: 0.1rem 0.1rem 0.3rem var(--dark-blue);
 }
-h1.jumbo {
-    font-size: 4rem;
-}
 h1.cellh {
     color: var(--cobalt-blue);
     font-size: 1.5rem;
@@ -50,6 +47,10 @@ h1.cellrank {
     color: var(--light-blue);
     margin-right: 0.5rem;
     text-shadow: 0.1rem 0.1rem 0.1rem var(--dark-blue);
+}
+h1.hero-head {
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
 }
 p {
     font-size: 1.1rem;
@@ -62,6 +63,9 @@ ul {
     font-size: 1.5rem;
     display: inline;
     text-align: center;
+}
+.container {
+    display: flex;
 }
 .btn-voca {
     color: var(--cobalt-blue);
@@ -94,7 +98,6 @@ ul {
     align-items: center;
     text-align: center;
     justify-content: center;
-    display: flex;
 }
 .image-container {
     height: 10rem;
@@ -111,10 +114,36 @@ ul {
     max-height: 25rem;
     width: auto;
 }
-.jumbotron {
-    background-color: var(--light-blue);
-    margin: 0;
-    padding-bottom: 0px;
+.hero-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 1.5rem 0;
+    height: 20rem;
+
+    background-image: url('../../assets/doro.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero-card {
+    background-color: rgba(139, 188, 249, 0.45);
+    backdrop-filter: blur(6px) saturate(102%);
+    -webkit-backdrop-filter: blur(6px) saturate(102%);
+
+    text-align: center;
+
+    padding: 0.5rem;
+    margin: auto;
+
+    width: 100%;
+
+    border: rgba(139, 188, 249, 0.45);
+    border-radius: 0;
+}
+.hero-btn {
+    padding-bottom: 1rem;
 }
 .navbar {
     min-height: 4rem;
@@ -159,6 +188,21 @@ ul {
 #producerIndex {
     object-position: center;
 }
+@media (min-width: 992px) {
+    h1.hero-head {
+        font-size: 4rem;
+        padding: 0 5rem 1rem 5rem;
+    }
+    .hero-background {
+        padding: 1.5rem 0;
+    }
+    .hero-card {
+        padding: 1.5rem;
+        border-radius: 2rem;
+
+        max-width: fit-content;
+    }
+}
 [data-bs-theme="voca-dark"] {
     body {
         color: #FFFFFF;
@@ -187,8 +231,8 @@ ul {
     .dropdown-menu {
         --bs-dropdown-bg: var(--medium-blue);
     }
-    .jumbotron {
-        background-color: var(--really-dark-blue);
+    .hero-background {
+        background-image: url('../../assets/minecraftcat.png');
     }
     .navbar {
         --bs-navbar-color: #FFFFFF;
@@ -205,6 +249,12 @@ ul {
     }
     .navbar-brand:hover {
         color: var(--light-blue);
+    }
+    .navbar-toggler {
+        border-color: #FFFFFF; /* Or use your custom color */
+    }
+    .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
     #songCell {
         background-color: var(--medium-blue);
