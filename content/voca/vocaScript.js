@@ -23,7 +23,6 @@ async function loadData()
         const cacheKey = `cachedSong${favSongId}`;
         const songExist = localStorage.getItem(cacheKey);
         
-        console.log(songExist);
         if (songExist)
         {
             console.log(`Loading song ID ${favSongId} from localStorage`);

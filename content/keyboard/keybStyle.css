@@ -1,3 +1,16 @@
+* {
+    font-family: "Noto Sans", sans-serif;
+}
+:root {
+    --cobalt-blue: #0954AE;
+    --medium-blue: #063A74;
+    --dark-blue: #04254E;
+    --really-dark-blue: #021327;;
+    --light-blue: #8BBCF9;
+    --really-light-blue: #DAEBFF;
+    --bright-copper: #F34616;
+    --light-copper: #FBC1B1;
+}
 h1 {
     color: #FFFFFF;
     font-family: Oswald, sans-serif;
@@ -47,20 +60,18 @@ table {
     margin: 0 auto;
 }
 .navbar {
-    min-height: 4rem;
-    background-color: #809ec2;
+    min-height: 3rem;
+    background-color: #FFFFFF;
+    border-bottom: 2px solid var(--light-blue);
     padding: 0;
+    --bs-navbar-hover-color: var(--light-blue);
+    --bs-navbar-active-color: var(--cobalt-blue);
 }
 .navbar-brand {
-    color: #FFFFFF;
-    font-family: Oswald, sans-serif;
-    font-size: 2rem;
-    margin-right: 1rem;
-    text-shadow: 0.1rem 0.1rem 0.3rem #04254E;
+    font-size: 1rem;
     transition: 0.2s;
-}
-.navbar-brand:hover {
-    color: #04254E;
+    padding: 0;
+    margin-right: 0.5rem;
 }
 .jumbotron {
     background-color: #a9b6c7;

@@ -139,3 +139,5 @@ v0.8.5 voca.html reworked hero backdrop
         > Added logo for each html
         > Changed final.html deprecation text to a 1 time alert
         > added footer
+0.8.6 consolidated all* navbars into navbar.js
+        > key added in localStorage for maintaining dark mode

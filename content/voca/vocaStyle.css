@@ -13,25 +13,22 @@
 }
 a {
     color: var(--bright-copper);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 a.anchor {
     display: block;
     position: relative;
-    top: -4.5rem;
+    top: -3.5rem;
     visibility: hidden;
 }
 a.credit {
     color: var(--medium-blue);
 }
-a.dropdown-item {
-    transition: 0.2s;
-}
 body {
-    
     color: var(--dark-blue);
     background-color: var(--really-light-blue);
     --bs-tertiary-bg: var(--really-light-blue);
+    transition: 0.2s;
 }
 b {
     font-weight: 700;
@@ -42,7 +39,7 @@ b.b1 {
 h1 {
     color: #FFFFFF;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 900;
     font-stretch: 55%;
     margin: 0;
     text-shadow: 0.1rem 0.1rem 0.3rem var(--dark-blue);
@@ -74,17 +71,18 @@ i.credit {
     font-size: 3rem;
 }
 p {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 p.credit {
     color: var(--medium-blue);
     display: inline;
-}
-ul {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 ul.credit {
     padding-left: 0;
+}
+ul.navbar-nav {
+    font-size: 1.1rem;
 }
 .cellh h1 {
     font-size: 1.5rem;
@@ -126,6 +124,10 @@ ul.credit {
     text-align: center;
     justify-content: center;
 }
+.fa {
+    font-size: 1.5rem;
+    width: 1.5rem;
+}
 .image-container {
     height: 10rem;
     border-radius: 0.5rem 2rem;
@@ -145,12 +147,15 @@ ul.credit {
     display: flex;
     
     padding: 1.5rem 0;
-    height: 20rem;
+    height: 30rem;
 
     background-image: url('../../assets/voca/rella70858371.jpg');
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 .hero-btn {
     padding-bottom: 1rem;
@@ -182,8 +187,16 @@ ul.credit {
     font-style: normal;
     text-shadow: 0.1rem 0.1rem 0.3rem var(--light-blue);
 }
+.logo svg path{
+  fill: green !important;
+  color: red !important;
+}
+.logo svg text{
+  fill: green !important;
+  color: red !important;
+}
 .navbar {
-    min-height: 4rem;
+    min-height: 3rem;
     background-color: #FFFFFF;
     border-bottom: 2px solid var(--light-blue);
     padding: 0;
@@ -195,9 +208,6 @@ ul.credit {
     transition: 0.2s;
     padding: 0;
     margin-right: 0.5rem;
-}
-.navbar-brand:hover {
-    color: var(--dark-blue);
 }
 .range-voca {
     --form-range-track-width: 100%;
@@ -238,7 +248,7 @@ ul.credit {
         max-width: fit-content;
     }
 }
-[data-bs-theme="voca-dark"] {
+[data-bs-theme="bc-dark"] {
     body {
         color: #FFFFFF;
         background-color: var(--dark-blue);
@@ -278,21 +288,11 @@ ul.credit {
         background-color: var(--medium-blue);
         border-bottom: 2px solid var(--really-dark-blue);
     }
-    .nav-link {
-        color: #FFFFFF;
-    }
-    .navbar-brand {
-        color: #FFFFFF;
-        text-shadow: 0.1rem 0.1rem 0.3rem var(--light-blue);
-    }
-    .navbar-brand:hover {
-        color: var(--light-blue);
-    }
     .navbar-toggler {
-        border-color: #FFFFFF; /* Or use your custom color */
+        border-color: #FFFFFF;
     }
     .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
     #songCell {
         background-color: var(--medium-blue);
