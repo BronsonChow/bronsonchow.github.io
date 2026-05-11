@@ -133,3 +133,9 @@ v0.8.1.2 updated todoVoca.md
 v0.8.1.3 swapped todo list to Google sheets
 v0.8.2 fixed* dark mode buttons; custom button classes
 v0.8.3 replaced jumbotron with hero elements on voca.html
+v0.8.4 voca.html hero completed
+v0.8.5 voca.html reworked hero backdrop
+        > Swapped fonts to Noto Sans and Chewy
+        > Added logo for each html
+        > Changed final.html deprecation text to a 1 time alert
+        > added footer

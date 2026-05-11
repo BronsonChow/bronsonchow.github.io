@@ -18,6 +18,11 @@ const producerData = [];
 
 async function loadData()
 {
+    if (localStorage.getItem('depAlert') === null)
+    {
+        alert("[Deprecation] See /content/voca/voca.html or go to Personal Projects -> Vocaloid Stuff in navigation bar.");
+        localStorage.setItem('depAlert', "1");
+    }
     for (let favSongId of favSongs)
     {
         const cacheKey = `cachedSong${favSongId}`;
