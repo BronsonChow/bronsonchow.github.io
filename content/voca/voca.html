@@ -34,47 +34,88 @@
                 <h1 class="hero-head">My Favorite Songs & Producers</h1>
                 <div class="btn-group hero-btn">
                     <a href="voca.html" class="btn btn-voca active">My Favorites</a>
-                    <a href="vocaTopSongs.html" class="btn btn-voca">Most Rated Songs</a>
+                    <a href="vocaTopSongs.html" class="btn btn-voca disabled">Most Rated Songs</a>
                 </div>
             </div>
         </div>
         <p class="hero-credit">Image by Rella : Links in Footer</p>
         &nbsp;
 
-        <hr class="my-4">
-        &nbsp;
-
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-2"></div>
+                <div class="col-lg-1"></div>
                 <div class="col-lg-4">
-                    <div class="container-fluid cell">
-                        <h1 class="centered">Songs</h1>
+                    <div class="container-fluid cell" style="max-width: 30rem;">
+                        <h1 class="centered" id="voca-title">Songs</h1>
                         &nbsp;
                         <div class="container-fluid centered">
                             <div class="btn-group" style="max-width: 15rem;">
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked/>
-                                <label class="btn btn-voca" for="btnradio1" onclick="sortDataAlphabetically()">Alphabetical</label>
+                                <label class="btn btn-voca" for="btnradio1" onclick="sortSongDataAlphabetically()">Alphabetical</label>
 
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"/>
-                                <label class="btn btn-voca" for="btnradio2" onclick="sortDataId()">Publish Date</label>
+                                <label class="btn btn-voca" for="btnradio2" onclick="sortSongDataId()">Publish Date</label>
                             </div>
                         </div>
                         &nbsp;
-                        <p id="favSongIndex"></p>
+                        <div id="songIndexFrame">
+                            <div id="favSongIndex"></div>
+                        </div>
                     </div>
-                    <p id="favSongCells"></p>
+                    &nbsp;
                 </div>
-                <div class="col-lg-4">
-                    <div class="container-fluid cell">
-                        <h1 class="centered">Producers</h1> <br>
-                        <p id="favProducerIndex"></p>
+                <div class="col-lg-6">
+                    <div id="song-carousel" class="carousel slide" style="max-width: 60rem;" data-bs-ride="false">
+                        <div class="carousel-inner cell">
+                            <div id="favSongCells"></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#song-carousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#song-carousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <p id="favProducerCells"></p>
                 </div>
-                <div class="col-lg-2"></div>
+                <div class="col-lg-1"></div>
             </div>
         </div>
+        &nbsp;
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-4">
+                    <div class="container-fluid cell" style="max-width: 30rem;">
+                        <h1 class="centered" id="voca-title">Producers</h1>
+                        &nbsp;
+                        <div id="prodIndexFrame">
+                            <div id="favProducerIndex"></div>
+                        </div>
+                    </div>
+                    &nbsp;
+                </div>
+                <div class="col-lg-6">
+                    <div id="prod-carousel" class="carousel slide" style="max-width: 60rem;" data-bs-ride="false">
+                        <div class="carousel-inner cell">
+                            <div id="favProducerCells"></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#prod-carousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#prod-carousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+        &nbsp;
 
         <hr class="my-4">
         <div class="container-fluid">

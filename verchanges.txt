@@ -141,3 +141,7 @@ v0.8.5 voca.html reworked hero backdrop
         > added footer
 0.8.6 consolidated all* navbars into navbar.js
         > key added in localStorage for maintaining dark mode
+0.9 complete revamp into carousel display
+        > needs CSS & code clean up
+        > added more favorites
+        > disabled vocaTopSongs.html button temporarily

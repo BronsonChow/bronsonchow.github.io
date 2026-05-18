@@ -34,7 +34,7 @@ b {
     font-weight: 700;
 }
 b.b1 {
-    color: var(--cobalt-blue);
+    color: var(--light-blue);
 }
 h1 {
     color: #FFFFFF;
@@ -45,16 +45,21 @@ h1 {
     text-shadow: 0.1rem 0.1rem 0.3rem var(--dark-blue);
 }
 h1.cellh {
-    color: var(--cobalt-blue);
-    font-size: 1.5rem;
-    text-shadow: 0.1rem 0.1rem 0.1rem var(--light-blue);
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: #FFFFFF;
+    font-size: 2rem;
+    text-shadow:
+            -0.1rem -0.1rem 0.1rem var(--dark-blue),
+            0.1rem 0.1rem 0.1rem var(--dark-blue);
+    display: inline;
 }
 h1.cellrank {
     color: var(--light-blue);
     margin-right: 0.5rem;
     text-shadow: 0.1rem 0.1rem 0.1rem var(--dark-blue);
+}
+h1.index {
+    font-size: 1.5rem;
 }
 h1.hero-head {
     font-size: 3.5rem;
@@ -84,11 +89,6 @@ ul.credit {
 ul.navbar-nav {
     font-size: 1.1rem;
 }
-.cellh h1 {
-    font-size: 1.5rem;
-    display: inline;
-    text-align: center;
-}
 .container {
     display: flex;
 }
@@ -102,9 +102,12 @@ ul.navbar-nav {
     --bs-btn-bg: var(--light-copper);
 }
 .btn-voca-index {
+    width: 100%;
     color: var(--cobalt-blue);
     background-color: var(--really-light-blue);
-    padding: 0;
+    border: var(--light-copper);
+    padding: 0.2rem 0 0.2rem 0;
+    margin-bottom: 0.2rem;
     --bs-btn-hover-bg: var(--light-copper);
 }
 .btn-voca:hover {
@@ -115,7 +118,7 @@ ul.navbar-nav {
     background-color: var(--light-blue);
 }
 .cell {
-    padding: 1rem;
+    height: 30rem;
     border-radius: 0.5rem 2rem;
     background-color: #FFFFFF;
 }
@@ -124,24 +127,30 @@ ul.navbar-nav {
     text-align: center;
     justify-content: center;
 }
-.fa {
-    font-size: 1.5rem;
-    width: 1.5rem;
-}
-.image-container {
-    height: 10rem;
+.carousel-item {
+    height: 30rem;
     border-radius: 0.5rem 2rem;
     overflow: hidden;
 }
-.image-container img {
+.carousel-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-.img-fluid {
-    max-height: 25rem;
-    width: auto;
+.carousel-caption {
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0;
+    background-color: #0009;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.fa {
+    font-size: 1.5rem;
+    width: 1.5rem;
 }
 .hero-background {
     display: flex;
@@ -222,7 +231,12 @@ ul.navbar-nav {
     padding: 0;
 }
 #songIndex {
+    max-width: 25rem;
     object-position: center;
+}
+#songIndexFrame {
+    max-height: 20rem;
+    overflow: scroll;
 }
 #producerCell {
     max-width: 50rem;
@@ -232,6 +246,13 @@ ul.navbar-nav {
 }
 #producerIndex {
     object-position: center;
+}
+#prodIndexFrame {
+    max-height: 25rem;
+    overflow: scroll;
+}
+#voca-title {
+    padding-top: 1rem;
 }
 @media (min-width: 992px) {
     h1.hero-head {
@@ -250,20 +271,11 @@ ul.navbar-nav {
 }
 [data-bs-theme="bc-dark"] {
     body {
-        color: #FFFFFF;
         background-color: var(--dark-blue);
-
-        --bs-body-color: #FFFFFF;
         --bs-tertiary-bg: var(--dark-blue);
     }
     b {
         color: var(--light-blue);
-    }
-    h1 {
-        text-shadow: 0.1rem 0.1rem 0.3rem var(--light-blue);
-    }
-    h1.cellh {
-        color: var(--really-light-blue);
     }
     .btn-voca-index {
         color: var(--light-blue);

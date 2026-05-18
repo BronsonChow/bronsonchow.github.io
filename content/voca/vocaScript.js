@@ -3,8 +3,19 @@ const songCell = document.getElementById("favSongCells");
 const producerIndex = document.getElementById("favProducerIndex");
 const producerCell = document.getElementById("favProducerCells");
 
-const favSongs = [178119, 805916, 820162, 131090, 812344, 829512, 164107, 166391, 850999, 129109, 753120, 642667, 131087, 198286, 588814, 506793, 1508];
-const favProducers = [144288, 28, 99484, 53, 23155, 144555];
+const favSongs = [
+    131090, 640212, 642667, 823241, 805916,
+    820162, 198286, 274835, 251400, 813747,
+    416211, 129109, 7042, 178119, 160589,
+    291470, 166391, 362821, 850999, 588814,
+    732509, 131087, 812344, 829477, 796304,
+    796307, 718225, 829512, 780061, 773406,
+    1501, 164107
+];
+const favProducers = [
+    144288, 28, 99484, 53, 23155,
+    144555, 140646, 49431, 624, 470
+];
 const favProducersM = [
     {id: 28, alias: "ピノキオP", voicebanks: "Hatsune Miku V4X (Original), Hatsune Miku V4X (Dark)", lang: "Japanese, English"}
 ,   {id: 144288, alias: "TAK / DORIDORI", voicebanks: "Hatsune Miku V4X (Original), Kasane Teto SV", lang: "Japanese, Korean, English"}
@@ -62,6 +73,7 @@ async function loadData()
             console.warn(`Error for producer ${favProducerId}`);
         }
     }
+    cleanLocalStorage();
     sortSongDataAlphabetically();
     sortProducerDataAlphabetically();
 }
@@ -80,8 +92,11 @@ function createSongIndex()
             `
             <div class="container-fluid" id="songIndex">
                 <div class="row justify-content-center">
-                    <div class="col-lg-10" style="max-width: 400px;">
-                        <a class="btn btn-voca-index centered" href="#${song?.id}" id="voca-index">${song?.name}</a>
+                    <div class="col-1" style="display: flex; justify-content: center; text-align: center;">
+                        <h1 class="index">${i+1}</h1>
+                    </div>
+                    <div class="col-11">
+                        <button type="button" class="list-group-item btn btn-voca-index" data-bs-target="#song-carousel" data-bs-slide-to="${i}">${song?.name}</button>
                     </div>
                 </div>
             </div>
@@ -92,6 +107,8 @@ function createSongIndex()
 }
 function createSongCells()
 {
+    var ifCellFirst = '';
+
     for (let i = 0; i < songData.length; i++)
     {
         const cell = document.createElement("div");
@@ -100,6 +117,12 @@ function createSongCells()
         if (key.startsWith('cachedSong'))
         {
             const song = JSON.parse(localStorage.getItem(`${songData[i]?.dataKey}`));
+            if (i === 0)
+            {
+                ifCellFirst = ` active`;
+            } else {
+                ifCellFirst = '';
+            }
             
             const minutes = Math.floor(song.lengthSeconds / 60);
             const seconds = song.lengthSeconds % 60;
@@ -113,24 +136,16 @@ function createSongCells()
             
             cell.innerHTML =
             `
-            &nbsp;
-            <a class="anchor" id="${song.id}"></a>
-            <div class="container-fluid" id="songCell">
-                <div class="row">
-                    <div class="col-lg-3 centered" style="padding-left: 0px;">
-                        <div class="image-container">
-                            <img class="img-fluid" style="transform: scale(1.5);" src="${song?.mainPicture?.urlOriginal}" title="${song.name}"/>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <h1 class="cellh"><b>${song.name}</b></h1>
-                        <p>
-                            <b class="b1">Producer(s):</b> ${song.artistString} <br>
-                            <b class="b1">Length:</b> ${minutes}:${formattedSeconds} <br>
-                            <b class="b1">Published:</b> ${formattedDate} <br>
-                            <a target="_blank" href="https://vocadb.net/S/${song.id}">VocaDB link</a>
-                        </p>
-                    </div>
+            <div class="carousel-item${ifCellFirst}">
+                <img src="${song?.mainPicture?.urlOriginal}" class="d-block w-100" alt="Slide ${i + 1}">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="cellh">${song.name}</h1>
+                    <p style="margin-bottom: 0rem;">
+                        <b class="b1">Producer(s):</b> ${song.artistString} <br>
+                        <b class="b1">Length:</b> ${minutes}:${formattedSeconds} <br>
+                        <b class="b1">Published:</b> ${formattedDate} <br>
+                        <a target="_blank" href="https://vocadb.net/S/${song.id}">VocaDB link</a>
+                    </p>
                 </div>
             </div>
             `;
@@ -153,8 +168,11 @@ function createProducerIndex()
             `
             <div class="container-fluid" id="producerIndex">
                 <div class="row justify-content-center">
-                    <div class="col-lg-10" style="max-width: 400px;">
-                        <a class="btn btn-voca-index centered" href="#${producer?.id}" id="voca-index">${producer?.name}</a>
+                    <div class="col-1" style="display: flex; justify-content: center; text-align: center;">
+                        <h1 class="index">${i+1}</h1>
+                    </div>
+                    <div class="col-11">
+                        <button type="button" class="list-group-item btn btn-voca-index" data-bs-target="#prod-carousel" data-bs-slide-to="${i}">${producer?.name}</button>
                     </div>
                 </div>
             </div>
@@ -165,6 +183,8 @@ function createProducerIndex()
 }
 function createProducerCells()
 {
+    var ifCellFirst = '';
+
     for (let i = 0; i < producerData.length; i++)
     {
         const cell = document.createElement("div");
@@ -173,6 +193,12 @@ function createProducerCells()
         if (key.startsWith('cachedProducer'))
         {
             const producer = JSON.parse(localStorage.getItem(`${producerData[i]?.dataKey}`));
+            if (i === 0)
+            {
+                ifCellFirst = ` active`;
+            } else {
+                ifCellFirst = '';
+            }
             
             const alias = favProducersM.find(p => p.id === producer.id)?.alias;
             const voicebanks = favProducersM.find(p => p.id === producer.id)?.voicebanks;
@@ -180,24 +206,16 @@ function createProducerCells()
             
             cell.innerHTML =
             `
-            &nbsp;
-            <a class="anchor" id="${producer.id}"></a>
-            <div class="container-fluid" id="producerCell">
-                <div class="row">
-                    <div class="col-lg-3 centered" style="padding-left: 0px;">
-                        <div class="image-container">
-                            <img class="img-fluid" src="${producer?.mainPicture?.urlOriginal}" title="${producer.name}"/>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <h1 class="cellh"><b>${producer.name}</b></h1>
-                        <p>
-                            <b class="b1">Aliases:</b> ${alias}<br>
-                            <b class="b1">Main Voicebank(s):</b> ${voicebanks} <br>
-                            <b class="b1">Main Language(s):</b> ${lang} <br>
-                            <a target="_blank" href="https://vocadb.net/Ar/${producer.id}">VocaDB link</a>
-                        </p>
-                    </div>
+            <div class="carousel-item${ifCellFirst}">
+                <img src="${producer?.mainPicture?.urlOriginal}" class="d-block w-100" alt="Slide ${i + 1}">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="cellh">${producer.name}</h1>
+                    <p style="margin-bottom: 0rem;">
+                        <b class="b1">Aliases(s):</b> ${alias} <br>
+                        <b class="b1">Main Voicebank(s):</b> ${voicebanks} <br>
+                        <b class="b1">Main Language(s):</b> ${lang} <br>
+                        <a target="_blank" href="https://vocadb.net/Ar/${producer.id}">VocaDB link</a>
+                    </p>
                 </div>
             </div>
             `;
@@ -228,10 +246,21 @@ function getLocalStorageUsage()
     console.log(`LocalStorage Bytes Remaining: ${remainingBytes}`);
     console.log(`LocalStorage Percentage Used: ${formattedPercentage} %`);
 }
-function sortDataAlphabetically()
+function cleanLocalStorage()
 {
-    sortSongDataAlphabetically();
-    sortProducerDataAlphabetically();
+    for (let i = 0; i < localStorage.length; i++)
+    {
+        var key = localStorage.key(i);
+        let LSobj = JSON.parse(localStorage.getItem(key));
+        if (favSongs.find((element) => element === LSobj.id)) { continue; }
+        if (favProducers.find((element) => element === LSobj.id)) { continue; }
+        if (LSobj.name)
+        {
+            console.log(`Removing from local storage : ${LSobj.name}, ${LSobj.id}`);
+            localStorage.removeItem(key);
+            continue;
+        }
+    }
 }
 function sortSongDataAlphabetically()
 {
@@ -251,7 +280,7 @@ function sortSongDataAlphabetically()
     songIndex.innerHTML = '';
     songCell.innerHTML = '';
     createSongIndex();
-    createSongCells();    
+    createSongCells();
 }
 function sortProducerDataAlphabetically()
 {
@@ -272,10 +301,6 @@ function sortProducerDataAlphabetically()
     producerCell.innerHTML = '';
     createProducerIndex();
     createProducerCells();  
-}
-function sortDataId()
-{
-    sortSongDataId();
 }
 function sortSongDataId()
 {
@@ -304,4 +329,3 @@ function sortSongDataId()
     createSongIndex();
     createSongCells();
 }
-// testLog();
