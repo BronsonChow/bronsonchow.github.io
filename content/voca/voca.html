@@ -28,8 +28,7 @@
     <body onload="loadData()">
         <div id="nav"></div><script src="../../navbar.js"></script>
 
-        <div id="sect1"></div>
-        <div class="hero-background" id="hero-bg">
+        <div class="hero-background">
             <div class="hero-card">
                 <h1 class="hero-head">My Favorite Songs & Producers</h1>
                 <div class="btn-group hero-btn">
@@ -39,17 +38,16 @@
             </div>
         </div>
         <p class="hero-credit">Image by Rella : Links in Footer</p>
-        &nbsp;
 
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-4">
-                    <div class="container-fluid cell" style="max-width: 30rem;">
-                        <h1 class="centered" id="voca-title">Songs</h1>
+                    <div class="container-fluid cell-index">
+                        <h1 class="centered index-title">Songs</h1>
                         &nbsp;
                         <div class="container-fluid centered">
-                            <div class="btn-group" style="max-width: 15rem;">
+                            <div class="btn-group btn-index">
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked/>
                                 <label class="btn btn-voca" for="btnradio1" onclick="sortSongDataAlphabetically()">Alphabetical</label>
 
@@ -58,15 +56,15 @@
                             </div>
                         </div>
                         &nbsp;
-                        <div id="songIndexFrame">
+                        <div class="song-index-frame">
                             <div id="favSongIndex"></div>
                         </div>
                     </div>
                     &nbsp;
                 </div>
                 <div class="col-lg-6">
-                    <div id="song-carousel" class="carousel slide" style="max-width: 60rem;" data-bs-ride="false">
-                        <div class="carousel-inner cell">
+                    <div id="song-carousel" class="carousel slide cell-carousel" data-bs-ride="false">
+                        <div class="carousel-inner">
                             <div id="favSongCells"></div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#song-carousel" data-bs-slide="prev">
@@ -88,18 +86,18 @@
             <div class="row">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-4">
-                    <div class="container-fluid cell" style="max-width: 30rem;">
-                        <h1 class="centered" id="voca-title">Producers</h1>
+                    <div class="container-fluid cell-index">
+                        <h1 class="centered index-title">Producers</h1>
                         &nbsp;
-                        <div id="prodIndexFrame">
+                        <div class="producer-index-frame">
                             <div id="favProducerIndex"></div>
                         </div>
                     </div>
                     &nbsp;
                 </div>
                 <div class="col-lg-6">
-                    <div id="prod-carousel" class="carousel slide" style="max-width: 60rem;" data-bs-ride="false">
-                        <div class="carousel-inner cell">
+                    <div id="prod-carousel" class="carousel slide cell-carousel" data-bs-ride="false">
+                        <div class="carousel-inner">
                             <div id="favProducerCells"></div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#prod-carousel" data-bs-slide="prev">
@@ -119,8 +117,8 @@
 
         <hr class="my-4">
         <div class="container-fluid">
-            <div class="row row-cols-1 row-cols-lg-5 py-5 my-5" id="footer">
-                <div class="col-lg-1"></div>
+            <div class="row row-cols-1 row-cols-lg-5 py-5 my-5 footer">
+                <div class="col--1"></div>
                 <div class="col-lg-2">
                     <h1 class="credit">General</h1>
                     <ul class="credit">
@@ -139,6 +137,10 @@
                             <a class="credit" href="https://www.pixiv.net/en/users/163536">Pixiv</a>
                             <p class="credit"> : </p>
                             <a class="credit" href="https://www.pixiv.net/en/artworks/70858371">Direct Image Link</a>
+                        <br><p class="credit">Page background image by PinocchioP : </p>
+                            <a class="credit" href="https://www.pixiv.net/en/users/1746464">Pixiv</a>
+                            <p class="credit"> : </p>
+                            <a class="credit" href="https://www.pixiv.net/en/artworks/68054943">Direct Image Link</a>
                     </ul>
                 </div>
                 <div class="col-lg-2">

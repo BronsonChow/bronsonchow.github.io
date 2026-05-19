@@ -9,8 +9,8 @@ const favSongs = [
     416211, 129109, 7042, 178119, 160589,
     291470, 166391, 362821, 850999, 588814,
     732509, 131087, 812344, 829477, 796304,
-    796307, 718225, 829512, 780061, 773406,
-    1501, 164107
+    796307, 718225, 829512, 25667, 1501,
+    164107
 ];
 const favProducers = [
     144288, 28, 99484, 53, 23155,
@@ -90,12 +90,12 @@ function createSongIndex()
             
             cell.innerHTML =
             `
-            <div class="container-fluid" id="songIndex">
+            <div class="container-fluid song-index" id="songIndex">
                 <div class="row justify-content-center">
-                    <div class="col-1" style="display: flex; justify-content: center; text-align: center;">
+                    <div class="col-2" style="display: flex; justify-content: center; text-align: center;">
                         <h1 class="index">${i+1}</h1>
                     </div>
-                    <div class="col-11">
+                    <div class="col-10">
                         <button type="button" class="list-group-item btn btn-voca-index" data-bs-target="#song-carousel" data-bs-slide-to="${i}">${song?.name}</button>
                     </div>
                 </div>
@@ -140,7 +140,7 @@ function createSongCells()
                 <img src="${song?.mainPicture?.urlOriginal}" class="d-block w-100" alt="Slide ${i + 1}">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="cellh">${song.name}</h1>
-                    <p style="margin-bottom: 0rem;">
+                    <p class="cellp">
                         <b class="b1">Producer(s):</b> ${song.artistString} <br>
                         <b class="b1">Length:</b> ${minutes}:${formattedSeconds} <br>
                         <b class="b1">Published:</b> ${formattedDate} <br>
@@ -166,12 +166,12 @@ function createProducerIndex()
             
             cell.innerHTML =
             `
-            <div class="container-fluid" id="producerIndex">
+            <div class="container-fluid producer-index" id="producerIndex">
                 <div class="row justify-content-center">
-                    <div class="col-1" style="display: flex; justify-content: center; text-align: center;">
+                    <div class="col-2" style="display: flex; justify-content: center; text-align: center;">
                         <h1 class="index">${i+1}</h1>
                     </div>
-                    <div class="col-11">
+                    <div class="col-10">
                         <button type="button" class="list-group-item btn btn-voca-index" data-bs-target="#prod-carousel" data-bs-slide-to="${i}">${producer?.name}</button>
                     </div>
                 </div>
@@ -210,7 +210,7 @@ function createProducerCells()
                 <img src="${producer?.mainPicture?.urlOriginal}" class="d-block w-100" alt="Slide ${i + 1}">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="cellh">${producer.name}</h1>
-                    <p style="margin-bottom: 0rem;">
+                    <p class="cellp">
                         <b class="b1">Aliases(s):</b> ${alias} <br>
                         <b class="b1">Main Voicebank(s):</b> ${voicebanks} <br>
                         <b class="b1">Main Language(s):</b> ${lang} <br>
