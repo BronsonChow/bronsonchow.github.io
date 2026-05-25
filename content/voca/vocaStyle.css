@@ -89,17 +89,13 @@ div.song-index {
     max-width: 25rem;
     object-position: center;
 }
-div.song-index-frame {
+div.index-frame {
     max-height: 14rem;
     overflow: scroll;
 }
 div.producer-index {
     max-width: 25rem;
     object-position: center;
-}
-div.producer-index-frame {
-    max-height: 18rem;
-    overflow: scroll;
 }
 h1 {
     color: #FFFFFF;
@@ -260,11 +256,8 @@ ul.navbar-nav {
 
         max-width: fit-content;
     }
-    div.song-index-frame {
+    div.index-frame {
         max-height: 19rem;
-    }
-    div.producer-index-frame {
-        max-height: 23em;
     }
     h1.hero-head {
         font-size: 4rem;

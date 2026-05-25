@@ -146,3 +146,4 @@ v0.8.5 voca.html reworked hero backdrop
         > added more favorites
         > disabled vocaTopSongs.html button temporarily
 0.9.1 cleaned up CSS & changed overall visuals
+0.9.1.1 optimized vocaScript.js via data deduplication
