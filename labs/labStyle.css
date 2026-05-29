@@ -2,12 +2,12 @@
     font-family: "Noto Sans", sans-serif;
 }
 :root {
+    --really-light-blue: #DAEBFF;
+    --light-blue: #8BBCF9;
     --cobalt-blue: #0954AE;
     --medium-blue: #063A74;
     --dark-blue: #04254E;
-    --really-dark-blue: #021327;;
-    --light-blue: #8BBCF9;
-    --really-light-blue: #DAEBFF;
+    --really-dark-blue: #021327;
     --bright-copper: #F34616;
     --light-copper: #FBC1B1;
 }
@@ -82,6 +82,7 @@ table {
     --bs-btn-bg: #f1f1f1;
     --bs-btn-hover-bg: #dadada;
 }
+
 /* NAVBAR */
 ul.navbar-nav {
     font-size: 1.1rem;
@@ -138,6 +139,9 @@ ul.navbar-nav {
         --bs-btn-bg: var(--really-dark-blue);
         --bs-btn-hover-color: #FFFFFF;
         --bs-btn-hover-bg: var(--dark-blue);
+    }
+    .card-body {
+        --bs-body-bg: var(--really-dark-blue);
     }
     .dropdown-item {
         color: #FFFFFF;

@@ -4,12 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <script src="../../userSettings.js"></script>
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Dosis|Oswald' rel='stylesheet'>
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">
+        
         <link href="vocaStyle.css" rel="stylesheet">
         
         <link rel="icon" href="../../assets/bc_logo.svg">
@@ -18,26 +23,18 @@
     </head>
 
     <body onload="loadTopRated()">
-        <div id="nav"></div><script src="navbarVoca.js"></script>
+        <div id="nav"></div><script src="../../navbar.js"></script>
 
-        <div id="sect1"></div>
-        <div class="jumbotron">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-11">
-                        <h1 class="display-3">Top Songs by Rating Count</h1>
-                        <p class="lead">
-                            <div class="btn-group">
-                                <a href="voca.html" class="btn btn-voca">My Favorites</a>
-                                <a href="vocaTopSongs.html" class="btn btn-voca active" aria-current="page">Top Songs by Rating Count</a>
-                            </div>
-                        </p>
-                    </div>
+        <div class="hero-background">
+            <div class="hero-card">
+                <h1 class="hero-head">My Favorite Songs & Producers</h1>
+                <div class="btn-group hero-btn">
+                    <a href="voca.html" class="btn btn-voca active">My Favorites</a>
+                    <a href="vocaTopSongs.html" class="btn btn-voca">Most Rated Songs</a>
                 </div>
             </div>
         </div>
-        &nbsp;
+        <p class="hero-credit">Image by Rella : Links in Footer</p>
 
         <div class="container-fluid">
             <div class="row">
