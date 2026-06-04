@@ -26,7 +26,13 @@ const navigation = `
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Personal Projects</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">External Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="https://ffxiv-fightsim.vercel.app/">FFXIV Fight Simulator</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Site Projects</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="${dupeDirCopy}content/keyboard/keyb.html">Custom Keyboard Info</a></li>
                         <li><a class="dropdown-item" href="${dupeDirCopy}content/voca/voca.html">Vocaloid Stuff</a></li>
