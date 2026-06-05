@@ -58,7 +58,7 @@ div.cell-index {
     margin: auto;
 }
 div.footer {
-    background-color: rgba(139, 188, 249, 0.45);
+    background-color: rgb(from var(--light-blue) r g b / 50%);
 }
 div.hero-background {
     background-image: url('../../assets/voca/rella70858371.jpg');
@@ -75,12 +75,10 @@ div.hero-btn {
     padding-bottom: 1rem;
 }
 div.hero-card {
-    background-color: rgba(139, 188, 249, 0.45);
+    background-color: rgb(from var(--light-blue) r g b / 50%);
     backdrop-filter: blur(6px) saturate(102%);
     -webkit-backdrop-filter: blur(6px) saturate(102%);
 
-    border: rgba(139, 188, 249, 0.45);
-    border-radius: 0;
     margin: auto;
     text-align: center;
     width: 100%;
@@ -123,8 +121,7 @@ h1.index {
 }
 h1.hero-head {
     font-family: "Chewy", system-ui;
-    font-weight: 400;
-    font-size: 3.5rem;
+    font-size: 3.9rem;
     font-style: normal;
     padding-bottom: 1rem;
     text-shadow: 0.1rem 0.1rem 0.3rem var(--light-blue);
@@ -283,14 +280,14 @@ ul.navbar-nav {
         color: var(--light-blue);
     }
     div.cell-index {
-        background-color: rgba(6, 58, 116, 0.6);
+        background-color: rgb(from var(--dark-blue) r g b / 60%);
     }
     p.credit {
         color: var(--really-light-blue);
     }
     .btn-voca-index {
         color: var(--light-blue);
-        background-color: var(--dark-blue);
+        background-color: rgb(from var(--cobalt-blue) r g b / 60%);
     }
     .btn-voca-index:hover {
         color: var(--dark-blue);

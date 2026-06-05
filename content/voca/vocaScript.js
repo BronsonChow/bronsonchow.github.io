@@ -38,15 +38,17 @@ const favSongs = [
 ];
 const favProducers = [
     {id: 28, rank: 0.0, alias: "ピノキオP", voicebanks: "Hatsune Miku V4X (Original), Hatsune Miku V4X (Dark)", lang: "Japanese, English"}
-,   {id: 144288, rank: 1.1, alias: "TAK / DORIDORI", voicebanks: "Hatsune Miku V4X (Original), Kasane Teto SV", lang: "Japanese, Korean, English"}
-,   {id: 99484, rank: 2.2, alias: "André Luiz", voicebanks: "Hatsune Miku V4 (English)", lang: "English"}
-,   {id: 53, rank: 1.0, alias: "GenjitsutouhiP", voicebanks: "Hatsune Miku, GUMI, Megurine Luka", lang: "Japanese"}
+,   {id: 144288, rank: 1.0, alias: "TAK / DORIDORI", voicebanks: "Hatsune Miku V4X (Original), Kasane Teto SV", lang: "Japanese, Korean, English"}
+,   {id: 99484, rank: 2.4, alias: "André Luiz", voicebanks: "Hatsune Miku V4 (English)", lang: "English"}
+,   {id: 53, rank: 2.0, alias: "GenjitsutouhiP", voicebanks: "Hatsune Miku, GUMI, Megurine Luka", lang: "Japanese"}
 ,   {id: 23155, rank: 0.1, alias: "JamieP", voicebanks: "Kasane Teto SV, V3 GUMI", lang: "English"}
-,   {id: 144555, rank: 2.1, alias: "東京真中, Tokyo Manaka", voicebanks: "Kasane Teto SV, Chis-A, Hatsune Miku", lang: "Japanese"}
-,   {id: 140646, rank: 2.0, voicebanks: "Hatsune Miku, Kasane Teto SV", lang: "English"}
-,   {id: 49431, rank: 1.2, voicebanks: "Hatsune Miku, KAFU, Kasane Teto SV", lang: "Japanese"}
+,   {id: 144555, rank: 2.3, alias: "東京真中, Tokyo Manaka", voicebanks: "Kasane Teto SV, Chis-A, Hatsune Miku", lang: "Japanese"}
+,   {id: 140646, rank: 2.1, voicebanks: "Hatsune Miku, Kasane Teto SV", lang: "English"}
+,   {id: 49431, rank: 1.1, voicebanks: "Hatsune Miku, KAFU, Kasane Teto SV", lang: "Japanese"}
 ,   {id: 624, rank: 3.0, alias: "Tucada", voicebanks: "Hatsune Miku, Megurine Luka, KAITO", lang: "Japanese"}
-,   {id: 470, rank: 1.3, alias: "きくお", voicebanks: "Hatsune Miku, Hatsune Miku V3 (English)", lang: "Japanese"}
+,   {id: 470, rank: 1.2, alias: "きくお", voicebanks: "Hatsune Miku, Hatsune Miku V3 (English)", lang: "Japanese"}
+,   {id: 93529, rank: 1.3, alias: "なみて, Wateraqua", voicebanks: "Kaai Yuki", lang: "Japanese"}
+,   {id: 45, rank: 2.2, alias: "デコニーナ", voicebanks: "Hatsune Miku V4X (Original)", lang: "Japanese"}
 ];
 
 async function loadData()

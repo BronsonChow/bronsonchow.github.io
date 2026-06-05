@@ -14,7 +14,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">
 
-        <link href="style.css" rel="stylesheet">
+        <link href="content/homepage/style.css" rel="stylesheet">
         
         <link rel="icon" href="assets/bc_logo.svg">
 
@@ -24,26 +24,26 @@
     <body>
         <div id="nav"></div><script src="navbar.js"></script>
 
-        <div class="jumbotron">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-11">
-                        <h1 class="display-3">Bronson Chow</h1>
-                        <p class="lead">CSI CUNY Computer Science Student
-                            <span style="margin-left: 1rem; margin-right: 1rem;">|</span>
-                            <a class="lead" href="mailto:bronch42@gmail.com">bronch42@gmail.com</a></p>
-                    </div>
-                </div>
+        <div class="intro">
+            <h1 class="logo-header">
+                <span class="logo">Bronson</span><span class="logo">Chow</span>
+            </h1>
+        </div>
+
+        <div class="hero-background">
+            <div class="hero-card">
+                <h1 class="hero-head">Bronson Chow</h1>
+                <p class="hero-sub">CSI CUNY Computer Science Student</p>
+                <a class="hero-sub" href="mailto:bronch42@gmail.com">bronch42@gmail.com</a>
             </div>
         </div>
-        &nbsp;
 
         <div class="container-fluid">
-            <div class="row justify-content-start">
-                <div class="col-md-6">
+            <div class="d-lg-flex flex-row justify-content-center">
+                <div class="p-4 card">
+                    <h2>Coding Languages</h2>
+                    <hr class="my-2">
                     <ul>
-                        <h2>Coding Languages</h2>
                         <li>C++ <span class="subtext">Decent</span></li>
                         <li>C <span class="subtext">Decent</span></li>
                         <li>Python <span class="subtext">Learning syntax</span></li>
@@ -51,14 +51,15 @@
                         <li>SQL <span class="subtext">Planning</span></li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="p-4 card">
+                    <h2>Courses Taken</h2>
+                    <hr class="my-2">
                     <ul>
-                        <h2>Courses Taken</h2>
                         <li>CSC 326 - Data Structures</li>
                         <li>CSC 330 - Object-Oriented Software Design</li>
-                        <li>CSC 346 - Switching & Automata Theory <span class="subtext">Current</span></li>
+                        <li>CSC 346 - Switching & Automata Theory</li>
                         <li>CSC 382 - Analysis of Algorithms</li>
-                        <li>CSC 430 - Software Engineering <span class="subtext">Current</span></li>
+                        <li>CSC 430 - Software Engineering</li>
                         <div style="margin-top: 1rem;"></div>
                         <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">More Information: CSI Course List</a>
                     </ul>
@@ -68,45 +69,39 @@
 
         <hr class="my-4">
         <div class="container-fluid">
-            <div class="row justify-content-start">
-                <div class="col-md-6">
+            <div class="d-lg-flex flex-row justify-content-center">
+                <div class="p-4 card">
+                    <h2>Useful Links</h2>
+                    <hr class="my-2">
                     <ul>
-                        <h2>Useful Links</h2><!--TODO convert into table-->
-                        <li><img class="ul_icon" src="./assets/WolframAlpha logo.png"/>
+                        <li><img class="ul_icon" src="assets/misc-logo/WolframAlpha logo.png"/>
                             <a target="_blank" href="https://www.wolframalpha.com/">Calculator</a><span class="subtext"> WolframAlpha</span></li>
-                        <li><img class="ul_icon" src="./assets/Desmos logo.png"/>
+                        <li><img class="ul_icon" src="assets/misc-logo/Desmos logo.png"/>
                             <a target="_blank" href="https://www.desmos.com/scientific">Calculator</a><span class="subtext"> Desmos</span></li>
-                        <li><img class="ul_icon" src="./assets/Cloudflare logo.png"/>
+                        <li><img class="ul_icon" src="assets/misc-logo/Cloudflare logo.png"/>
                             <a target="_blank" href="https://www.cloudflarestatus.com/">Cloudflare Status</a></li>
-                        <li><img class="ul_icon" src="./assets/Downdetector logo.png"/>
+                        <li><img class="ul_icon" src="assets/misc-logo/Downdetector logo.png"/>
                             <a target="_blank" href="https://downdetector.com/">Service Down Detector</a><span class="subtext"> Ookla</span></li></li>
-                        <li><img class="ul_icon" src="./assets/World Time Buddy logo.png"/>
+                        <li><img class="ul_icon" src="assets/misc-logo/World Time Buddy logo.png"/>
                             <a target="_blank" href="https://www.worldtimebuddy.com/">World Clock / Converter</a></li>
-                        <li><img class="ul_icon" src="./assets/Ookla speedtest logo.png"/>
+                        <li><img class="ul_icon" src="assets/misc-logo/Ookla speedtest logo.png"/>
                             <a target="_blank" href="https://www.speedtest.net/">Internet Speed Test</a><span class="subtext"> Ookla</span></li>
-                        <li><img class="ul_icon" src="./assets/Netflix speedtest logo.png"/>
+                        <li><img class="ul_icon" src="assets/misc-logo/Netflix speedtest logo.png"/>
                             <a target="_blank" href="https://fast.com/">Internet Speed Test</a><span class="subtext"> Netflix</span></li>
                         <li><img class="" src=""/>
                             <a target="_blank" href="https://fontawesome.com/v4/icons/">CSS Icons</a><span class="subtext"> FontAwesome</span></li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="p-4 card">
+                    <h2>Misc. Links</h2>
+                    <hr class="my-2">
                     <ul>
-                        <h2>Misc. Links</h2>
-                        <li><img class="ul_icon" src="./assets/wooting logo.png"/>
+                        <li><img class="ul_icon" src="assets/misc-logo/wooting logo.png"/>
                             <a target="_blank" href="https://wooting.io/">Wooting.io</a><span class="subtext"> Hall Effect Mechanical Keyboards</span></li>
                     </ul>
                 </div>
             </div>
         </div>
-
-        <hr class="my-4">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col align-self-start">
-                    <!--<img src="./assets/doro.png" width="100" title="Doro"/>-->
-                </div>
-            </div>
-        </div>
+        <script src="content/homepage/indexScript.js"></script>
     </body>
 </html>

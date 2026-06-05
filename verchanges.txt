@@ -149,3 +149,5 @@ v0.8.5 voca.html reworked hero backdrop
 0.9.1.1 optimized vocaScript.js via data deduplication
 0.9.2 functional sitewide dark mode
 0.9.2.1 added new navbar tab "External Projects"
+0.9.3 revamped index.html to have introductionary animation
+        > further organized asset files into respective folders
