@@ -1,0 +1,96 @@
+div.carousel-item {
+    border-radius: 0.5rem 2rem;
+    height: 20rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+div.cell-carousel {
+    border-radius: 0.5rem 2rem;
+    box-shadow: 0 0 1rem var(--cobalt-blue);
+    margin: auto;
+    max-width: 50rem;
+}
+div.cell-index {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0.5rem 2rem;
+    box-shadow: 0 0 1rem var(--cobalt-blue);
+    height: 25rem;
+    max-width: 30rem;
+    margin: auto;
+}
+div.song-index {
+    max-width: 25rem;
+    object-position: center;
+}
+div.index-frame {
+    max-height: 14rem;
+    overflow: scroll;
+}
+div.producer-index {
+    max-width: 25rem;
+    object-position: center;
+}
+h1.cellh {
+    display: inline;
+    margin: 0;
+}
+h1.cellrank {
+    color: var(--light-blue);
+    margin-right: 0.5rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem var(--dark-blue);
+}
+h1.index {
+    font-size: 1.5rem;
+}
+h1.index-title {
+    padding-top: 1rem;
+}
+p.cellp {
+    margin: 0.5rem;
+}
+.btn-voca-index {
+    background-color: var(--really-light-blue);
+    border: var(--light-copper);
+    color: var(--cobalt-blue);
+    padding: 0.2rem 0 0.2rem 0;
+    margin-bottom: 0.2rem;
+    width: 100%;
+    --bs-btn-hover-bg: var(--light-copper);
+}
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.45);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0;
+}
+@media (min-width: 992px) {
+    div.carousel-item {
+        height: 30rem;
+    }
+    div.cell-carousel {
+        margin-left: 0;
+    }
+    div.cell-index {
+        height: 30rem;
+        margin-right: 0;
+    }
+}
+
+[data-bs-theme="bc-dark"] {
+    b {
+        color: var(--light-blue);
+    }
+    div.cell-index {
+        background-color: rgb(from var(--dark-blue) r g b / 60%);
+    }
+}

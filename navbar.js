@@ -35,7 +35,7 @@ const navigation = `
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Site Projects</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="${dupeDirCopy}content/keyboard/keyb.html">Custom Keyboard Info</a></li>
-                        <li><a class="dropdown-item" href="${dupeDirCopy}content/voca/voca.html">Vocaloid Stuff</a></li>
+                        <li><a class="dropdown-item" href="${dupeDirCopy}content/voca/vocaFav.html">Vocaloid Stuff</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
