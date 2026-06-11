@@ -4,54 +4,26 @@ const producerIndex = document.getElementById("favProducerIndex");
 const producerCell = document.getElementById("favProducerCells");
 
 const favSongs = [
-    {id: 131090, rank: 1.3}
-,   {id: 640212, rank: 3.3}
-,   {id: 642667, rank: 0.0}
-,   {id: 823241, rank: 3.2}
-,   {id: 805916, rank: 0.3}
-,   {id: 820162, rank: 0.1}
-,   {id: 198286, rank: 1.0}
-,   {id: 274835, rank: 4.4}
-,   {id: 251400, rank: 4.5}
-,   {id: 813747, rank: 4.1}
-,   {id: 416211, rank: 3.5}
-,   {id: 129109, rank: 1.6}
-,   {id: 7042, rank: 4.6}
-,   {id: 178119, rank: 2.0}
-,   {id: 160589, rank: 1.4}
-,   {id: 291470, rank: 1.5}
-,   {id: 166391, rank: 1.2}
-,   {id: 362821, rank: 2.4}
-,   {id: 850999, rank: 2.1}
-,   {id: 588814, rank: 3.4}
-,   {id: 732509, rank: 3.0}
-,   {id: 131087, rank: 4.3}
-,   {id: 812344, rank: 2.2}
-,   {id: 829477, rank: 3.1}
-,   {id: 796304, rank: 4.2}
-,   {id: 796307, rank: 4.0}
-,   {id: 718225, rank: 3.6}
-,   {id: 829512, rank: 1.1}
-,   {id: 25667, rank: 2.5}
-,   {id: 1501, rank: 0.2}
-,   {id: 164107, rank: 2.3}
+    {id: 131090}
+,   {id: 640212}
+,   {id: 642667}
 ];
 const favProducers = [
-    {id: 28, rank: 0.0, alias: "ピノキオP", voicebanks: "Hatsune Miku V4X (Original), Hatsune Miku V4X (Dark)", lang: "Japanese, English"}
-,   {id: 144288, rank: 1.0, alias: "TAK / DORIDORI", voicebanks: "Hatsune Miku V4X (Original), Kasane Teto SV", lang: "Japanese, Korean, English"}
-,   {id: 99484, rank: 2.4, alias: "André Luiz", voicebanks: "Hatsune Miku V4 (English)", lang: "English"}
-,   {id: 53, rank: 2.0, alias: "GenjitsutouhiP", voicebanks: "Hatsune Miku, GUMI, Megurine Luka", lang: "Japanese"}
-,   {id: 23155, rank: 0.1, alias: "JamieP", voicebanks: "Kasane Teto SV, V3 GUMI", lang: "English"}
-,   {id: 144555, rank: 2.3, alias: "東京真中, Tokyo Manaka", voicebanks: "Kasane Teto SV, Chis-A, Hatsune Miku", lang: "Japanese"}
-,   {id: 140646, rank: 2.1, voicebanks: "Hatsune Miku, Kasane Teto SV", lang: "English"}
-,   {id: 49431, rank: 1.1, voicebanks: "Hatsune Miku, KAFU, Kasane Teto SV", lang: "Japanese"}
-,   {id: 624, rank: 3.0, alias: "Tucada", voicebanks: "Hatsune Miku, Megurine Luka, KAITO", lang: "Japanese"}
-,   {id: 470, rank: 1.2, alias: "きくお", voicebanks: "Hatsune Miku, Hatsune Miku V3 (English)", lang: "Japanese"}
-,   {id: 93529, rank: 1.3, alias: "なみて, Wateraqua", voicebanks: "Kaai Yuki", lang: "Japanese"}
-,   {id: 45, rank: 2.2, alias: "デコニーナ", voicebanks: "Hatsune Miku V4X (Original)", lang: "Japanese"}
+    {id: 28, rank: 1}
+,   {id: 144288, rank: 3}
+,   {id: 99484, rank: 11}
+,   {id: 53, rank: 7}
+,   {id: 23155, rank: 2}
+,   {id: 144555, rank: 10}
+,   {id: 140646, rank: 8}
+,   {id: 49431, rank: 4}
+,   {id: 624, rank: 12}
+,   {id: 470, rank: 5}
+,   {id: 93529, rank: 6}
+,   {id: 45, rank: 9}
 ];
 
-async function loadData()
+async function loadFavSongData()
 {
     for (let eachSong of favSongs)
     {
@@ -97,12 +69,12 @@ async function loadData()
             console.warn(`Error for producer ${eachProd.id}`);
         }
     }
-    cleanLocalStorage();
-    initializeData();
-    sortSongsRanked();
-    sortProducersRanked();
+    cleanFavLocalStorage();
+    storeFavDataInArray();
+    sortFavSongs("ranked");
+    sortFavProducers("ranked");
 }
-function cleanLocalStorage()
+function cleanFavLocalStorage()
 {
     for (let i = 0; i < localStorage.length; i++)
     {
@@ -117,12 +89,13 @@ function cleanLocalStorage()
         }
     }
 }
-function initializeData()
+function storeFavDataInArray()
 {
     for (let i = 0; i < localStorage.length; i++)
     {
         const key = localStorage.key(i);
         const dataJSON = JSON.parse(localStorage.getItem(key));
+
         if (key.startsWith('cachedSong'))
         {
             const get = favSongs.find((element) => element.id === dataJSON.id);
@@ -272,38 +245,34 @@ function createProducerCells()
         producerCell.appendChild(cell);
     }
 }
-function sortSongsRanked()
+function sortFavSongs(sortBy)
 {
-    favSongs.sort((x, y) => x?.rank - y?.rank);
-    
+    switch (sortBy)
+    {
+        case "ranked":
+            favSongs.sort((x, y) => x?.rank - y?.rank);
+            break;
+        case "alphabet":
+            favSongs.sort((x, y) => x?.name?.localeCompare(y?.name, undefined, { sensitivity: 'base' }));
+            break;
+        case "date":
+            favSongs.sort((x, y) => x.date - y.date);
+            break;
+    }
     createSongIndex();
     createSongCells();
 }
-function sortSongsAlphabetically()
+function sortFavProducers(sortBy)
 {
-    favSongs.sort((x, y) => x?.name?.localeCompare(y?.name, undefined, { sensitivity: 'base' }));
-    
-    createSongIndex();
-    createSongCells();
-}
-function sortSongsId()
-{
-    favSongs.sort((x, y) => x.date - y.date);
-
-    createSongIndex();
-    createSongCells();
-}
-function sortProducersRanked()
-{
-    favProducers.sort((x, y) => x?.rank - y?.rank);
-
-    createProducerIndex();
-    createProducerCells();  
-}
-function sortProducersAlphabetically()
-{
-    favProducers.sort((x, y) => x?.name?.localeCompare(y?.name, undefined, { sensitivity: 'base' }));
-    
+    switch (sortBy)
+    {
+        case "ranked":
+            favProducers.sort((x, y) => x?.rank - y?.rank);
+            break;
+        case "alphabet":
+            favProducers.sort((x, y) => x?.name?.localeCompare(y?.name, undefined, { sensitivity: 'base' }));
+            break;
+    }
     createProducerIndex();
     createProducerCells();  
 }

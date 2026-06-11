@@ -15,7 +15,7 @@ body {
     background-attachment: fixed;
     background-blend-mode: hard-light;
     background-color: var(--really-light-blue);
-    background-image: url("../../assets/voca/pino68054943_p5.jpg");
+    background-image: url("../../../assets/voca/pino68054943_p5.jpg");
     background-position: 50% 45%;
     background-size: auto;
     
@@ -41,7 +41,7 @@ div.footer {
     background-color: rgb(from var(--light-blue) r g b / 50%);
 }
 div.hero-background {
-    background-image: url('../../assets/voca/rella70858371.jpg');
+    background-image: url('../../../assets/voca/rella70858371.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;

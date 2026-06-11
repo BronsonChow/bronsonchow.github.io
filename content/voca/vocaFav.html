@@ -22,7 +22,7 @@
         <title>BC's Vocaloid Project</title>
     </head>
 
-    <body onload="loadData()">
+    <body onload="loadVocaData('favoriteVoca')">
         <div id="nav"></div><script src="../../navbar.js"></script>
 
         <div class="hero-background">
@@ -47,13 +47,13 @@
                         <div class="container-fluid centered">
                             <div class="btn-group btn-index">
                                 <input type="radio" class="btn-check" name="btnradio-song" id="btnradio1s" autocomplete="off" checked/>
-                                <label class="btn btn-voca" for="btnradio1s" onclick="sortSongsRanked()">My Rank</label>
+                                <label class="btn btn-voca" for="btnradio1s" onclick="sortFavSongs('ranked')">My Rank</label>
 
                                 <input type="radio" class="btn-check" name="btnradio-song" id="btnradio2s" autocomplete="off"/>
-                                <label class="btn btn-voca" for="btnradio2s" onclick="sortSongsAlphabetically()">Alphabetical</label>
+                                <label class="btn btn-voca" for="btnradio2s" onclick="sortFavSongs('alphabet')">Alphabetical</label>
 
                                 <input type="radio" class="btn-check" name="btnradio-song" id="btnradio3s" autocomplete="off"/>
-                                <label class="btn btn-voca" for="btnradio3s" onclick="sortSongsId()">Publish Date</label>
+                                <label class="btn btn-voca" for="btnradio3s" onclick="sortFavSongs('date')">Publish Date</label>
                             </div>
                         </div>
                         &nbsp;
@@ -93,10 +93,10 @@
                         <div class="container-fluid centered">
                             <div class="btn-group btn-index">
                                 <input type="radio" class="btn-check" name="btnradio-prod" id="btnradio1p" autocomplete="off" checked/>
-                                <label class="btn btn-voca" for="btnradio1p" onclick="sortProducersRanked()">My Rank</label>
+                                <label class="btn btn-voca" for="btnradio1p" onclick="sortFavProducers('ranked')">My Rank</label>
 
                                 <input type="radio" class="btn-check" name="btnradio-prod" id="btnradio2p" autocomplete="off"/>
-                                <label class="btn btn-voca" for="btnradio2p" onclick="sortProducersAlphabetically()">Alphabetical</label>
+                                <label class="btn btn-voca" for="btnradio2p" onclick="sortFavProducers('alphabet')">Alphabetical</label>
                             </div>
                         </div>
                         &nbsp;
@@ -166,5 +166,6 @@
             </div>
         </div>
     </body>
+    <script src="scripts/vocaScript.js"></script>
     <script src="scripts/vocaFavScript.js"></script>
 </html>
