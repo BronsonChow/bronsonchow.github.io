@@ -42,13 +42,13 @@ const navigation = `
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CSC 225 Labs</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="${dupeDirCopy}README.md">Lab 1 - readme</a></li>
-                        <li><a class="dropdown-item" href="${dupeDirCopy}labs/StarterPage.html">Lab 2 - Starter Page</a></li>
-                        <li><a class="dropdown-item" href="${dupeDirCopy}labs/lab3.html">Lab 3 - Bootstrap</a></li>
-                        <li><a class="dropdown-item" href="${dupeDirCopy}labs/lab4.html">Lab 4 - JavaScript</a></li>
-                        <li><a class="dropdown-item" href="${dupeDirCopy}labs/lab5.html">Lab 5 - JavaScript contd.</a></li>
-                        <li><a class="dropdown-item" href="${dupeDirCopy}labs/lab6.html">Lab 6 - Rest API</a></li>
+                        <li><a class="dropdown-item" href="${dupeDirCopy}csc225/StarterPage.html">Lab 2 - Starter Page</a></li>
+                        <li><a class="dropdown-item" href="${dupeDirCopy}csc225/lab3.html">Lab 3 - Bootstrap</a></li>
+                        <li><a class="dropdown-item" href="${dupeDirCopy}csc225/lab4.html">Lab 4 - JavaScript</a></li>
+                        <li><a class="dropdown-item" href="${dupeDirCopy}csc225/lab5.html">Lab 5 - JavaScript contd.</a></li>
+                        <li><a class="dropdown-item" href="${dupeDirCopy}csc225/lab6.html">Lab 6 - Rest API</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="${dupeDirCopy}labs/final/final.html">Final Project</a></li>
+                        <li><a class="dropdown-item" href="${dupeDirCopy}csc225/final/final.html">Final Project</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
