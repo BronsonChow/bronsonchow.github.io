@@ -39,6 +39,7 @@ b.b1 {
 }
 div.footer {
     background-color: rgb(from var(--light-blue) r g b / 50%);
+    box-shadow: 0 0 1rem var(--cobalt-blue);
 }
 div.hero-background {
     background-image: url('../../../assets/voca/rella70858371.jpg');
@@ -55,9 +56,7 @@ div.hero-btn {
     padding-bottom: 1rem;
 }
 div.hero-card {
-    background-color: rgb(from var(--light-blue) r g b / 50%);
-    backdrop-filter: blur(6px) saturate(102%);
-    -webkit-backdrop-filter: blur(6px) saturate(102%);
+    background-color: rgb(from var(--light-blue) r g b / 39%);
 
     margin: auto;
     text-align: center;

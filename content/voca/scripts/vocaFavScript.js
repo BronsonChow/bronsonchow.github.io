@@ -3,11 +3,12 @@ const songCell = document.getElementById("favSongCells");
 const producerIndex = document.getElementById("favProducerIndex");
 const producerCell = document.getElementById("favProducerCells");
 
-const favSongs = [
+const favSongsOld = [
     {id: 131090}
 ,   {id: 640212}
 ,   {id: 642667}
 ];
+const favSongs = [];
 const favProducers = [
     {id: 28, rank: 1}
 ,   {id: 144288, rank: 3}
@@ -25,7 +26,21 @@ const favProducers = [
 
 async function loadFavSongData()
 {
-    for (let eachSong of favSongs)
+    const favSongLS = localStorage.getItem("totalSongs");
+    const parsedFavSongsLS = JSON.parse(favSongLS);
+
+    console.log(parsedFavSongsLS);
+    console.log(parsedFavSongsLS.values.length);
+    console.log(parsedFavSongsLS.values[0]);
+    console.log(parsedFavSongsLS.values[0][1]);
+
+    const parsedFavorites = parsedFavSongsLS.values.filter(val => val[1] === "★");
+    console.log(parsedFavorites);
+    
+    for (let i = 0; i < parsedFavorites.length; i++)
+    { console.log(i); }
+    
+    for (let eachSong of favSongsOld)
     {
         const cacheKey = `cachedSong${eachSong.id}`;
         const songExist = localStorage.getItem(cacheKey);
@@ -80,7 +95,7 @@ function cleanFavLocalStorage()
     {
         var key = localStorage.key(i);
         let LSobj = JSON.parse(localStorage.getItem(key));
-        if (favSongs.find((element) => element.id === LSobj.id)) { continue; }
+        if (favSongsOld.find((element) => element.id === LSobj.id)) { continue; }
         if (favProducers.find((element) => element.id === LSobj.id)) { continue; }
         if (LSobj.name)
         {
@@ -98,7 +113,7 @@ function storeFavDataInArray()
 
         if (key.startsWith('cachedSong'))
         {
-            const get = favSongs.find((element) => element.id === dataJSON.id);
+            const get = favSongsOld.find((element) => element.id === dataJSON.id);
 
             get.name = dataJSON?.name;
             get.dataKey = key;
@@ -121,10 +136,10 @@ function createSongIndex()
 {
     songIndex.innerHTML = '';
 
-    for (let i = 0; i < favSongs.length; i++)
+    for (let i = 0; i < favSongsOld.length; i++)
     {
         const cell = document.createElement("div");
-        const song = JSON.parse(localStorage.getItem(`${favSongs[i]?.dataKey}`));
+        const song = JSON.parse(localStorage.getItem(`${favSongsOld[i]?.dataKey}`));
         
         cell.innerHTML =
         `
@@ -147,10 +162,10 @@ function createSongCells()
     var ifCellFirst = '';
     songCell.innerHTML = '';
 
-    for (let i = 0; i < favSongs.length; i++)
+    for (let i = 0; i < favSongsOld.length; i++)
     {
         const cell = document.createElement("div");
-        const song = JSON.parse(localStorage.getItem(`${favSongs[i]?.dataKey}`));
+        const song = JSON.parse(localStorage.getItem(`${favSongsOld[i]?.dataKey}`));
         const minutes = Math.floor(song.lengthSeconds / 60);
         const seconds = song.lengthSeconds % 60;
         const formattedSeconds = seconds.toString().padStart(2, '0');
@@ -250,13 +265,13 @@ function sortFavSongs(sortBy)
     switch (sortBy)
     {
         case "ranked":
-            favSongs.sort((x, y) => x?.rank - y?.rank);
+            favSongsOld.sort((x, y) => x?.rank - y?.rank);
             break;
         case "alphabet":
-            favSongs.sort((x, y) => x?.name?.localeCompare(y?.name, undefined, { sensitivity: 'base' }));
+            favSongsOld.sort((x, y) => x?.name?.localeCompare(y?.name, undefined, { sensitivity: 'base' }));
             break;
         case "date":
-            favSongs.sort((x, y) => x.date - y.date);
+            favSongsOld.sort((x, y) => x.date - y.date);
             break;
     }
     createSongIndex();

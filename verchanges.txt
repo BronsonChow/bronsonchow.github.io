@@ -156,3 +156,4 @@ v0.8.5 voca.html reworked hero backdrop
 0.9.4 implemented Google API with localStorage to prevent spam
         > future proofing ease of editing when fully implemented alongside vocaFavScript & vocaTopScript
 0.9.5 renamed directory (labs -> csc225) for future proofing
+0.9.5.1 re-organizing code blocks

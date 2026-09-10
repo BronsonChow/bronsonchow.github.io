@@ -22,7 +22,7 @@
         <title>BC's Vocaloid Project</title>
     </head>
 
-    <body onload="loadVocaData('favoriteVoca')">
+    <body onload="loadVocaData('favoriteVoca'); loadFooter('voca')">
         <div id="nav"></div><script src="../../navbar.js"></script>
 
         <div class="hero-background">
@@ -30,8 +30,8 @@
                 <h1 class="hero-head">My Favorite Songs & Producers</h1>
                 <div class="btn-group hero-btn">
                     <a href="vocaFav.html" class="btn btn-voca active">My Favorites</a>
-                    <a href="vocaTotal.html" class="btn btn-voca">Total Songs</a>
-                    <a href="vocaTop.html" class="btn btn-voca">Most Rated Songs</a>
+                    <a href="vocaTotal.html" class="btn btn-voca disabled" aria-disabled>Total Songs</a>
+                    <a href="vocaTop.html" class="btn btn-voca disabled" aria-disabled>Most Rated Songs</a>
                 </div>
             </div>
         </div>
@@ -124,48 +124,10 @@
                 <div class="col-lg-1"></div>
             </div>
         </div>
-        &nbsp;
 
-        <hr class="my-4">
-        <div class="container-fluid">
-            <div class="row row-cols-1 row-cols-lg-5 py-5 my-5 footer">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-2">
-                    <h1 class="credit">General</h1>
-                    <ul class="credit">
-                        <p class="credit">Bronson Chow's Website</p><br>
-                        <a href="https://github.com/BronsonChow/"><i class="fa fa-github credit" aria-hidden="true"></i></a>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <h1 class="credit">Credit</h1>
-                    <ul class="credit">
-                        <p class="credit">Powered by </p>
-                            <a class="credit" href="https://vocadb.net/">VocaDB</a>
-                            <p class="credit"> : </p>
-                            <a class="credit" href="https://wiki.vocadb.net/docs/">Public API Documentation</a>
-                        <br><p class="credit">Hero background image by Rella : </p>
-                            <a class="credit" href="https://www.pixiv.net/en/users/163536">Pixiv</a>
-                            <p class="credit"> : </p>
-                            <a class="credit" href="https://www.pixiv.net/en/artworks/70858371">Direct Image Link</a>
-                        <br><p class="credit">Page background image by PinocchioP : </p>
-                            <a class="credit" href="https://www.pixiv.net/en/users/1746464">Pixiv</a>
-                            <p class="credit"> : </p>
-                            <a class="credit" href="https://www.pixiv.net/en/artworks/68054943">Direct Image Link</a>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <h1 class="credit">Navigation</h1>
-                    <ul class="credit">
-                        <a class="credit" href="#">Top of Page</a><br>
-                        <a class="credit" href="voca.html">Landing Page</a><br>
-                        
-                    </ul>
-                </div>
-                <div class="col-lg-1"></div>
-            </div>
-        </div>
+        <div id="footer"></div><script src="../../footer.js"></script>
+
+        <script src="scripts/vocaScript.js"></script>
+        <script src="scripts/vocaFavScript.js"></script>
     </body>
-    <script src="scripts/vocaScript.js"></script>
-    <script src="scripts/vocaFavScript.js"></script>
 </html>

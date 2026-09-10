@@ -21,10 +21,12 @@
 
         <title>BC's Vocaloid Project</title>
     </head>
-    <body onload="loadVocaData('totalVoca')">
+    <body onload="loadVocaData('totalVoca'); loadFooter('voca')">
         <div id="nav"></div><script src="../../navbar.js"></script>
 
         <div id="totalSongsList"></div>
+
+        <div id="footer"></div><script src="../../footer.js"></script>
 
         <script src="scripts/vocaScript.js"></script>
         <script src="scripts/vocaTotalScript.js"></script>
