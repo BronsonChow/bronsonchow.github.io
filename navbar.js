@@ -51,6 +51,12 @@ const navigation = `
                         <li><a class="dropdown-item" href="${dupeDirCopy}csc225/final/final.html">Final Project</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CSC 435</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="${dupeDirCopy}csc435/435_lab1.html">Lab 1 - Fast Fourier Transform</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="https://docs.google.com/spreadsheets/d/15gTjHYgSWRcKoOGMVjodmE6AoESzgY2RV_Dej49yHBo/edit?usp=sharing">Future Plans List</a>
                 </li>

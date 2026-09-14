@@ -32,7 +32,7 @@ function loadFooter(pageName)
     const footerHTML = `
     <hr class="my-4">
     <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-lg-5 py-5 my-5 footer">
+        <div class="row row-cols-1 row-cols-lg-5 py-3 my-5 footer">
             <div class="col-lg-1"></div>
             <div class="col-lg-2">
                 <h1 class="credit">General</h1>
