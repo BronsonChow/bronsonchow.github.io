@@ -158,3 +158,4 @@ v0.8.5 voca.html reworked hero backdrop
 0.9.5 renamed directory (labs -> csc225) for future proofing
 0.9.5.1 re-organizing code blocks
 0.9.6 added csc435 directory + files
+0.9.7 added csc436 directory + files

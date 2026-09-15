@@ -39,7 +39,7 @@ const navigation = `
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CSC 225 Labs</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CSC 225</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="${dupeDirCopy}README.md">Lab 1 - readme</a></li>
                         <li><a class="dropdown-item" href="${dupeDirCopy}csc225/StarterPage.html">Lab 2 - Starter Page</a></li>
@@ -55,6 +55,12 @@ const navigation = `
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CSC 435</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="${dupeDirCopy}csc435/435_lab1.html">Lab 1 - Fast Fourier Transform</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CSC 436</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="${dupeDirCopy}csc436/436_lab1.html">Lab 1 - Static Foundations</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
