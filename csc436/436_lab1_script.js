@@ -1,0 +1,57 @@
+const cardCell = document.getElementById("cardCell");
+const cards = [
+    `565fc4d4-4c17-44d5-a5bc-31bc99018e5d`, // Armageddon
+    `4c7c9072-d14c-442c-a386-bfdc0cbe110d`, // Propaganda
+    `test`
+];
+
+async function fetchCards()
+{
+    for (let cardID of cards)
+    {
+        const cardExist = localStorage.getItem(`cachedCard${cardID}`);
+        if (cardExist)
+        {
+            console.log(`Loading card ${cardID} from cache`);
+            showCard(cardID);
+        }
+        else
+        {
+            try
+            {
+                console.log(`Fetching card ${cardID} from API`);
+
+                const result = await fetch(`https://api.scryfall.com/cards/${cardID}`);
+                const card = await result.json();
+
+                localStorage.setItem(`cachedCard${cardID}`, JSON.stringify(card));
+                console.log(`Card ${cardID} cached successfully`);
+                showCard(cardID);
+            }
+            catch (error)
+            {
+                console.error(`Error fetching card ${cardID}:`, error);
+            }
+        }
+    }
+}
+function showCard(cardID)
+{
+    const key = localStorage.getItem(`cachedCard${cardID}`);
+    const card = JSON.parse(key);
+    if (card.object === 'card')
+    {
+        const cardHTML = document.createElement("div");
+
+        console.log(card.image_uris.normal);
+
+        cardHTML.innerHTML =
+        `
+        <div id="cardCell">
+            <img src="${card.image_uris.normal}" alt="${card.name}" class="card-image">
+        </div>
+        `;
+        cardCell.appendChild(cardHTML);
+    }
+}
+fetchCards();

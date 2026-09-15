@@ -92,10 +92,9 @@ ul.navbar-nav {
 .btn.disabled {
     background-color: var(--light-blue);
 }
-.centered {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.container {
+    display: flex;
+    gap: 1rem;
 }
 .fa {
     font-size: 1.5rem;

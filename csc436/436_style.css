@@ -40,6 +40,9 @@ canvas {
     margin: auto;
     max-width: 60%;
 }
+div.card {
+    display: flex;
+}
 div.hero-div {
     background-color: var(--neon-pink);
     padding: 1rem;
@@ -69,6 +72,11 @@ i.credit {
     color: var(--gold);
     font-size: 3rem;
     margin-top: 1rem;
+}
+img.card-image {
+    display: block;
+    margin: auto;
+    max-width: 20%;
 }
 p {
     font-size: 1rem;
