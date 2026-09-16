@@ -41,7 +41,17 @@ canvas {
     max-width: 60%;
 }
 div.card {
+    max-width: 20rem;
+    background-color: rgb(from var(--really-light-pink) r g b / 50%);
+    margin: 1rem;
+    flex: 1 0 calc(100% / 3);
+}
+div.card-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
 }
 div.hero-div {
     background-color: var(--neon-pink);
@@ -76,7 +86,7 @@ i.credit {
 img.card-image {
     display: block;
     margin: auto;
-    max-width: 20%;
+    max-width: 100%;
 }
 p {
     font-size: 1rem;
