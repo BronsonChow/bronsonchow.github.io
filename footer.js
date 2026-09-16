@@ -22,6 +22,16 @@ function loadFooter(pageName)
             </ul>
             `;
             break;
+        case "csc436lab1":
+            footerMiddleCol = `
+            <ul class="credit">
+                <p class="credit">Powered by </p>
+                    <a class="credit" href="https://scryfall.com/">Scryfall</a>
+                    <p class="credit"> : </p>
+                    <a class="credit" href="https://scryfall.com/docs/api">Public API Documentation</a>
+            </ul>
+            `;
+            break;
         default:
             footerMiddleCol = `
             <ul class="credit">

@@ -6,6 +6,7 @@ const cards = [
     `43c037e3-7d1a-48ca-8ecc-276696592f62`, // Heroic Intervention
     `f2c4f80e-84a0-463b-82c3-5c6503809351`, // Doubling Season
     `d6914dba-0d27-4055-ac34-b3ebf5802221`, // Rhystic Study
+    `7fe98f7c-e6c0-4632-96da-a4c2e1a1c094`, // Command Tower
     `test` // testing error handling
 ];
 

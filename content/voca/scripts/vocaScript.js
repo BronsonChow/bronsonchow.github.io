@@ -1,9 +1,18 @@
 const spreadsheetID = "1WMIVNClOw7a2aftjfZl0al2rAorJvz1El-ihGO9mogE";
 const range = "vocaDB-ID-list!A1:C";
-const domainAPIkey = "AIzaSyBWyQ295daWJeBa5rWi1UXEgY7HaUtOyRU"; // Restricted by domain
 const userData = JSON.parse(localStorage.getItem("userSettings"));
 const now = new Date().getTime();
 const updateCheck = new Date(now + (8 * 60 * 60 * 1000));
+
+export async function handler(event, context)
+{
+    const secretKey = process.env.vocaGoogleAPIKey;
+
+    return {
+        statusCode: 200,
+        body: JSON.stringify({ message: "Data fetched successfully." }),
+    };
+}
 
 async function loadVocaData(pageName)
 {
@@ -18,7 +27,7 @@ async function loadVocaData(pageName)
         console.log("Updating song list from " + updateCheck.toString() + " to " + updateCheck.toString());
         try
         {
-            const totalResult = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetID}/values/${range}?key=${domainAPIkey}`);
+            const totalResult = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetID}/values/${range}?key=${domainGoogleAPIkey}`);
             const totalList = await totalResult.json();
             if (totalList.error)
             {

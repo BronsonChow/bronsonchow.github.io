@@ -161,3 +161,4 @@ v0.8.5 voca.html reworked hero backdrop
 0.9.7 added csc436 directory + files
 0.9.7.1 added card api fetch & display
 0.9.7.2 reformatted css and minor JS edits
+0.9.7.3 reformatted css again, added footer case
