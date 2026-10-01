@@ -52,15 +52,10 @@ const navigation = `
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CSC 435</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="${dupeDirCopy}csc435/435_lab1.html">Lab 1 - Fast Fourier Transform</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CSC 436</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="${dupeDirCopy}csc436/436_lab1.html">Lab 1 - Static Foundations</a></li>
+                        <li><a class="dropdown-item" href="${dupeDirCopy}csc436/lab1/436_lab1.html">Lab 1 - Static Foundations</a></li>
+                        <li><a class="dropdown-item" href="${dupeDirCopy}csc436/lab2/436_lab2.html">Lab 2 - React Fundamentals</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
