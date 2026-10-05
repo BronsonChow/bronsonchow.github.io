@@ -164,3 +164,4 @@ v0.8.5 voca.html reworked hero backdrop
 0.9.7.3 reformatted css again, added footer case
 0.9.8 reformatted csc436 directory for future proofing, removed csc435 directory
 0.10 revamped csc436 lab 1 into foundation for Warhammer site, slight CSS changes
+0.10.0.1 stopped infinite redirects if landing page is currently Netlify

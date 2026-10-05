@@ -20,9 +20,12 @@
 
         <!-- Redirect to Netlify -->
         <script>
-            const netlifyDomain = "https://bchow.netlify.app";
-            const newURL = netlifyDomain + window.location.pathname + window.location.search;
-            window.location.replace(newURL);
+            if (!window.location.hostname.endsWith(".netlify.app"))
+            {
+                const netlifyDomain = "https://bchow.netlify.app";
+                const newURL = netlifyDomain + window.location.pathname + window.location.search;
+                window.location.replace(newURL);
+            }
         </script>
 
         <title>Bronson Chow's Website</title>
