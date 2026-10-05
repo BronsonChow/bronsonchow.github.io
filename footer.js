@@ -25,10 +25,13 @@ function loadFooter(pageName)
         case "csc436lab1":
             footerMiddleCol = `
             <ul class="credit">
+                <p class="credit">Information gathered from </p>
+                    <a class="credit" href="https://wahapedia.ru/">Wahapedia</a>
+                <br>
                 <p class="credit">Powered by </p>
-                    <a class="credit" href="https://scryfall.com/">Scryfall</a>
+                    <a class="credit" href="https://developers.google.com/workspace/sheets">Google Sheets</a>
                     <p class="credit"> : </p>
-                    <a class="credit" href="https://scryfall.com/docs/api">Public API Documentation</a>
+                    <a class="credit" href="https://developers.google.com/workspace/docs/api/reference/rest">Public API Documentation</a>
             </ul>
             `;
             break;

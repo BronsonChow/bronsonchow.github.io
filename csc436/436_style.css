@@ -2,12 +2,12 @@
     font-family: "Noto Sans", sans-serif;
 }
 :root {
-    --main-color-1: #B80B0B;
-    --main-color-1-2: #F43E3E;
-    --main-color-2: #E3B5A4;
-    --main-color-2-2: #1A0000;
-    --main-color-3: #F5E9E2;
-    --main-color-3-2: #440404;
+    --main-color-1: #b8810b;
+    --main-color-1-2: #e9ae30;
+    --main-color-2: #a4d1e3;
+    --main-color-2-2: #000c1a;
+    --main-color-3: #f1fcff;
+    --main-color-3-2: #042544;
     --secondary-color-1: #0B0014;
     --secondary-color-2: #393E41;
 }
@@ -149,6 +149,9 @@ ul.navbar-nav {
     div.footer {
         background-color: rgb(from var(--main-color-2-2) r g b / 50%);
         box-shadow: 0 0 1rem var(--secondary-color-1);
+    }
+    div.para-container {
+        background-color: rgb(from var(--main-color-2-2) r g b / 50%);
     }
     h1 {
         color: var(--main-color-2);
