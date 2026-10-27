@@ -167,3 +167,4 @@ v0.8.5 voca.html reworked hero backdrop
 0.10.0.1 stopped infinite redirects if landing page is currently Netlify
 0.10.1 properly displays unit cards using id from local array
 0.10.2 added data caching & slight CSS refactoring
+0.10.3 edited CSS foundation for visual clarity

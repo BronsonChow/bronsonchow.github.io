@@ -44,12 +44,6 @@ function displayArmy()
 {
     const matchedArmy = JSON.parse(localStorage.getItem("cachedUnits")) || [];
     
-    const unitCardIndex = document.createElement('unitCardIndex');
-    unitCardIndex.innerHTML =
-    `
-    <h2>Locally Saved Units</h2>
-    `;
-    document.querySelector('cardContainer').appendChild(unitCardIndex);
     document.querySelector('cardContainer').appendChild(document.createElement('br'));
 
     matchedArmy.forEach((row, index) => {
@@ -58,8 +52,12 @@ function displayArmy()
 
         unitCard.innerHTML =
         `
-        <p>${row[2]}</p>
-        <p>${row[3]}</p>
+        <h1>${row[2] || "N/A"}</h1>
+        <p>${row[3] || "N/A"}</p>
+        <p>${row[4] || "N/A"}</p>
+        <p>${row[5] || "N/A"}</p>
+        <p>${row[6] || "N/A"}</p>
+        <p>${row[8] || "N/A"}</p>
         `;
         document.querySelector('cardContainer').appendChild(unitCard);
     });
