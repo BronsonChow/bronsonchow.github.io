@@ -1,6 +1,6 @@
 export const handler = async (event, context) => {
     const spreadsheetID = "1WMIVNClOw7a2aftjfZl0al2rAorJvz1El-ihGO9mogE";
-    const range = encodeURIComponent("wh-info!A1:K");
+    const range = encodeURIComponent("Datasheets_models!A1:M");
     const apiKey = process.env.generalGoogleSheet;
 
     if (!apiKey)

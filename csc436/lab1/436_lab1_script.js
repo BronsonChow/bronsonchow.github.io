@@ -1,4 +1,13 @@
-async function getSecureData() {
+const customArmy =
+[
+    1558,
+    704,
+    1174,
+    94
+];
+
+async function getSecureData()
+{
     try
     {
         const response = await fetch('/.netlify/functions/fetch_data');
@@ -9,57 +18,34 @@ async function getSecureData() {
         
         const data = await response.json();
         console.log("Successfully fetched data:", data);
+        displayData(data);
     } catch (error) {
         console.error("Error calling function:", error);
     }
 }
+function displayData(data)
+{
+    const matchedArmy = data.values.filter((row) => customArmy.includes(parseInt(row[0])));
 
-// async function fetchCards()
-// {   
-//     for (let cardID of cards)
-//     {
-//         const cardExist = localStorage.getItem(`cachedCard${cardID}`);
-//         if (cardExist)
-//         {
-//             // console.log(`Loading card ${cardID} from cache`);
-//             showCard(cardID);
-//         }
-//         else
-//         {
-//             try
-//             {
-//                 // console.log(`Fetching card ${cardID} from API`);
+    const unitCardIndex = document.createElement('unitCardIndex');
+    unitCardIndex.innerHTML =
+    `
+    <h2>Locally Saved Units</h2>
+    `;
+    document.querySelector('cardContainer').appendChild(unitCardIndex);
+    document.querySelector('cardContainer').appendChild(document.createElement('br'));
 
-//                 const result = await fetch(`https://api.scryfall.com/cards/${cardID}`);
-//                 const card = await result.json();
+    matchedArmy.forEach((row, index) => {
+        const unitCard = document.createElement('unitCard');
+        console.log(`Displaying data for row ${index}:`, row);
 
-//                 localStorage.setItem(`cachedCard${cardID}`, JSON.stringify(card));
-//                 // console.log(`Card ${cardID} cached successfully`);
-//                 showCard(cardID);
-//             }
-//             catch (error)
-//             {
-//                 console.error(`Error fetching card ${cardID}:`, error);
-//             }
-//         }
-//     }
-// }
-// function showCard(cardID)
-// {
-//     const key = localStorage.getItem(`cachedCard${cardID}`);
-//     const card = JSON.parse(key);
-//     if (card.object === 'card')
-//     {
-//         const cardHTML = document.createElement("div");
-//         cardHTML.classList.add("card");
+        unitCard.innerHTML =
+        `
+        <p>${row[2]}</p>
+        <p>${row[3]}</p>
+        `;
+        document.querySelector('cardContainer').appendChild(unitCard);
+    });
+}
 
-//         // console.log(card.image_uris.normal);
-
-//         cardHTML.innerHTML =
-//         `
-//         <img src="${card.image_uris.normal}" alt="${card.name}" class="card-image">
-//         `;
-//         cardCell.appendChild(cardHTML);
-//     }
-// }
 getSecureData();

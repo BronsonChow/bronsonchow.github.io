@@ -29,6 +29,14 @@ a {
 b {
     font-weight: 700;
 }
+cardContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+unitCard {
+    display: flex;
+}
 div.card {
     max-width: 20rem;
     background-color: rgb(from var(--main-color-2) r g b / 50%);
