@@ -22,6 +22,22 @@ body {
 
     --bs-tertiary-bg: var(--main-color-2);
 }
+/* Hero Section */
+div.hero-div {
+    background-color: var(--main-color-2);
+    margin: 1rem 0;
+    padding: 1rem 0;
+}
+h1.hero-head {
+    text-align: center;
+    font-size: 2rem;
+}
+p.hero-paragraph {
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    background-color: rgb(from var(--main-color-2-2) r g b / 20%);
+}
 a {
     color: var(--main-color-1);
     font-size: 1rem;
@@ -33,36 +49,18 @@ cardContainer {
     display: grid;
     justify-content: center;
     align-items: center;
+    border: 1px solid var(--main-color-2);
+    width: 95%;
+    max-width: 720px;
+    margin: 0 auto;
 }
 unitCard {
+    border: 1px solid var(--main-color-2);
     display: flex;
-}
-div.card {
-    max-width: 20rem;
-    background-color: rgb(from var(--main-color-2) r g b / 50%);
-    margin: 1rem;
-    flex: 1 0 calc(100% / 3);
-}
-div.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.1rem;
-}
-div.hero-div {
-    background-color: var(--main-color-2);
-    padding: 1rem;
 }
 div.footer {
     background-color: rgb(from var(--main-color-2) r g b / 50%);
     box-shadow: 0 0 1rem var(--secondary-color-2);
-}
-div.para-container {
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-    background-color: rgb(from var(--main-color-2) r g b / 50%);
 }
 h1 {
     color: var(--secondary-color-1);
@@ -70,10 +68,6 @@ h1 {
     font-weight: 300;
     font-stretch: 95%;
     text-shadow: 0.1rem 0.1rem 0.3rem var(--secondary-color-2);
-}
-h1.hero-head {
-    text-align: center;
-    font-size: 2rem;
 }
 h1.credit {
     padding-bottom: 1rem;
@@ -150,16 +144,17 @@ ul.navbar-nav {
 
         --bs-tertiary-bg: var(--main-color-2-2);
     }
+    /* Hero Section */
     div.hero-div {
         background-color: var(--main-color-2-2);
         padding: 1rem;
     }
+    p.hero-paragraph {
+        background-color: rgb(from var(--main-color-2-2) r g b / 50%);
+    }
     div.footer {
         background-color: rgb(from var(--main-color-2-2) r g b / 50%);
         box-shadow: 0 0 1rem var(--secondary-color-1);
-    }
-    div.para-container {
-        background-color: rgb(from var(--main-color-2-2) r g b / 50%);
     }
     h1 {
         color: var(--main-color-2);

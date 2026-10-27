@@ -8,6 +8,12 @@ const customArmy =
 
 async function getSecureData()
 {
+    if (localStorage.getItem("cachedUnits"))
+    {
+        console.log("Loading units from localstorage.");
+        displayArmy();
+        return;
+    }
     try
     {
         const response = await fetch('/.netlify/functions/fetch_data');
@@ -18,15 +24,26 @@ async function getSecureData()
         
         const data = await response.json();
         console.log("Successfully fetched data:", data);
-        displayData(data);
+        try
+        {
+            const matchLocalArmy = data.values.filter((row) => customArmy.includes(parseInt(row[0])));
+            
+            console.log("Storing data in localstorage.");
+            localStorage.setItem("cachedUnits", JSON.stringify(matchLocalArmy));
+            console.log(`Successfully stored ${matchLocalArmy.length} local units in localstorage.`);
+        } catch (error) {
+            console.error("Error storing data in localStorage:", error);
+        }
+
+        displayArmy();
     } catch (error) {
         console.error("Error calling function:", error);
     }
 }
-function displayData(data)
+function displayArmy()
 {
-    const matchedArmy = data.values.filter((row) => customArmy.includes(parseInt(row[0])));
-
+    const matchedArmy = JSON.parse(localStorage.getItem("cachedUnits")) || [];
+    
     const unitCardIndex = document.createElement('unitCardIndex');
     unitCardIndex.innerHTML =
     `
@@ -37,7 +54,7 @@ function displayData(data)
 
     matchedArmy.forEach((row, index) => {
         const unitCard = document.createElement('unitCard');
-        console.log(`Displaying data for row ${index}:`, row);
+        // console.log(`Displaying data for row ${index}:`, row);
 
         unitCard.innerHTML =
         `
